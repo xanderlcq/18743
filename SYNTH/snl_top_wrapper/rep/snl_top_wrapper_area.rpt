@@ -1,0 +1,523 @@
+ 
+****************************************
+Report : area
+Design : snl_top_wrapper
+Version: P-2019.03
+Date   : Mon Mar 21 14:00:06 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /afs/andrew.cmu.edu/course/18/743/backend/45nm_Nangate/pdk_v1.3_v2010_12/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Liberty/NLDM/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                         1292
+Number of nets:                          2252
+Number of cells:                         1249
+Number of combinational cells:            993
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                        481
+Number of references:                       2
+
+Combinational area:                673.245992
+Buf/Inv area:                      256.158002
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   673.245992
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+snl_top_wrapper                    673.2460    100.0    0.7980     0.0000  0.0000  snl_top_wrapper
+nsg                                672.4480     99.9   34.0480     0.0000  0.0000  neuron_snl_grl
+nsg/up                             638.4000     94.8    0.0000     0.0000  0.0000  bitonic_sort_32
+nsg/up/Lower                       212.8000     31.6    0.0000     0.0000  0.0000  bitonic_sort_16_0
+nsg/up/Lower/Lower                  63.8400      9.5    0.0000     0.0000  0.0000  bitonic_sort_8_0
+nsg/up/Lower/Lower/Lower            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_0
+nsg/up/Lower/Lower/Lower/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_4
+nsg/up/Lower/Lower/Lower/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_5
+nsg/up/Lower/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_3
+nsg/up/Lower/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_2
+nsg/up/Lower/Lower/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_1
+nsg/up/Lower/Lower/Lower/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_0
+nsg/up/Lower/Lower/Upper            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_1
+nsg/up/Lower/Lower/Upper/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_10
+nsg/up/Lower/Lower/Upper/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_11
+nsg/up/Lower/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_9
+nsg/up/Lower/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_8
+nsg/up/Lower/Lower/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_7
+nsg/up/Lower/Lower/Upper/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_6
+nsg/up/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_59
+nsg/up/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_58
+nsg/up/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_57
+nsg/up/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_56
+nsg/up/Lower/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_55
+nsg/up/Lower/Lower/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_54
+nsg/up/Lower/Lower/outter_loop_1__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_53
+nsg/up/Lower/Lower/outter_loop_1__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_52
+nsg/up/Lower/Lower/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_51
+nsg/up/Lower/Lower/outter_loop_2__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_50
+nsg/up/Lower/Lower/outter_loop_2__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_49
+nsg/up/Lower/Lower/outter_loop_2__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_48
+nsg/up/Lower/Upper                  63.8400      9.5    0.0000     0.0000  0.0000  bitonic_sort_8_1
+nsg/up/Lower/Upper/Lower            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_2
+nsg/up/Lower/Upper/Lower/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_16
+nsg/up/Lower/Upper/Lower/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_17
+nsg/up/Lower/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_15
+nsg/up/Lower/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_14
+nsg/up/Lower/Upper/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_13
+nsg/up/Lower/Upper/Lower/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_12
+nsg/up/Lower/Upper/Upper            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_3
+nsg/up/Lower/Upper/Upper/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_22
+nsg/up/Lower/Upper/Upper/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_23
+nsg/up/Lower/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_21
+nsg/up/Lower/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_20
+nsg/up/Lower/Upper/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_19
+nsg/up/Lower/Upper/Upper/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_18
+nsg/up/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_71
+nsg/up/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_70
+nsg/up/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_69
+nsg/up/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_68
+nsg/up/Lower/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_67
+nsg/up/Lower/Upper/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_66
+nsg/up/Lower/Upper/outter_loop_1__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_65
+nsg/up/Lower/Upper/outter_loop_1__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_64
+nsg/up/Lower/Upper/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_63
+nsg/up/Lower/Upper/outter_loop_2__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_62
+nsg/up/Lower/Upper/outter_loop_2__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_61
+nsg/up/Lower/Upper/outter_loop_2__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_60
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_127
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_126
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_125
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_124
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_123
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_122
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_121
+nsg/up/Lower/outter_loop_0__inner_loop_0__s_loop_7__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_120
+nsg/up/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_119
+nsg/up/Lower/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_118
+nsg/up/Lower/outter_loop_1__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_117
+nsg/up/Lower/outter_loop_1__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_116
+nsg/up/Lower/outter_loop_1__inner_loop_1__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_113
+nsg/up/Lower/outter_loop_1__inner_loop_1__s_loop_11__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_112
+nsg/up/Lower/outter_loop_1__inner_loop_1__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_115
+nsg/up/Lower/outter_loop_1__inner_loop_1__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_114
+nsg/up/Lower/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_111
+nsg/up/Lower/outter_loop_2__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_110
+nsg/up/Lower/outter_loop_2__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_109
+nsg/up/Lower/outter_loop_2__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_108
+nsg/up/Lower/outter_loop_2__inner_loop_2__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_107
+nsg/up/Lower/outter_loop_2__inner_loop_2__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_106
+nsg/up/Lower/outter_loop_2__inner_loop_3__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_105
+nsg/up/Lower/outter_loop_2__inner_loop_3__s_loop_13__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_104
+nsg/up/Lower/outter_loop_3__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_103
+nsg/up/Lower/outter_loop_3__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_102
+nsg/up/Lower/outter_loop_3__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_101
+nsg/up/Lower/outter_loop_3__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_100
+nsg/up/Lower/outter_loop_3__inner_loop_4__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_99
+nsg/up/Lower/outter_loop_3__inner_loop_5__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_98
+nsg/up/Lower/outter_loop_3__inner_loop_6__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_97
+nsg/up/Lower/outter_loop_3__inner_loop_7__s_loop_14__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_96
+nsg/up/Upper                       212.8000     31.6    0.0000     0.0000  0.0000  bitonic_sort_16_1
+nsg/up/Upper/Lower                  63.8400      9.5    0.0000     0.0000  0.0000  bitonic_sort_8_2
+nsg/up/Upper/Lower/Lower            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_4
+nsg/up/Upper/Lower/Lower/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_28
+nsg/up/Upper/Lower/Lower/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_29
+nsg/up/Upper/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_27
+nsg/up/Upper/Lower/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_26
+nsg/up/Upper/Lower/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_25
+nsg/up/Upper/Lower/Lower/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_24
+nsg/up/Upper/Lower/Upper            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_5
+nsg/up/Upper/Lower/Upper/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_34
+nsg/up/Upper/Lower/Upper/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_35
+nsg/up/Upper/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_33
+nsg/up/Upper/Lower/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_32
+nsg/up/Upper/Lower/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_31
+nsg/up/Upper/Lower/Upper/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_30
+nsg/up/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_83
+nsg/up/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_82
+nsg/up/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_81
+nsg/up/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_80
+nsg/up/Upper/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_79
+nsg/up/Upper/Lower/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_78
+nsg/up/Upper/Lower/outter_loop_1__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_77
+nsg/up/Upper/Lower/outter_loop_1__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_76
+nsg/up/Upper/Lower/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_75
+nsg/up/Upper/Lower/outter_loop_2__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_74
+nsg/up/Upper/Lower/outter_loop_2__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_73
+nsg/up/Upper/Lower/outter_loop_2__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_72
+nsg/up/Upper/Upper                  63.8400      9.5    0.0000     0.0000  0.0000  bitonic_sort_8_3
+nsg/up/Upper/Upper/Lower            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_6
+nsg/up/Upper/Upper/Lower/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_40
+nsg/up/Upper/Upper/Lower/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_41
+nsg/up/Upper/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_39
+nsg/up/Upper/Upper/Lower/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_38
+nsg/up/Upper/Upper/Lower/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_37
+nsg/up/Upper/Upper/Lower/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_36
+nsg/up/Upper/Upper/Upper            15.9600      2.4    0.0000     0.0000  0.0000  bitonic_sort_4_7
+nsg/up/Upper/Upper/Upper/Lower       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_46
+nsg/up/Upper/Upper/Upper/Upper       2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_47
+nsg/up/Upper/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_45
+nsg/up/Upper/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_44
+nsg/up/Upper/Upper/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_43
+nsg/up/Upper/Upper/Upper/outter_loop_1__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_42
+nsg/up/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_95
+nsg/up/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_94
+nsg/up/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_93
+nsg/up/Upper/Upper/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_92
+nsg/up/Upper/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_91
+nsg/up/Upper/Upper/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_90
+nsg/up/Upper/Upper/outter_loop_1__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_89
+nsg/up/Upper/Upper/outter_loop_1__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_88
+nsg/up/Upper/Upper/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_87
+nsg/up/Upper/Upper/outter_loop_2__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_86
+nsg/up/Upper/Upper/outter_loop_2__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_85
+nsg/up/Upper/Upper/outter_loop_2__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_84
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_159
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_158
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_157
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_156
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_155
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_154
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_153
+nsg/up/Upper/outter_loop_0__inner_loop_0__s_loop_7__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_152
+nsg/up/Upper/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_151
+nsg/up/Upper/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_150
+nsg/up/Upper/outter_loop_1__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_149
+nsg/up/Upper/outter_loop_1__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_148
+nsg/up/Upper/outter_loop_1__inner_loop_1__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_145
+nsg/up/Upper/outter_loop_1__inner_loop_1__s_loop_11__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_144
+nsg/up/Upper/outter_loop_1__inner_loop_1__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_147
+nsg/up/Upper/outter_loop_1__inner_loop_1__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_146
+nsg/up/Upper/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_143
+nsg/up/Upper/outter_loop_2__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_142
+nsg/up/Upper/outter_loop_2__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_141
+nsg/up/Upper/outter_loop_2__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_140
+nsg/up/Upper/outter_loop_2__inner_loop_2__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_139
+nsg/up/Upper/outter_loop_2__inner_loop_2__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_138
+nsg/up/Upper/outter_loop_2__inner_loop_3__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_137
+nsg/up/Upper/outter_loop_2__inner_loop_3__s_loop_13__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_136
+nsg/up/Upper/outter_loop_3__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_135
+nsg/up/Upper/outter_loop_3__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_134
+nsg/up/Upper/outter_loop_3__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_133
+nsg/up/Upper/outter_loop_3__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_132
+nsg/up/Upper/outter_loop_3__inner_loop_4__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_131
+nsg/up/Upper/outter_loop_3__inner_loop_5__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_130
+nsg/up/Upper/outter_loop_3__inner_loop_6__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_129
+nsg/up/Upper/outter_loop_3__inner_loop_7__s_loop_14__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_128
+nsg/up/outter_loop_0__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_239
+nsg/up/outter_loop_0__inner_loop_0__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_229
+nsg/up/outter_loop_0__inner_loop_0__s_loop_11__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_228
+nsg/up/outter_loop_0__inner_loop_0__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_227
+nsg/up/outter_loop_0__inner_loop_0__s_loop_13__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_226
+nsg/up/outter_loop_0__inner_loop_0__s_loop_14__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_225
+nsg/up/outter_loop_0__inner_loop_0__s_loop_15__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_224
+nsg/up/outter_loop_0__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_238
+nsg/up/outter_loop_0__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_237
+nsg/up/outter_loop_0__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_236
+nsg/up/outter_loop_0__inner_loop_0__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_235
+nsg/up/outter_loop_0__inner_loop_0__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_234
+nsg/up/outter_loop_0__inner_loop_0__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_233
+nsg/up/outter_loop_0__inner_loop_0__s_loop_7__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_232
+nsg/up/outter_loop_0__inner_loop_0__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_231
+nsg/up/outter_loop_0__inner_loop_0__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_230
+nsg/up/outter_loop_1__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_223
+nsg/up/outter_loop_1__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_222
+nsg/up/outter_loop_1__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_221
+nsg/up/outter_loop_1__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_220
+nsg/up/outter_loop_1__inner_loop_0__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_219
+nsg/up/outter_loop_1__inner_loop_0__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_218
+nsg/up/outter_loop_1__inner_loop_0__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_217
+nsg/up/outter_loop_1__inner_loop_0__s_loop_7__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_216
+nsg/up/outter_loop_1__inner_loop_1__s_loop_16__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_215
+nsg/up/outter_loop_1__inner_loop_1__s_loop_17__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_214
+nsg/up/outter_loop_1__inner_loop_1__s_loop_18__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_213
+nsg/up/outter_loop_1__inner_loop_1__s_loop_19__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_212
+nsg/up/outter_loop_1__inner_loop_1__s_loop_20__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_211
+nsg/up/outter_loop_1__inner_loop_1__s_loop_21__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_210
+nsg/up/outter_loop_1__inner_loop_1__s_loop_22__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_209
+nsg/up/outter_loop_1__inner_loop_1__s_loop_23__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_208
+nsg/up/outter_loop_2__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_207
+nsg/up/outter_loop_2__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_206
+nsg/up/outter_loop_2__inner_loop_0__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_205
+nsg/up/outter_loop_2__inner_loop_0__s_loop_3__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_204
+nsg/up/outter_loop_2__inner_loop_1__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_201
+nsg/up/outter_loop_2__inner_loop_1__s_loop_11__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_200
+nsg/up/outter_loop_2__inner_loop_1__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_203
+nsg/up/outter_loop_2__inner_loop_1__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_202
+nsg/up/outter_loop_2__inner_loop_2__s_loop_16__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_199
+nsg/up/outter_loop_2__inner_loop_2__s_loop_17__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_198
+nsg/up/outter_loop_2__inner_loop_2__s_loop_18__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_197
+nsg/up/outter_loop_2__inner_loop_2__s_loop_19__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_196
+nsg/up/outter_loop_2__inner_loop_3__s_loop_24__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_195
+nsg/up/outter_loop_2__inner_loop_3__s_loop_25__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_194
+nsg/up/outter_loop_2__inner_loop_3__s_loop_26__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_193
+nsg/up/outter_loop_2__inner_loop_3__s_loop_27__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_192
+nsg/up/outter_loop_3__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_191
+nsg/up/outter_loop_3__inner_loop_0__s_loop_1__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_190
+nsg/up/outter_loop_3__inner_loop_1__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_189
+nsg/up/outter_loop_3__inner_loop_1__s_loop_5__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_188
+nsg/up/outter_loop_3__inner_loop_2__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_187
+nsg/up/outter_loop_3__inner_loop_2__s_loop_9__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_186
+nsg/up/outter_loop_3__inner_loop_3__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_185
+nsg/up/outter_loop_3__inner_loop_3__s_loop_13__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_184
+nsg/up/outter_loop_3__inner_loop_4__s_loop_16__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_183
+nsg/up/outter_loop_3__inner_loop_4__s_loop_17__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_182
+nsg/up/outter_loop_3__inner_loop_5__s_loop_20__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_181
+nsg/up/outter_loop_3__inner_loop_5__s_loop_21__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_180
+nsg/up/outter_loop_3__inner_loop_6__s_loop_24__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_179
+nsg/up/outter_loop_3__inner_loop_6__s_loop_25__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_178
+nsg/up/outter_loop_3__inner_loop_7__s_loop_28__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_177
+nsg/up/outter_loop_3__inner_loop_7__s_loop_29__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_176
+nsg/up/outter_loop_4__inner_loop_0__s_loop_0__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_175
+nsg/up/outter_loop_4__inner_loop_10__s_loop_20__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_165
+nsg/up/outter_loop_4__inner_loop_11__s_loop_22__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_164
+nsg/up/outter_loop_4__inner_loop_12__s_loop_24__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_163
+nsg/up/outter_loop_4__inner_loop_13__s_loop_26__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_162
+nsg/up/outter_loop_4__inner_loop_14__s_loop_28__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_161
+nsg/up/outter_loop_4__inner_loop_15__s_loop_30__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_160
+nsg/up/outter_loop_4__inner_loop_1__s_loop_2__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_174
+nsg/up/outter_loop_4__inner_loop_2__s_loop_4__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_173
+nsg/up/outter_loop_4__inner_loop_3__s_loop_6__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_172
+nsg/up/outter_loop_4__inner_loop_4__s_loop_8__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_171
+nsg/up/outter_loop_4__inner_loop_5__s_loop_10__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_170
+nsg/up/outter_loop_4__inner_loop_6__s_loop_12__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_169
+nsg/up/outter_loop_4__inner_loop_7__s_loop_14__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_168
+nsg/up/outter_loop_4__inner_loop_8__s_loop_16__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_167
+nsg/up/outter_loop_4__inner_loop_9__s_loop_18__swapper
+                                     2.6600      0.4    2.6600     0.0000  0.0000  bitonic_sort_2_166
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+Total                                                 673.2460     0.0000  0.0000
+
+1
