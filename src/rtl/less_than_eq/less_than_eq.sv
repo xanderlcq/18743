@@ -1,3 +1,5 @@
+`default_nettype none
+
 module less_than_eq
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8)
@@ -10,7 +12,7 @@ module less_than_eq
 `ifdef RISING
 //edge transition base, rising
 
-`elif FALLING
+`elsif FALLING
 //edge transition base, falling
 
     logic c, d;
