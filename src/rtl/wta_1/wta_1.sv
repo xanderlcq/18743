@@ -16,9 +16,9 @@ module wta_1
     assign lteq_outputs_b = ~lteq_outputs;
     assign spiked = & lteq_outputs;
 
-    // TODO: This is not needed if it's pure falling edge.
-    sr_latch Inhibit_sr(.s(~spiked), .r(rst), .q(), .q_b(inhibit));
-
+    // This is not needed if it's pure falling edge.
+    // sr_latch Inhibit_sr(.s(~spiked), .r(rst), .q(), .q_b(inhibit));
+    assign inhibit = spiked;
     
     genvar i;
     generate
@@ -40,7 +40,13 @@ module wta_1
 
     assign lteq_outputs_b = ~lteq_outputs;
     assign spiked = | lteq_outputs;
-    sr_latch Inhibit_sr(.s(spiked), .r(rst), .q(inhibit), .q_b());
+
+    `ifdef RISING
+        assign inhibit = spiked;
+    `else
+        sr_latch Inhibit_sr(.s(spiked), .r(rst), .q(inhibit), .q_b());
+    `endif
+
     genvar i;
     generate
         for(i = 0; i < NUM_INPUTS; i++) begin

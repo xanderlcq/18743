@@ -20,19 +20,21 @@ def gen_sim(top_module_name, src_dir):
     synth_dir = os.path.abspath(synth_dir)+'/'
     synth_src_dir = os.path.abspath(synth_src_dir)+'/'
 
-    print('generating sim directory for top module:{}, src file directory:{}'.format(top_module_name, src_dir))
-    Path(synth_src_dir).mkdir(parents=True, exist_ok=True)
+    print('generating sim directory for top module:{}, src file directory:{}'.format(top_module_name, synth_dir))
+    Path(synth_dir).mkdir(parents=True, exist_ok=True)
 
     #make dir
     #link soure files
-    sv_files = glob.glob(src_dir+'*.sv')
-    print("creating sort files sym links for: {}".format(sv_files))
+    # sv_files = glob.glob(src_dir+'*.sv')
+    # print("creating sort files sym links for: {}".format(sv_files))
     # print('ln -s {}* {}'.format(src_dir, synth_src_dir))
-    res = subprocess.run('ln -s {}* {}'.format(src_dir, synth_src_dir), shell=True, stdout=PIPE, stderr=PIPE)
+    # res = subprocess.run('ln -s {}* {}'.format(src_dir, synth_src_dir), shell=True, stdout=PIPE, stderr=PIPE)
+
+    res = subprocess.run('cp {}vcs.args {}/'.format(src_dir, synth_dir), shell=True, stdout=PIPE, stderr=PIPE)
 
     print('Creating make file')
     makefile = open('{}Makefile'.format(synth_dir), 'w')
-    makefile.write('all:\n\tvcs -sverilog -debug_all -full64 -top tb ./src/*.sv ./src/tb/testbench.sv')
+    makefile.write('rising:\n\tvcs -sverilog -debug_all -full64 -top tb -f vcs.args +define+RISING\nfalling:\n\tvcs -sverilog -debug_all -full64 -top tb -f vcs.args +define+FALLING\npulse:\n\tvcs -sverilog -debug_all -full64 -top tb -f vcs.args +define+PULSE')
     makefile.close()
     
 
