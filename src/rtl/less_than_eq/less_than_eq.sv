@@ -11,12 +11,17 @@ module less_than_eq
 );
 `ifdef RISING
 //edge transition base, rising
+logic c, d;
+assign c = (~a) & b;
+sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+assign q = a & (~d);
+
 
 `elsif FALLING
-//edge transition base, falling
+//edge transition base, falling, JES_STC_GRL_2_12_20.pdf
 
     logic c, d;
-    assign c = ~((~a) & b);
+    assign c = ~((a) & (~b));
     sr_latch sr(.s(~c), .r(rst), .q(d), .q_b());
     assign q = q | a;
 `else
