@@ -11,10 +11,10 @@ module less_than_eq
 );
 `ifdef RISING
 //edge transition base, rising
-logic c, d;
-assign c = (~a) & b;
-sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
-assign q = a & (~d);
+  logic c, d;
+  assign c = (~a) & b;
+  sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+  assign q = a & (~d);
 
 
 `elsif FALLING

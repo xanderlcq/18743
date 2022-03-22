@@ -21,6 +21,7 @@ module wta_1
     assign inhibit = spiked;
     
     genvar i;
+    
     generate
         for(i = 0; i < NUM_INPUTS; i++) begin
             less_than_eq Lteq(.a(input_spikes[i]), .b(inhibit), .rst(rst), .q(lteq_outputs[i]));
