@@ -21,9 +21,9 @@ module less_than_eq
 //edge transition base, falling, JES_STC_GRL_2_12_20.pdf
 
     logic c, d;
-    assign c = ~((a) & (~b));
-    sr_latch sr(.s(~c), .r(rst), .q(d), .q_b());
-    assign q = q | a;
+    assign c = ((a) & (~b));
+    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    assign q = d | a;
 `else
 //pulse width base
 

@@ -21,14 +21,14 @@ module wta_1
     assign inhibit = spiked;
     
     genvar i;
-    
     generate
         for(i = 0; i < NUM_INPUTS; i++) begin
             less_than_eq Lteq(.a(input_spikes[i]), .b(inhibit), .rst(rst), .q(lteq_outputs[i]));
             if(i > 0) begin
                 logic blocker;
-                assign blocker = |(lteq_outputs_b[i-1:0]);
+                assign blocker = |lteq_outputs_b[ (i-1) : 0];
                 assign output_spikes[i] = lteq_outputs[i] | blocker;
+
             end else begin
                 assign output_spikes[0] = lteq_outputs[0];
             end

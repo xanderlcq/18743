@@ -24,6 +24,7 @@ module tb();
         endtask
 
         initial begin
+            $display("Testing Rising Edge of wta1");
             reset();
             input_spikes[0] <= 1'b1;
             @(posedge clk);
@@ -44,7 +45,7 @@ module tb();
 
             reset();
             @(posedge clk);
-            input_spikes[0] <= 1'b1;
+            input_spikes[1] <= 1'b1;
             input_spikes[4] <= 1'b1;
             input_spikes[5] <= 1'b1;
             @(posedge clk);
@@ -60,6 +61,55 @@ module tb();
 
     `endif
 
+    `ifdef FALLING
+        task reset();
+            rst = 1;
+            input_spikes = '1;
+            @(posedge clk);
+            @(posedge clk);
+            @(posedge clk);
+            rst = 0;
+            @(posedge clk);
+            @(posedge clk);
+        endtask
+
+        initial begin
+            $display("Testing Falling Edge of wta1");
+            reset();
+            input_spikes[0] <= 1'b0;
+            @(posedge clk);
+            @(posedge clk);
+
+            reset();
+            @(posedge clk);
+            input_spikes[3] <= 1'b0;
+            @(posedge clk);
+            input_spikes[7] <= 1'b0;
+            @(posedge clk);
+            input_spikes[6] <= 1'b0;
+            @(posedge clk);
+            @(posedge clk);
+            input_spikes[2] <= 1'b0;
+            @(posedge clk);
+            @(posedge clk);
+
+            reset();
+            @(posedge clk);
+            input_spikes[1] <= 1'b0;
+            input_spikes[4] <= 1'b0;
+            input_spikes[5] <= 1'b0;
+            @(posedge clk);
+            input_spikes[6] <= 1'b0;
+            @(posedge clk);
+            @(posedge clk);
+            input_spikes[2] <= 1'b0;
+            @(posedge clk);
+            @(posedge clk);
+            $finish;
+        end
+
+
+    `endif
 
     initial begin
         clk = 0;
