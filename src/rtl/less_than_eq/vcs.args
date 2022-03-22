@@ -1,0 +1,3 @@
+$NEURAL_HOME/src/rtl/lib/sr_latch.sv
+$NEURAL_HOME/src/rtl/less_than_eq/less_than_eq.sv
++define+FALLING
