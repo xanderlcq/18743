@@ -1,6 +1,6 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Tue Mar 22 16:30:10 2022
+# Saved on Tue Mar 22 21:04:21 2022
 # Designs open: 1
 #   Sim: /afs/ece.cmu.edu/usr/acli/Private/18743/SIM/converters/simv
 # Toplevel windows open: 2
@@ -59,7 +59,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 536} {child_wave_right 1306} {child_wave_colname 266} {child_wave_colvalue 266} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 536} {child_wave_right 1306} {child_wave_colname 266} {child_wave_colvalue 265} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -89,11 +89,11 @@ gui_set_time_units 1s
 gui_load_child_values {tb.DUT}
 
 
-set _session_group_2 Group1
-gui_sg_create "$_session_group_2"
-set Group1 "$_session_group_2"
+set _session_group_1 Group1
+gui_sg_create "$_session_group_1"
+set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_2" { tb.DUT.rst tb.DUT.gclk tb.DUT.aclk tb.DUT.edge_input tb.DUT.pulse_output tb.DUT.counter tb.DUT.counter_next tb.DUT.GAMMA_CYCLE_WIDTH tb.DUT.PULSE_WIDTH }
+gui_sg_addsignal -group "$_session_group_1" { tb.DUT.grst tb.DUT.gclk tb.DUT.aclk tb.DUT.edge_input tb.DUT.pulse_output tb.DUT.counter tb.DUT.counter_next tb.DUT.GAMMA_CYCLE_WIDTH tb.DUT.PULSE_WIDTH }
 gui_set_radix -radix {decimal} -signals {Sim:tb.DUT.GAMMA_CYCLE_WIDTH}
 gui_set_radix -radix {twosComplement} -signals {Sim:tb.DUT.GAMMA_CYCLE_WIDTH}
 gui_set_radix -radix {decimal} -signals {Sim:tb.DUT.PULSE_WIDTH}
@@ -136,7 +136,7 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {tb.DUT}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb.DUT.pulse_output tb.DUT.PULSE_WIDTH tb.DUT.gclk tb.DUT.counter_next tb.DUT.edge_input tb.DUT.GAMMA_CYCLE_WIDTH tb.DUT.counter tb.DUT.aclk tb.DUT.rst }}
+catch { gui_list_select -id ${Data.1} {tb.DUT.grst tb.DUT.gclk tb.DUT.aclk tb.DUT.edge_input tb.DUT.pulse_output tb.DUT.counter tb.DUT.counter_next tb.DUT.GAMMA_CYCLE_WIDTH tb.DUT.PULSE_WIDTH }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -145,7 +145,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active tb /afs/ece.cmu.edu/usr/acli/Private/18743/src/rtl/converters/tb/testbench.sv
+gui_open_source -id ${Source.1}  -replace -active tb /afs/ece.cmu.edu/usr/acli/Private/18743//src/rtl/converters/tb/testbench.sv
 gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 
@@ -157,7 +157,7 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 428
+gui_wv_zoom_timerange -id ${Wave.1} 331 759
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
 gui_list_select -id ${Wave.1} {tb.DUT.pulse_output }
 gui_seek_criteria -id ${Wave.1} {Any Edge}

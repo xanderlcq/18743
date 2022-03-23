@@ -1,18 +1,17 @@
 module tb();
-logic rst, gclk, aclk, edge_input, pulse_output;
+logic grst, gclk, aclk, edge_input, pulse_output;
 edge2pulse DUT(.*);
 
 
 `ifdef RISING
     initial begin
         aclk = 0;
-        rst <= 1'b1;
+        grst <= 1'b1;
+        @(posedge aclk);
         edge_input <= 1'b0;
         @(posedge aclk);
-        @(posedge aclk);
-        rst <= 1'b0;
-
-
+        grst <= 1'b0;
+        
         @(posedge aclk);
         @(posedge aclk);
         @(posedge aclk);
@@ -33,6 +32,56 @@ edge2pulse DUT(.*);
         edge_input <= 1'b1;
         @(posedge aclk);
         edge_input <= 1'b0;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
         @(posedge aclk);
         @(posedge aclk);
         @(posedge aclk);
@@ -44,5 +93,91 @@ edge2pulse DUT(.*);
     end
 `endif
 
+`ifdef FALLING
+    initial begin
+        aclk = 0;
+        grst <= 1'b1;
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        edge_input <= 1'b0;
+        @(posedge aclk);
+        edge_input <= 1'b1;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        grst <= 1'b1;
+        @(posedge aclk);
+        grst <= 1'b0;
+        @(posedge aclk);
+        @(posedge aclk);
+        @(posedge aclk);
+        $finish;
+    end
+
+    always begin
+        #5 aclk = ~aclk;
+    end
+`endif
 
 endmodule:tb
