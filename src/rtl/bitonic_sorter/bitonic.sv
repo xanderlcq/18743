@@ -17,7 +17,7 @@ module bitonic_sort_32 (sorted_out, raw_in);
 
     parameter N = 5;
     parameter INPUT_SIZE = 1<<N;
-    genvar i, j, k;
+    genvar i, j, k, r, b, s;
 
     input [0:INPUT_SIZE-1] raw_in;
     output [0:INPUT_SIZE-1] sorted_out;
@@ -31,7 +31,7 @@ module bitonic_sort_32 (sorted_out, raw_in);
     logic [0:INPUT_SIZE/2-1] og_order;
     assign sorted_out = cur_step[N];
 
-    genvar r;
+    // genvar r;
     generate
         for(r = 0; r < INPUT_SIZE/2; r = r + 1) begin
             assign cur_step[0][r+INPUT_SIZE/2] = og_order[INPUT_SIZE/2 - r - 1];
@@ -44,7 +44,7 @@ module bitonic_sort_32 (sorted_out, raw_in);
 
 
     /* WRITE YOUR CODE FOR THE LAST STAGE */
-    genvar i, b, s, s_end;
+    // genvar i, b, s, s_end;
     generate 
         
         for(i = 0; i < N; i = i + 1) begin : outter_loop
@@ -67,7 +67,7 @@ module bitonic_sort_16 (sorted_out, raw_in);
 
     parameter N = 4;
     parameter INPUT_SIZE = 1<<N;
-    genvar i, j, k;
+    genvar i, j, k, r, b, s;
 
     input [0:INPUT_SIZE-1] raw_in;
     output [0:INPUT_SIZE-1] sorted_out;
@@ -80,7 +80,7 @@ module bitonic_sort_16 (sorted_out, raw_in);
     logic [0:INPUT_SIZE/2-1] og_order;
     assign sorted_out = cur_step[N];
 
-    genvar r;
+    // genvar r;
     generate
         for(r = 0; r < INPUT_SIZE/2; r = r + 1) begin
             assign cur_step[0][r+INPUT_SIZE/2] = og_order[INPUT_SIZE/2 - r - 1];
@@ -93,7 +93,7 @@ module bitonic_sort_16 (sorted_out, raw_in);
 
 
     /* WRITE YOUR CODE FOR THE LAST STAGE */
-    genvar i, b, s, s_end;
+    // genvar i, b, s, s_end;
     generate 
         
         for(i = 0; i < N; i = i + 1) begin : outter_loop
@@ -115,7 +115,7 @@ module bitonic_sort_8 (sorted_out, raw_in);
 
     parameter N = 3;
     parameter INPUT_SIZE = 1<<N;
-    genvar i, j, k;
+    genvar i, j, k, r, b, s;
 
     input [0:INPUT_SIZE-1] raw_in;
     output [0:INPUT_SIZE-1] sorted_out;
@@ -128,7 +128,7 @@ module bitonic_sort_8 (sorted_out, raw_in);
     logic [0:INPUT_SIZE/2-1] og_order;
     assign sorted_out = cur_step[N];
 
-    genvar r;
+    // genvar r;
     generate
         for(r = 0; r < INPUT_SIZE/2; r = r + 1) begin
             assign cur_step[0][r+INPUT_SIZE/2] = og_order[INPUT_SIZE/2 - r - 1];
@@ -141,7 +141,7 @@ module bitonic_sort_8 (sorted_out, raw_in);
 
 
     /* WRITE YOUR CODE FOR THE LAST STAGE */
-    genvar i, b, s, s_end;
+    // genvar i, b, s, s_end;
     generate 
         
         for(i = 0; i < N; i = i + 1) begin : outter_loop
@@ -163,8 +163,7 @@ module bitonic_sort_4 (sorted_out, raw_in);
 
     parameter N = 2;
     parameter INPUT_SIZE = 1<<N;
-    genvar i, j, k;
-
+    genvar i, j, k, r, b, s;
     input [0:INPUT_SIZE-1] raw_in;
     output [0:INPUT_SIZE-1] sorted_out;
 
@@ -176,7 +175,7 @@ module bitonic_sort_4 (sorted_out, raw_in);
     logic [0:INPUT_SIZE/2-1] og_order;
     assign sorted_out = cur_step[N];
 
-    genvar r;
+    // genvar r;
     generate
         for(r = 0; r < INPUT_SIZE/2; r = r + 1) begin
             assign cur_step[0][r+INPUT_SIZE/2] = og_order[INPUT_SIZE/2 - r - 1];
@@ -189,7 +188,7 @@ module bitonic_sort_4 (sorted_out, raw_in);
 
 
     /* WRITE YOUR CODE FOR THE LAST STAGE */
-    genvar i, b, s, s_end;
+    // genvar i, b, s, s_end;
     generate 
         
         for(i = 0; i < N; i = i + 1) begin : outter_loop

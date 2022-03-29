@@ -11,7 +11,7 @@ puts "Hostname : [info hostname]"
 ## Preset global variables and attributes
 ##############################################################################
 
-set DESIGN bitonic_sort_32
+set DESIGN TOP_MODULE_NAME
 set GEN_EFF high
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 

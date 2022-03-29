@@ -7,9 +7,9 @@ import glob
 import sys
 
 
-synth_no_clk_tcl = './tcl/no_clk_sample.tcl'
-synth_clk_tcl = './tcl/clk_sample.tcl'
-clk_setup_tcl = './tcl/clk.tcl'
+synth_no_clk_tcl = './tcl/new_run.tcl'
+synth_clk_tcl = './tcl/new_run.tcl'
+# clk_setup_tcl = './tcl/clk.tcl'
 
 def gen_sim(top_module_name, src_dir):
     src_dir += '/'
@@ -86,20 +86,20 @@ def gen_synth(top_module_name, src_dir, clk=False):
         output_tcl.write(tcl_content)
         output_tcl.close()
 
-        print('Creating clk.tcl')
-        sample_tcl = open(clk_setup_tcl)
-        tcl_content = sample_tcl.read()
-        sample_tcl.close()
+        # print('Creating clk.tcl')
+        # sample_tcl = open(clk_setup_tcl)
+        # tcl_content = sample_tcl.read()
+        # sample_tcl.close()
 
-        tcl_content = tcl_content.replace('TOP_MODULE_NAME', top_module_name)
+        # tcl_content = tcl_content.replace('TOP_MODULE_NAME', top_module_name)
 
-        output_tcl = open(clk_tcl, 'w')
-        output_tcl.write(tcl_content)
-        output_tcl.close()
+        # output_tcl = open(clk_tcl, 'w')
+        # output_tcl.write(tcl_content)
+        # output_tcl.close()
 
     print('Creating make file')
     makefile = open('{}Makefile'.format(synth_dir), 'w')
-    makefile.write('all:\n\tdc_shell -f run.tcl')
+    makefile.write('all:\n\tgenus -f run.tcl')
     makefile.close()
     print("Don't forget to source 18743_setup.bash")
     print("Please run:\ncd {}; make".format(synth_dir))
