@@ -11,7 +11,7 @@ puts "Hostname : [info hostname]"
 ## Preset global variables and attributes
 ##############################################################################
 
-set DESIGN snl_top_wrapper
+set DESIGN kwta_no_tie_break
 set GEN_EFF high
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
