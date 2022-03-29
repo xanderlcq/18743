@@ -8,8 +8,8 @@ import sys
 
 
 synth_no_clk_tcl = './tcl/new_run.tcl'
-synth_clk_tcl = './tcl/new_run.tcl'
-# clk_setup_tcl = './tcl/clk.tcl'
+synth_clk_tcl = './tcl/new_run_clk.tcl'
+chip_sdc = './tcl/chip.sdc'
 
 def gen_sim(top_module_name, src_dir):
     src_dir += '/'
@@ -60,7 +60,7 @@ def gen_synth(top_module_name, src_dir, clk=False):
     #make tcl files
 
     run_tcl = synth_dir+'run.tcl'
-    clk_tcl = synth_dir+'clk.tcl'
+    target_sdc_file = synth_dir+'chip.sdc'
     if clk == False:
         #combinational module
         print('Creating combinational run.tcl')
@@ -86,16 +86,14 @@ def gen_synth(top_module_name, src_dir, clk=False):
         output_tcl.write(tcl_content)
         output_tcl.close()
 
-        # print('Creating clk.tcl')
-        # sample_tcl = open(clk_setup_tcl)
-        # tcl_content = sample_tcl.read()
-        # sample_tcl.close()
+        print('Creating chip.sdc clock constraints')
+        sample_sdc = open(chip_sdc)
+        sdc = sample_sdc.read()
+        sample_sdc.close()
 
-        # tcl_content = tcl_content.replace('TOP_MODULE_NAME', top_module_name)
-
-        # output_tcl = open(clk_tcl, 'w')
-        # output_tcl.write(tcl_content)
-        # output_tcl.close()
+        output_sdc = open(target_sdc_file, 'w')
+        output_sdc.write(sdc)
+        output_sdc.close()
 
     print('Creating make file')
     makefile = open('{}Makefile'.format(synth_dir), 'w')
@@ -112,8 +110,7 @@ if __name__ == "__main__":
         print('Invalid args')
         print('Usage: python3 gen.py [SYNTH|SIM] [top_module_name] [dir name within src/rtl] [comb|seq]')
         exit(0)
-    include_clk = sys.argv[3] == 'seq'
-    
+    include_clk = sys.argv[4] == 'seq'
     if sys.argv[1] == 'SYNTH':
         gen_synth(sys.argv[2], './src/rtl/'+sys.argv[3], include_clk)
     else:
