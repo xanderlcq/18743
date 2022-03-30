@@ -4,12 +4,12 @@ module tb();
 
 `ifdef RISING
 //edge transition base, rising
-    logic set, a, b, q;
-    exclusive_max DUT(.set(set), .a(a), .b(b), .q(q));
+    logic rst, a, b, q;
+    exclusive_max DUT(.rst(rst), .a(a), .b(b), .q(q));
     
     task reset();
-       a = 0; b = 0; set = 1;
-       #1; set = 0;
+       a = 0; b = 0; rst = 1;
+       #1; rst = 0;
     endtask
 
     initial begin
@@ -39,12 +39,12 @@ module tb();
 
 `elsif FALLING
 //edge transition base, falling
-    logic set, a, b, q;
-    exclusive_max DUT(.set(set), .a(a), .b(b), .q(q));
+    logic rst, a, b, q;
+    exclusive_max DUT(.rst(rst), .a(a), .b(b), .q(q));
     
     task reset();
-       a = 1; b = 1; set = 1;
-       #1; set = 0;
+       a = 1; b = 1; rst = 1;
+       #1; rst = 0;
     endtask
 
     initial begin
@@ -74,7 +74,7 @@ module tb();
 
 `else
 //pulse width base
-    logic aclk, grst, set, a, b, q;
+    logic aclk, grst, rst, a, b, q;
     exclusive_max DUT(.*);
 
     task reset();

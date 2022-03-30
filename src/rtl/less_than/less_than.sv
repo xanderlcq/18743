@@ -6,7 +6,7 @@ module less_than
 (
     input logic aclk,
     input logic grst,
-    input logic set,
+    input logic rst,
     input logic a,
     input logic b,
     output logic q
@@ -15,14 +15,14 @@ module less_than
 //edge transition base, rising
     logic c, d;
     assign c = (a & (~b));
-    sr_latch sr(.s(set), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
     assign q = (~d | c);
 
 `elsif FALLING
 //edge transition base, falling, JES_STC_GRL_2_12_20.pdf
     logic c, d;
     assign c = ((~a) & b);
-    sr_latch sr(.s(set), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
     assign q = (d & ~c);
 
 `else
@@ -31,7 +31,7 @@ module less_than
 
     logic c, d;
     assign c = (a & (~b));
-    sr_latch sr(.s(set), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
     assign temp_out = (~d | c);
     
     assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));

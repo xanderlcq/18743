@@ -6,7 +6,7 @@ module exclusive_max
 (
     input logic aclk,
     input logic grst,
-    input logic set,
+    input logic rst,
     input logic a,
     input logic b,
     output logic q
@@ -21,7 +21,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = ((~a) | (~b));
 
-    sr_latch sr(.s(set), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign q = ~(h | f);
@@ -36,7 +36,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = a | b;
 
-    sr_latch sr(.s(set), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign q = h | f;
@@ -52,7 +52,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = ((~a) | (~b));
 
-    sr_latch sr(.s(set), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign temp_out = ~(h | f);

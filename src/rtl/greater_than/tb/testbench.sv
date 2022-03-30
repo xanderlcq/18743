@@ -4,11 +4,11 @@ module tb();
 
 `ifdef RISING
 // rising edge transition base
-    logic a, b, q, set ;
-    greater_than DUT(.set(set), .a(a), .b(b), .q(q));
+    logic a, b, q, rst ;
+    greater_than DUT(.rst(rst), .a(a), .b(b), .q(q));
     task reset();
-       a = 0; b = 0; set = 1;
-       #1 set = 0;
+       a = 0; b = 0; rst = 1;
+       #1 rst = 0;
     endtask
 
     initial begin
@@ -38,11 +38,11 @@ module tb();
 
 `elsif FALLING
 // falling edge transition base
-    logic a, b, q, set;
-    greater_than DUT(.set(set), .a(a), .b(b), .q(q));
+    logic a, b, q, rst;
+    greater_than DUT(.rst(rst), .a(a), .b(b), .q(q));
     task reset();
-       a = 1; b = 1; set = 1;
-       #1 set = 0;
+       a = 1; b = 1; rst = 1;
+       #1 rst = 0;
     endtask
 
     initial begin
