@@ -13,20 +13,18 @@ module greater_than
 );
 `ifdef RISING
 //edge transition base, rising
-
     logic c, d;
-    assign c = ((~a) & (b));
+    assign c = ((~a) & b);
     sr_latch sr(.s(set), .r(c), .q(d), .q_b());
-    assign q = ~(d & a);
-
+    assign q = (~d & a);
 
 `elsif FALLING
 //edge transition base, falling, JES_STC_GRL_2_12_20.pdf
-
     logic c, d;
-    assign c = ((a) & (~b));
+    assign c = (a & (~b));
     sr_latch sr(.s(set), .r(c), .q(d), .q_b());
-    assign q = d & a;
+    assign q = d | a;
+
 `else
 //pulse width base
     logic [$clog2(PULSE_WIDTH):0] counter, counter_next, temp_out;

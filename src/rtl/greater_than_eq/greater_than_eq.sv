@@ -17,7 +17,7 @@ module greater_than_eq
     logic c, d;
     assign c = (a & (~b));
     sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
-    assign q = ~(d | a);
+    assign q = ~(d | ~a);
 
 `elsif FALLING
 // falling edge transition base (JES_STC_GRL_2_12_20.pdf)
