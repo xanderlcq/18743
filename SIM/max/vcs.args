@@ -1,3 +1,2 @@
 $NEURAL_HOME/src/rtl/max/max.sv
 $NEURAL_HOME/src/rtl/max/tb/testbench.sv
-+define+FALLING

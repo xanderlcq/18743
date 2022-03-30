@@ -1,4 +1,3 @@
 $NEURAL_HOME/src/rtl/lib/sr_latch.sv
 $NEURAL_HOME/src/rtl/equal/equal.sv
 $NEURAL_HOME/src/rtl/equal/tb/testbench.sv
-+define+FALLING
