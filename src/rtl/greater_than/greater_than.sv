@@ -30,9 +30,9 @@ module greater_than
     logic [$clog2(PULSE_WIDTH):0] counter, counter_next, temp_out;
 
     logic c, d;
-    assign c = ((~a) & (b));
+    assign c = ((~a) & b);
     sr_latch sr(.s(set), .r(c), .q(d), .q_b());
-    assign temp_out = ~(d & a);
+    assign temp_out = (~d & a);
     
     assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
 

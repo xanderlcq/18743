@@ -32,7 +32,7 @@ module less_than
     logic c, d;
     assign c = (a & (~b));
     sr_latch sr(.s(set), .r(c), .q(d), .q_b());
-    assign temp_out = ~(d & c);
+    assign temp_out = (~d | c);
     
     assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
 
