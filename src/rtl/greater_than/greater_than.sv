@@ -1,6 +1,6 @@
 `default_nettype none
 
-module less_than
+module greater_than
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8)
 (
@@ -56,4 +56,4 @@ module less_than
 
 `endif
 
-endmodule: less_than
+endmodule: greater_than
