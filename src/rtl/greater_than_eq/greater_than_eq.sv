@@ -36,7 +36,7 @@ module greater_than_eq
     sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
     assign temp_out = ~(d | ~a);
     
-    assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
+    assign q = (temp_out && (counter != PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
 
     always_ff @( posedge aclk, posedge grst) begin
         if(grst) begin

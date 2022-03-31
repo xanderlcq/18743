@@ -85,7 +85,7 @@ module tb();
         grst = 1; rst = 1;
         @(posedge aclk);
         grst = 0; rst = 0;
-        repeat (GAMMA_CYCLE_WIDTH - elapsed_cycles) @(posedge aclk);
+        repeat (GAMMA_CYCLE_WIDTH - elapsed_cycles - 1) @(posedge aclk);
     endtask
 
     initial begin

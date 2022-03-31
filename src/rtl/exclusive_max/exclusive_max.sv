@@ -56,12 +56,12 @@ module exclusive_max
 
     assign h = g & e;
     assign temp_out = ~(h | f);
-    assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
+    assign q = (temp_out && (counter != PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
 
     always_ff @( posedge aclk, posedge grst) begin
         if(grst) begin
             counter <= '0;
-        end else if (y) begin
+        end else if (q) begin
             counter <= counter_next;
         end
     end
