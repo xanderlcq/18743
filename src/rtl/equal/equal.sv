@@ -39,7 +39,7 @@ module equal
     
     assign c = ((~a) ^ (~b));
 	assign temp_out = ~((~a) | c | d);
-    assign y = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
+    assign y = (temp_out && (counter != PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
 
     always_ff @( posedge aclk, posedge grst) begin
         if(grst) begin
