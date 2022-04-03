@@ -27,28 +27,32 @@ module less_than
 
 `else
 //pulse width base
-    logic [$clog2(PULSE_WIDTH):0] counter, counter_next, temp_out;
 
-    logic c, d;
-    assign c = (a & (~b));
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
-    assign temp_out = (~d | c);
+    logic temp_out, ouptut_latch_set, a_select, prev_temp_out, prev_a;
     
-    assign q = (temp_out && (counter != (PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
-
-    always_ff @( posedge aclk, posedge grst) begin
-        if(grst) begin
-            counter <= '0;
-        end else if (q) begin
-            counter <= counter_next;
+    logic c, d;
+    assign c = a & (~b);
+    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+    assign temp_out = a & (~d);
+    assign q = (a_select & a);
+    
+    always_ff @(posedge aclk, posedge grst) begin
+        if (grst) begin
+            prev_a <= 0;
+            prev_temp_out <= 0;
+        end else begin
+            prev_a <= a;
+            prev_temp_out <= temp_out;
         end
     end
 
-    always_comb begin
-        if(counter == PULSE_WIDTH) begin
-            counter_next = counter;
+    sr_latch sr1(.s(ouptut_latch_set), .r(rst), .q(a_select), .q_b());
+
+    always_comb begin        
+        if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin
+            ouptut_latch_set = 1;
         end else begin
-            counter_next = counter + 1'b1;
+            ouptut_latch_set = 0;
         end
     end
 
