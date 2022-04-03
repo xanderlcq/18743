@@ -1,2 +1,2 @@
 all:
-	dc_shell -f run.tcl
+	genus -f run.tcl

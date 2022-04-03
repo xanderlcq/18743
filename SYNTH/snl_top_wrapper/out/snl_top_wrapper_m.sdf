@@ -1,0 +1,4609 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "snl_top_wrapper")
+  (DATE        "Tue Mar 29 15:08:02 EDT 2022")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "18.14-s037_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::0.7)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::25.0)
+  (TIMESCALE   1ns)
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.Lower.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.Lower.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.Upper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.Upper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.Lower.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.Lower.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.Upper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.Upper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.Lower.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.Lower.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.Upper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.Upper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.Lower.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.Lower.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.Upper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.Upper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_4_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_4_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_5_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_5_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_6_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_6_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_7_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_7_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_2_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_2_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_3_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_3_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_8_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_8_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_9_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_9_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_10_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_10_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_11_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_11_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_4_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_4_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_5_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_5_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_8_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_8_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_9_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_9_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_12_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_12_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_13_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_13_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_1_\.s_loop_2_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_2_\.s_loop_4_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_2_\.s_loop_4_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_3_\.s_loop_6_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_3_\.s_loop_6_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_4_\.s_loop_8_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_4_\.s_loop_8_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_5_\.s_loop_10_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_5_\.s_loop_10_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_6_\.s_loop_12_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_6_\.s_loop_12_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_7_\.s_loop_14_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Lower.outter_loop_3_\.inner_loop_7_\.s_loop_14_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.Lower.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.Lower.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.Upper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.Upper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.Lower.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.Lower.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.Upper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.Upper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Lower.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.Lower.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.Lower.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.Upper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.Upper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Lower.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.Lower.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.Lower.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.Upper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.Upper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_2_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_4_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_5_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_2_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_4_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_6_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_4_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_4_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_5_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_5_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_6_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_6_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_7_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_0_\.inner_loop_0_\.s_loop_7_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_2_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_2_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_3_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_0_\.s_loop_3_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_8_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_8_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_9_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_9_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_10_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_10_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_11_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_1_\.inner_loop_1_\.s_loop_11_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_0_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_1_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_0_\.s_loop_1_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_4_\.swapper.g16__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_4_\.swapper.g17__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_5_\.swapper.g16__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_1_\.s_loop_5_\.swapper.g17__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_8_\.swapper.g16__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_8_\.swapper.g17__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_9_\.swapper.g16__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.022) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_2_\.s_loop_9_\.swapper.g17__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.024))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_12_\.swapper.g16__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_12_\.swapper.g17__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_13_\.swapper.g16__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.022))
+          (IOPATH B Y (::0.022) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_2_\.inner_loop_3_\.s_loop_13_\.swapper.g17__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.021) (::0.025))
+          (IOPATH B Y (::0.020) (::0.025))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_0_\.s_loop_0_\.swapper.g16__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_0_\.s_loop_0_\.swapper.g17__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_1_\.s_loop_2_\.swapper.g16__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_1_\.s_loop_2_\.swapper.g17__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_2_\.s_loop_4_\.swapper.g16__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_2_\.s_loop_4_\.swapper.g17__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_3_\.s_loop_6_\.swapper.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_3_\.s_loop_6_\.swapper.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_4_\.s_loop_8_\.swapper.g16__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_4_\.s_loop_8_\.swapper.g17__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_5_\.s_loop_10_\.swapper.g16__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_5_\.s_loop_10_\.swapper.g17__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_6_\.s_loop_12_\.swapper.g16__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.020))
+          (IOPATH B Y (::0.020) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_6_\.s_loop_12_\.swapper.g17__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.023))
+          (IOPATH B Y (::0.019) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_7_\.s_loop_14_\.swapper.g16__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.020) (::0.021))
+          (IOPATH B Y (::0.020) (::0.020))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.Upper.outter_loop_3_\.inner_loop_7_\.s_loop_14_\.swapper.g17__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.024))
+          (IOPATH B Y (::0.018) (::0.023))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_0_\.swapper.g14__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_1_\.swapper.g14__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_2_\.swapper.g14__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_3_\.swapper.g14__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_4_\.swapper.g14__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_5_\.swapper.g14__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_6_\.swapper.g14__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_7_\.swapper.g14__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_8_\.swapper.g14__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_9_\.swapper.g14__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_10_\.swapper.g14__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_11_\.swapper.g14__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_12_\.swapper.g14__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_13_\.swapper.g14__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_14_\.swapper.g14__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_0_\.inner_loop_0_\.s_loop_15_\.swapper.g14__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_0_\.swapper.g5__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_1_\.swapper.g5__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_2_\.swapper.g5__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_3_\.swapper.g5__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_4_\.swapper.g5__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_5_\.swapper.g5__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_6_\.swapper.g5__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_1_\.inner_loop_0_\.s_loop_7_\.swapper.g5__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_2_\.inner_loop_1_\.s_loop_8_\.swapper.g14__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_2_\.inner_loop_1_\.s_loop_9_\.swapper.g14__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_2_\.inner_loop_1_\.s_loop_10_\.swapper.g14__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_2_\.inner_loop_1_\.s_loop_11_\.swapper.g14__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.020))
+          (IOPATH B Y (::0.019) (::0.019))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_3_\.inner_loop_2_\.s_loop_8_\.swapper.g5__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_3_\.inner_loop_2_\.s_loop_9_\.swapper.g5__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.019) (::0.023))
+          (IOPATH B Y (::0.018) (::0.022))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AND2x2_ASAP7_75t_R")
+     (INSTANCE nsg.up.outter_loop_4_\.inner_loop_5_\.s_loop_10_\.swapper.g14__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.018) (::0.019))
+          (IOPATH B Y (::0.018) (::0.018))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g1__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g2__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g3__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g4__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g5__2250)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g6__6083)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g7__2703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g8__5795)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g9__7344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g10__1840)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g11__5019)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g12__1857)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g13__9906)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g14__8780)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g15__4296)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g16__3772)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g17__1474)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g18__4547)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g19__9682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g20__2683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g21__1309)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g22__6877)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g23__2900)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g24__2391)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g25__7675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g26__7118)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g27__8757)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g28__1786)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g29__5953)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g30__5703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g31__7114)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2x2_ASAP7_75t_R")
+     (INSTANCE nsg.g32__5266)
+     (DELAY
+        (ABSOLUTE
+          (PORT A (::0.000))
+          (PORT B (::0.000))
+          (IOPATH A Y (::0.017) (::0.022))
+          (IOPATH B Y (::0.016) (::0.021))
+        )
+     )
+  )
+)
