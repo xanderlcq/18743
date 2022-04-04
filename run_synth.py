@@ -40,13 +40,20 @@ def run_program(top_module_name, directory, synth_type, macro):
     cwd = os.getcwd()
     os.chdir(dest_dir)
     subprocess.run(['make'])
+
+    files = arr = os.listdir('./')
+    for file in files:
+        if (file != "rep"):
+            subprocess.run(['rm', '-rf', file])
     os.chdir(cwd)
+
 
 
 
 modules = [
         # 'equal', 'not_equal', 'exclusive_max', 'exclusive_min', 'max', 
-        'min', 'greater_than', 'lesser_than', 'greater_than_eq', 'lesser_than_eq',
+        #'min', 'greater_than', 'lesser_than', 'greater_than_eq', 
+        'less_than_eq'
         ]
 
 macros = ['RISING', 'FALLING', 'PULSE']
@@ -57,3 +64,4 @@ for module in modules:
             run_program(module, module, 'seq', macro)
         else:
             run_program(module, module, 'comb', macro)
+
