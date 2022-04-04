@@ -6,7 +6,9 @@ if {[file exists /proc/cpuinfo]} {
 }
 
 puts "Hostname : [info hostname]"
-
+set_db / .hdl_error_on_blackbox true
+set_db / .hdl_error_on_latch true
+set_db / .fail_on_error_mesg true
 ##############################################################################
 ## Preset global variables and attributes
 ##############################################################################
