@@ -42,18 +42,17 @@ def run_program(top_module_name, directory, synth_type, macro):
     subprocess.run(['make'])
 
     files = arr = os.listdir('./')
+    # Delete unnecessary Files
     for file in files:
-        if (file != "rep"):
+        if (file != "rep" or file != "src" or file != "Makefile" or file != "run.tcl"):
             subprocess.run(['rm', '-rf', file])
     os.chdir(cwd)
 
 
 
-
 modules = [
-        # 'equal', 'not_equal', 'exclusive_max', 'exclusive_min', 'max', 
-        'min', 'greater_than', 'less_than', 'greater_than_eq'
-        'less_than_eq'
+        'equal', 'not_equal', 'exclusive_max', 'exclusive_min', 'max'
+        'min', 'greater_than', 'lesser_than', 'greater_than_eq', 'less_than_eq'
         ]
 
 macros = ['RISING', 'FALLING', 'PULSE']

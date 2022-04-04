@@ -1,0 +1,51 @@
+
+
+Working Directory = /afs/andrew.cmu.edu/usr4/kbhat2/private/18-743/project/SYNTH/exclusive_min_comb_rising
+QoS Summary for exclusive_min
+================================================================================
+Metric                          final          
+================================================================================
+Slack (ps):                       inf
+  R2R (ps):                  no_value
+  I2R (ps):                  no_value
+  R2O (ps):                  no_value
+  I2O (ps):                  no_value
+  CG  (ps):                  no_value
+TNS (ps):                           0
+  R2R (ps):                  no_value
+  I2R (ps):                  no_value
+  R2O (ps):                  no_value
+  I2O (ps):                  no_value
+  CG  (ps):                  no_value
+Failing Paths:                      0
+Cell Area:                          8
+Total Cell Area:                    8
+Leaf Instances:                     7
+Total Instances:                    7
+Utilization (%):                 0.00
+Tot. Net Length (um):        no_value
+Avg. Net Length (um):        no_value
+Route Overflow H (%):        no_value
+Route Overflow V (%):        no_value
+MBCI(%) (bits/gate) :            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value
+  Tot Cong:                  no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:00:28
+Real Runtime (h:m:s):        00:00:12
+CPU  Elapsed (h:m:s):        00:00:32
+Real Elapsed (h:m:s):        00:00:14
+Memory (MB):                  1133.47
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:00:13
+Total Memory (MB):     1141.47
+Executable Version:    20.11-s111_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+
