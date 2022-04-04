@@ -1,2 +1,3 @@
+$NEURAL_HOME/src/rtl/lib/sr_latch.sv
 $NEURAL_HOME/src/rtl/min/min.sv
 $NEURAL_HOME/src/rtl/min/tb/testbench.sv

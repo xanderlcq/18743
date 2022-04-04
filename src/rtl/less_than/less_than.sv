@@ -29,8 +29,8 @@ module less_than
 //pulse width base
 
     logic temp_out, ouptut_latch_set, a_select, prev_temp_out, prev_a;
-    
     logic c, d;
+    
     assign c = a & (~b);
     sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
     assign temp_out = a & (~d);

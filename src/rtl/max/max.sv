@@ -6,6 +6,7 @@ module max
 (
     input logic aclk,
     input logic grst,
+    input logic rst,
     input logic a,
     input logic b,
     output logic y
@@ -20,25 +21,39 @@ module max
 
 `else
 // pulse width base
-    logic temp_out;
-    logic [$clog2(PULSE_WIDTH):0] counter, counter_next;
+
+    logic temp_out, ouptut_latch_set_1, ouptut_latch_set_2;
+    logic a_select, b_select, prev_temp_out, prev_a, prev_b;
     
     assign temp_out = (a & b);
-    assign y = (temp_out && (counter != PULSE_WIDTH)) | ((counter > '0) && (counter < PULSE_WIDTH));
-
-    always_ff @( posedge aclk, posedge grst) begin
-        if(grst) begin
-            counter <= '0;
-        end else if (y) begin
-            counter <= counter_next;
+    assign y = (a_select & a) | (b_select & b);
+    
+    always_ff @(posedge aclk, posedge grst) begin
+        if (grst) begin
+            prev_a <= 0;
+            prev_temp_out <= 0;
+        end else begin
+            prev_a <= a;
+            prev_temp_out <= temp_out;
         end
     end
 
-    always_comb begin
-        if(counter == PULSE_WIDTH) begin
-            counter_next = counter;
+    sr_latch sr1(.s(ouptut_latch_set_1), .r(rst), .q(a_select), .q_b());
+    sr_latch sr2(.s(ouptut_latch_set_2), .r(rst), .q(b_select), .q_b());
+
+    always_comb begin        
+        if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin
+            ouptut_latch_set_1 = 1;
         end else begin
-            counter_next = counter + 1'b1;
+            ouptut_latch_set_1 = 0;
+        end
+    end
+
+    always_comb begin        
+        if ((!prev_b & b) && (!prev_temp_out & temp_out)) begin
+            ouptut_latch_set_2 = 1;
+        end else begin
+            ouptut_latch_set_2 = 0;
         end
     end
 
