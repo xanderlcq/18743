@@ -7,6 +7,10 @@ if {[file exists /proc/cpuinfo]} {
 
 puts "Hostname : [info hostname]"
 
+set_db / .hdl_error_on_blackbox true
+set_db / .hdl_error_on_latch true
+set_db / .fail_on_error_mesg true
+
 ##############################################################################
 ## Preset global variables and attributes
 ##############################################################################
@@ -64,7 +68,7 @@ set all_files [glob ./src/*.sv]
 #  analyze -format sverilog $both 
 # }
 # read_hdl -define P=${P} -define Q=${Q} -define THRESHOLD=${THRESHOLD} -language sv "bitonic.sv"
-read_hdl -language sv ${all_files}
+read_hdl -define RISING -language sv ${all_files}
 
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"

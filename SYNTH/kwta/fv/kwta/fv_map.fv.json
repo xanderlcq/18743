@@ -167,7 +167,7 @@
 "type":"root"},
 
 {"commit_cpf_done":"false",
-"hdl_filelist":"{default -sv {SYNTHESIS} {src/kwta.sv} {./src} {}}",
+"hdl_filelist":"{default -sv {RISING SYNTHESIS} {src/kwta.sv} {./src} {}}",
 "hdl_parameters":"{GAMMA_CYCLE_WIDTH 16 0} {PULSE_WIDTH 8 0} {NUM_INPUTS 16 0} {K 4 0}",
 "hdl_user_name":"kwta",
 "is_retimed":"false",
@@ -296,14 +296,14 @@
 "type":"instance"},
 
 {"index": "1", 
- "date": "Tue Mar 29 16:48:03 EDT 2022",
- "seconds": 1648586883.388933,
+ "date": "Sun Apr 03 20:50:12 EDT 2022",
+ "seconds": 1649033412.794262,
  "netlist": "fv/kwta/fv_map.v.gz", 
  "design_name": "kwta", 
  "synth_workdir": "/afs/ece.cmu.edu/usr/acli/Private/18743/SYNTH/kwta", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 0.33729 
+ "write_verif_file_runtime": 0.34124499999999997 
  }
 ]

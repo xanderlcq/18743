@@ -1,6 +1,6 @@
 ######################################################################
 
-# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Tue Mar 29 16:48:05 EDT 2022
+# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Sun Apr 03 20:50:15 EDT 2022
 
 # This file contains the RC script for design:kwta
 
@@ -18,15 +18,18 @@ set_db -quiet phys_use_invs_extraction true
 set_db -quiet phys_route_time_out 120.0
 set_db -quiet capacitance_per_unit_length_mmmc {}
 set_db -quiet resistance_per_unit_length_mmmc {}
-set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 25.0} {to_generic 2 13 1 26} {first_condense 0 13 0 27} {PBS_Generic_Opt-Post 2 13 2.950175999999999 27.950176} {{PBS_Generic-Postgen HBO Optimizations} 0 13 0.0 27.950176} {PBS_TechMap-Start 0 14 0.0 27.950176} {{PBS_TechMap-Premap HBO Optimizations} 0 14 0.0 27.950176} {second_condense 0 14 0 27} {reify 0 14 0 28} {global_incr_map 0 14 0 28} {{PBS_Techmap-Global Mapping} 1 15 0.8827409999999993 28.832917} {{PBS_TechMap-Datapath Postmap Operations} 0 15 0.0 28.832917} {{PBS_TechMap-Postmap HBO Optimizations} 0 15 0.0 28.832917} {{PBS_TechMap-Postmap Clock Gating} 0 15 0.0 28.832917} {{PBS_TechMap-Postmap Cleanup} 0 15 0.0 28.832917} {PBS_Techmap-Post_MBCI 0 15 0.0 28.832917} {incr_opt 0 15 0 29} }
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 26.0} {to_generic 1 12 1 27} {first_condense 1 13 0 28} {PBS_Generic_Opt-Post 2 13 2.9521610000000003 28.952161} {{PBS_Generic-Postgen HBO Optimizations} 0 13 0.0 28.952161} {PBS_TechMap-Start 0 13 0.0 28.952161} {{PBS_TechMap-Premap HBO Optimizations} 0 13 0.0 28.952161} {second_condense 0 13 0 28} {reify 1 14 0 29} {global_incr_map 0 14 0 29} {{PBS_Techmap-Global Mapping} 1 14 0.8679759999999987 29.820137} {{PBS_TechMap-Datapath Postmap Operations} 0 14 0.0 29.820137} {{PBS_TechMap-Postmap HBO Optimizations} 0 14 0.0 29.820137} {{PBS_TechMap-Postmap Clock Gating} 0 14 0.0 29.820137} {{PBS_TechMap-Postmap Cleanup} 0 14 0.0 29.820137} {PBS_Techmap-Post_MBCI 0 14 0.0 29.820137} {incr_opt 0 15 0 30} }
+set_db -quiet hdl_error_on_latch true
 set_db -quiet hdl_generate_index_style %s_%d_
+set_db -quiet hdl_error_on_blackbox true
 set_db -quiet tinfo_tstamp_file .rs_acli.tstamp
 set_db -quiet metric_enable true
 set_db -quiet metric_page_cfg {}
+set_db -quiet fail_on_error_mesg true
 set_db -quiet script_search_path ./
 set_db -quiet auto_ungroup none
 set_db -quiet use_area_from_lef true
-set_db -quiet flow_metrics_snapshot_uuid 73e6693d-269d-4d55-b43e-5487b982aa9e
+set_db -quiet flow_metrics_snapshot_uuid e69a91da-232e-47d3-a813-3e941a28f20b
 set_db -quiet syn_generic_effort high
 set_db -quiet compensative_dpul_driver 0
 set_db -quiet phys_use_segment_parasitics true
@@ -47,56 +50,56 @@ set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_
 set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
 # BEGIN MSV SECTION
 # END MSV SECTION
-define_clock -name aclk -domain domain_1 -period 10000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:kwta port:kwta/aclk
+define_clock -name aclk -domain domain_1 -period 5000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:kwta port:kwta/aclk
 set_db -quiet clock:kwta/aclk .slew {150.0 150.0 150.0 150.0}
-set_db -quiet clock:kwta/aclk .clock_setup_uncertainty {400.0 400.0}
-set_db -quiet clock:kwta/aclk .clock_hold_uncertainty {400.0 400.0}
+set_db -quiet clock:kwta/aclk .clock_setup_uncertainty {150.0 150.0}
+set_db -quiet clock:kwta/aclk .clock_hold_uncertainty {150.0 150.0}
 define_cost_group -design design:kwta -name aclk
 external_delay -accumulate -input {0.0 no_value 0.0 no_value} -clock clock:kwta/aclk -name create_clock_delay_domain_1_aclk_R_0 port:kwta/aclk
 set_db -quiet external_delay:kwta/create_clock_delay_domain_1_aclk_R_0 .clock_network_latency_included true
 external_delay -accumulate -input {no_value 0.0 no_value 0.0} -clock clock:kwta/aclk -edge_fall -name create_clock_delay_domain_1_aclk_F_0 port:kwta/aclk
 set_db -quiet external_delay:kwta/create_clock_delay_domain_1_aclk_F_0 .clock_network_latency_included true
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7 port:kwta/grst
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_1_1 {{port:kwta/input_spikes[15]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_2_1 {{port:kwta/input_spikes[14]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_3_1 {{port:kwta/input_spikes[13]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_4_1 {{port:kwta/input_spikes[12]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_5_1 {{port:kwta/input_spikes[11]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_6_1 {{port:kwta/input_spikes[10]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_7_1 {{port:kwta/input_spikes[9]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_8_1 {{port:kwta/input_spikes[8]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_9_1 {{port:kwta/input_spikes[7]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_10_1 {{port:kwta/input_spikes[6]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_11_1 {{port:kwta/input_spikes[5]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_12_1 {{port:kwta/input_spikes[4]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_13_1 {{port:kwta/input_spikes[3]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_14_1 {{port:kwta/input_spikes[2]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_15_1 {{port:kwta/input_spikes[1]}}
-external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_16_1 {{port:kwta/input_spikes[0]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8 {{port:kwta/output_spikes[15]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_17_1 {{port:kwta/output_spikes[14]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_18_1 {{port:kwta/output_spikes[13]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_19_1 {{port:kwta/output_spikes[12]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_20_1 {{port:kwta/output_spikes[11]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_21_1 {{port:kwta/output_spikes[10]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_22_1 {{port:kwta/output_spikes[9]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_23_1 {{port:kwta/output_spikes[8]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_24_1 {{port:kwta/output_spikes[7]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_25_1 {{port:kwta/output_spikes[6]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_26_1 {{port:kwta/output_spikes[5]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_27_1 {{port:kwta/output_spikes[4]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_28_1 {{port:kwta/output_spikes[3]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_29_1 {{port:kwta/output_spikes[2]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_30_1 {{port:kwta/output_spikes[1]}}
-external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_31_1 {{port:kwta/output_spikes[0]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7 port:kwta/grst
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_1_1 {{port:kwta/input_spikes[15]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_2_1 {{port:kwta/input_spikes[14]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_3_1 {{port:kwta/input_spikes[13]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_4_1 {{port:kwta/input_spikes[12]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_5_1 {{port:kwta/input_spikes[11]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_6_1 {{port:kwta/input_spikes[10]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_7_1 {{port:kwta/input_spikes[9]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_8_1 {{port:kwta/input_spikes[8]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_9_1 {{port:kwta/input_spikes[7]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_10_1 {{port:kwta/input_spikes[6]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_11_1 {{port:kwta/input_spikes[5]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_12_1 {{port:kwta/input_spikes[4]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_13_1 {{port:kwta/input_spikes[3]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_14_1 {{port:kwta/input_spikes[2]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_15_1 {{port:kwta/input_spikes[1]}}
+external_delay -accumulate -input {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_7_16_1 {{port:kwta/input_spikes[0]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8 {{port:kwta/output_spikes[15]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_17_1 {{port:kwta/output_spikes[14]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_18_1 {{port:kwta/output_spikes[13]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_19_1 {{port:kwta/output_spikes[12]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_20_1 {{port:kwta/output_spikes[11]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_21_1 {{port:kwta/output_spikes[10]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_22_1 {{port:kwta/output_spikes[9]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_23_1 {{port:kwta/output_spikes[8]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_24_1 {{port:kwta/output_spikes[7]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_25_1 {{port:kwta/output_spikes[6]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_26_1 {{port:kwta/output_spikes[5]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_27_1 {{port:kwta/output_spikes[4]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_28_1 {{port:kwta/output_spikes[3]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_29_1 {{port:kwta/output_spikes[2]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_30_1 {{port:kwta/output_spikes[1]}}
+external_delay -accumulate -output {1000.0 1000.0 1000.0 1000.0} -clock clock:kwta/aclk -name chip.sdc_line_8_31_1 {{port:kwta/output_spikes[0]}}
 path_group -paths [specify_paths -to clock:kwta/aclk]  -name aclk -group cost_group:kwta/aclk -user_priority -1047552
 # BEGIN DFT SECTION
 set_db -quiet dft_scan_style muxed_scan
 set_db -quiet dft_scanbit_waveform_analysis false
 # END DFT SECTION
-set_db -quiet design:kwta .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 687} {cell_count 545} {utilization  0.00} {runtime 2 13 1 26} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 425} {cell_count 272} {utilization  0.00} {runtime 0 13 0 27} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 425} {cell_count 272} {utilization  0.00} {runtime 0 14 0 27} }{reify {wns 3377} {tns 0} {vep 0} {area 312} {cell_count 176} {utilization  0.00} {runtime 0 14 0 28} }{global_incr_map {wns 3370} {tns 0} {vep 0} {area 312} {cell_count 176} {utilization  0.00} {runtime 0 14 0 28} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 311} {cell_count 174} {utilization  0.00} {runtime 0 15 0 29} }}
+set_db -quiet design:kwta .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 687} {cell_count 545} {utilization  0.00} {runtime 1 12 1 27} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 425} {cell_count 272} {utilization  0.00} {runtime 1 13 0 28} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 425} {cell_count 272} {utilization  0.00} {runtime 0 13 0 28} }{reify {wns 627} {tns 0} {vep 0} {area 312} {cell_count 176} {utilization  0.00} {runtime 1 14 0 29} }{global_incr_map {wns 620} {tns 0} {vep 0} {area 312} {cell_count 176} {utilization  0.00} {runtime 0 14 0 29} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 311} {cell_count 174} {utilization  0.00} {runtime 0 15 0 30} }}
 set_db -quiet design:kwta .seq_mbci_coverage 0.0
-set_db -quiet design:kwta .hdl_filelist {{default -sv {SYNTHESIS} {src/kwta.sv} {./src} {}}}
+set_db -quiet design:kwta .hdl_filelist {{default -sv {RISING SYNTHESIS} {src/kwta.sv} {./src} {}}}
 set_db -quiet design:kwta .hdl_user_name kwta
 set_db -quiet design:kwta .verification_directory fv/kwta
 set_db -quiet design:kwta .seq_reason_deleted {{{remaining_spikes_count_reg[3]} {{constant 0}}}}
@@ -303,7 +306,7 @@ set_db -quiet source_verbose true
 ##
 ## Written by Genus(TM) Synthesis Solution version 18.14-s037_1
 ## flowkit v18.10-p010_1
-## Written on 16:48:06 29-Mar 2022
+## Written on 20:50:15 03-Apr 2022
 #############################################################
 #####   Flow Definitions   ##################################
 
@@ -346,7 +349,7 @@ if {[is_attribute flow_mail_on_error -obj_type root]} {set_db flow_mail_on_error
 if {[is_attribute flow_mail_to -obj_type root]} {set_db flow_mail_to {}}
 if {[is_attribute flow_metrics_file -obj_type root]} {set_db flow_metrics_file {}}
 if {[is_attribute flow_metrics_snapshot_parent_uuid -obj_type root]} {set_db flow_metrics_snapshot_parent_uuid {}}
-if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid 73e6693d-269d-4d55-b43e-5487b982aa9e}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid e69a91da-232e-47d3-a813-3e941a28f20b}
 if {[is_attribute flow_overwrite_db -obj_type root]} {set_db flow_overwrite_db false}
 if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
 if {[is_attribute flow_run_tag -obj_type root]} {set_db flow_run_tag {}}
