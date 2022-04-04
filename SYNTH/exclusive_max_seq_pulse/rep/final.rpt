@@ -5,23 +5,23 @@ QoS Summary for exclusive_max
 ================================================================================
 Metric                          final          
 ================================================================================
-Slack (ps):                     5,376
-  R2R (ps):                     9,307
-  I2R (ps):                     7,392
-  R2O (ps):                     7,310
-  I2O (ps):                     5,376
+Slack (ps):                     5,326
+  R2R (ps):                  no_value
+  I2R (ps):                     7,527
+  R2O (ps):                     7,332
+  I2O (ps):                     5,326
   CG  (ps):                  no_value
 TNS (ps):                           0
-  R2R (ps):                         0
+  R2R (ps):                  no_value
   I2R (ps):                         0
   R2O (ps):                         0
   I2O (ps):                         0
   CG  (ps):                  no_value
 Failing Paths:                      0
-Cell Area:                         49
-Total Cell Area:                   49
-Leaf Instances:                    24
-Total Instances:                   24
+Cell Area:                         30
+Total Cell Area:                   30
+Leaf Instances:                    19
+Total Instances:                   19
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -32,17 +32,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value
   Tot Cong:                  no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:29
-Real Runtime (h:m:s):        00:00:13
-CPU  Elapsed (h:m:s):        00:00:33
+CPU  Runtime (h:m:s):        00:00:30
+Real Runtime (h:m:s):        00:00:14
+CPU  Elapsed (h:m:s):        00:00:34
 Real Elapsed (h:m:s):        00:00:15
-Memory (MB):                  1149.45
+Memory (MB):                  1132.90
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:13
-Total Memory (MB):     1157.45
+Total Runtime (h:m:s): 00:00:14
+Total Memory (MB):     1140.91
 Executable Version:    20.11-s111_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area

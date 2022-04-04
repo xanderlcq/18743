@@ -52,7 +52,7 @@ def run_program(top_module_name, directory, synth_type, macro):
 
 modules = [
         'equal', 'not_equal', 'exclusive_max', 'exclusive_min', 'max',
-        'min', 'greater_than', 'less_than', 'greater_than_eq', 'less_than_eq'
+        #'min', 'greater_than', 'less_than', 'greater_than_eq', 'less_than_eq'
         ]
 
 macros = ['RISING', 'FALLING', 'PULSE']
