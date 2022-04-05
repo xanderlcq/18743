@@ -1,6 +1,6 @@
 ######################################################################
 
-# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Sun Apr 03 19:21:20 EDT 2022
+# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Mon Apr 04 14:19:43 EDT 2022
 
 # This file contains the RC script for design:wrapper
 
@@ -18,7 +18,7 @@ set_db -quiet phys_use_invs_extraction true
 set_db -quiet phys_route_time_out 120.0
 set_db -quiet capacitance_per_unit_length_mmmc {}
 set_db -quiet resistance_per_unit_length_mmmc {}
-set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 26.0} {to_generic 0 11 0 25} {first_condense 0 11 0 26} {PBS_Generic_Opt-Post 0 11 -0.019368000000000052 25.980632} {{PBS_Generic-Postgen HBO Optimizations} 0 11 0.0 25.980632} {PBS_TechMap-Start 0 11 0.0 25.980632} {{PBS_TechMap-Premap HBO Optimizations} 0 11 0.0 25.980632} {first_condense 0 11 0 26} {reify 0 11 0 26} {global_incr_map 1 12 0 26} {{PBS_Techmap-Global Mapping} 1 12 0.9208010000000009 26.901433} {{PBS_TechMap-Datapath Postmap Operations} 0 12 0.0 26.901433} {{PBS_TechMap-Postmap HBO Optimizations} 0 12 0.0 26.901433} {{PBS_TechMap-Postmap Clock Gating} 0 12 0.0 26.901433} {{PBS_TechMap-Postmap Cleanup} 0 12 0.0 26.901433} {PBS_Techmap-Post_MBCI 0 12 0.0 26.901433} {incr_opt 0 12 0 27} }
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 25.0} {to_generic 0 11 0 25} {first_condense 1 12 0 26} {PBS_Generic_Opt-Post 1 12 0.9272549999999988 25.927255} {{PBS_Generic-Postgen HBO Optimizations} 0 12 0.0 25.927255} {PBS_TechMap-Start 0 12 0.0 25.927255} {{PBS_TechMap-Premap HBO Optimizations} 0 12 0.0 25.927255} {second_condense 0 12 0 26} {reify 1 13 0 27} {global_incr_map 0 13 0 27} {{PBS_Techmap-Global Mapping} 1 13 1.7371920000000003 27.664447} {{PBS_TechMap-Datapath Postmap Operations} 1 14 0.0 27.664447} {{PBS_TechMap-Postmap HBO Optimizations} 0 14 0.0 27.664447} {{PBS_TechMap-Postmap Clock Gating} 0 14 0.0 27.664447} {{PBS_TechMap-Postmap Cleanup} 0 14 0.0 27.664447} {PBS_Techmap-Post_MBCI 0 14 0.0 27.664447} {incr_opt 0 14 0 28} }
 set_db -quiet hdl_error_on_latch true
 set_db -quiet hdl_generate_index_style %s_%d_
 set_db -quiet hdl_error_on_blackbox true
@@ -29,7 +29,7 @@ set_db -quiet fail_on_error_mesg true
 set_db -quiet script_search_path ./
 set_db -quiet auto_ungroup none
 set_db -quiet use_area_from_lef true
-set_db -quiet flow_metrics_snapshot_uuid 2f18af7d-94a6-4721-9b74-bb0c39919b89
+set_db -quiet flow_metrics_snapshot_uuid 6bb47e3b-8de7-4539-ad02-e2ccba3ad7c2
 set_db -quiet syn_generic_effort high
 set_db -quiet compensative_dpul_driver 0
 set_db -quiet phys_use_segment_parasitics true
@@ -48,62 +48,216 @@ set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT
 set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
 set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
 set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
 # BEGIN MSV SECTION
 # END MSV SECTION
-define_clock -name aclk -domain domain_1 -period 1300.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:wrapper port:wrapper/aclk
+define_clock -name aclk -domain domain_1 -period 50000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:wrapper port:wrapper/aclk
 set_db -quiet clock:wrapper/aclk .slew {150.0 150.0 150.0 150.0}
-set_db -quiet clock:wrapper/aclk .clock_setup_uncertainty {130.0 130.0}
-set_db -quiet clock:wrapper/aclk .clock_hold_uncertainty {130.0 130.0}
+set_db -quiet clock:wrapper/aclk .clock_setup_uncertainty {200.0 200.0}
+set_db -quiet clock:wrapper/aclk .clock_hold_uncertainty {200.0 200.0}
 define_cost_group -design design:wrapper -name aclk
 external_delay -accumulate -input {0.0 no_value 0.0 no_value} -clock clock:wrapper/aclk -name create_clock_delay_domain_1_aclk_R_0 port:wrapper/aclk
 set_db -quiet external_delay:wrapper/create_clock_delay_domain_1_aclk_R_0 .clock_network_latency_included true
 external_delay -accumulate -input {no_value 0.0 no_value 0.0} -clock clock:wrapper/aclk -edge_fall -name create_clock_delay_domain_1_aclk_F_0 port:wrapper/aclk
 set_db -quiet external_delay:wrapper/create_clock_delay_domain_1_aclk_F_0 .clock_network_latency_included true
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7 port:wrapper/rst
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_1_1 {{port:wrapper/input_spikes[15]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_2_1 {{port:wrapper/input_spikes[14]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_3_1 {{port:wrapper/input_spikes[13]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_4_1 {{port:wrapper/input_spikes[12]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_5_1 {{port:wrapper/input_spikes[11]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_6_1 {{port:wrapper/input_spikes[10]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_7_1 {{port:wrapper/input_spikes[9]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_8_1 {{port:wrapper/input_spikes[8]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_9_1 {{port:wrapper/input_spikes[7]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_10_1 {{port:wrapper/input_spikes[6]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_11_1 {{port:wrapper/input_spikes[5]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_12_1 {{port:wrapper/input_spikes[4]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_13_1 {{port:wrapper/input_spikes[3]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_14_1 {{port:wrapper/input_spikes[2]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_15_1 {{port:wrapper/input_spikes[1]}}
-external_delay -accumulate -input {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_7_16_1 {{port:wrapper/input_spikes[0]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8 {{port:wrapper/output_spikes[15]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_17_1 {{port:wrapper/output_spikes[14]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_18_1 {{port:wrapper/output_spikes[13]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_19_1 {{port:wrapper/output_spikes[12]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_20_1 {{port:wrapper/output_spikes[11]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_21_1 {{port:wrapper/output_spikes[10]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_22_1 {{port:wrapper/output_spikes[9]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_23_1 {{port:wrapper/output_spikes[8]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_24_1 {{port:wrapper/output_spikes[7]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_25_1 {{port:wrapper/output_spikes[6]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_26_1 {{port:wrapper/output_spikes[5]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_27_1 {{port:wrapper/output_spikes[4]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_28_1 {{port:wrapper/output_spikes[3]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_29_1 {{port:wrapper/output_spikes[2]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_30_1 {{port:wrapper/output_spikes[1]}}
-external_delay -accumulate -output {260.0 260.0 260.0 260.0} -clock clock:wrapper/aclk -name chip.sdc_line_8_31_1 {{port:wrapper/output_spikes[0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13 port:wrapper/rst
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_1_1 {{port:wrapper/input_spikes[63]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_2_1 {{port:wrapper/input_spikes[62]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_3_1 {{port:wrapper/input_spikes[61]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_4_1 {{port:wrapper/input_spikes[60]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_5_1 {{port:wrapper/input_spikes[59]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_6_1 {{port:wrapper/input_spikes[58]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_7_1 {{port:wrapper/input_spikes[57]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_8_1 {{port:wrapper/input_spikes[56]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_9_1 {{port:wrapper/input_spikes[55]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_10_1 {{port:wrapper/input_spikes[54]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_11_1 {{port:wrapper/input_spikes[53]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_12_1 {{port:wrapper/input_spikes[52]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_13_1 {{port:wrapper/input_spikes[51]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_14_1 {{port:wrapper/input_spikes[50]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_15_1 {{port:wrapper/input_spikes[49]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_16_1 {{port:wrapper/input_spikes[48]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_17_1 {{port:wrapper/input_spikes[47]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_18_1 {{port:wrapper/input_spikes[46]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_19_1 {{port:wrapper/input_spikes[45]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_20_1 {{port:wrapper/input_spikes[44]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_21_1 {{port:wrapper/input_spikes[43]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_22_1 {{port:wrapper/input_spikes[42]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_23_1 {{port:wrapper/input_spikes[41]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_24_1 {{port:wrapper/input_spikes[40]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_25_1 {{port:wrapper/input_spikes[39]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_26_1 {{port:wrapper/input_spikes[38]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_27_1 {{port:wrapper/input_spikes[37]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_28_1 {{port:wrapper/input_spikes[36]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_29_1 {{port:wrapper/input_spikes[35]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_30_1 {{port:wrapper/input_spikes[34]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_31_1 {{port:wrapper/input_spikes[33]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_32_1 {{port:wrapper/input_spikes[32]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_33_1 {{port:wrapper/input_spikes[31]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_34_1 {{port:wrapper/input_spikes[30]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_35_1 {{port:wrapper/input_spikes[29]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_36_1 {{port:wrapper/input_spikes[28]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_37_1 {{port:wrapper/input_spikes[27]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_38_1 {{port:wrapper/input_spikes[26]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_39_1 {{port:wrapper/input_spikes[25]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_40_1 {{port:wrapper/input_spikes[24]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_41_1 {{port:wrapper/input_spikes[23]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_42_1 {{port:wrapper/input_spikes[22]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_43_1 {{port:wrapper/input_spikes[21]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_44_1 {{port:wrapper/input_spikes[20]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_45_1 {{port:wrapper/input_spikes[19]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_46_1 {{port:wrapper/input_spikes[18]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_47_1 {{port:wrapper/input_spikes[17]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_48_1 {{port:wrapper/input_spikes[16]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_49_1 {{port:wrapper/input_spikes[15]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_50_1 {{port:wrapper/input_spikes[14]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_51_1 {{port:wrapper/input_spikes[13]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_52_1 {{port:wrapper/input_spikes[12]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_53_1 {{port:wrapper/input_spikes[11]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_54_1 {{port:wrapper/input_spikes[10]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_55_1 {{port:wrapper/input_spikes[9]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_56_1 {{port:wrapper/input_spikes[8]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_57_1 {{port:wrapper/input_spikes[7]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_58_1 {{port:wrapper/input_spikes[6]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_59_1 {{port:wrapper/input_spikes[5]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_60_1 {{port:wrapper/input_spikes[4]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_61_1 {{port:wrapper/input_spikes[3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_62_1 {{port:wrapper/input_spikes[2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_63_1 {{port:wrapper/input_spikes[1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_13_64_1 {{port:wrapper/input_spikes[0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14 {{port:wrapper/output_spikes[63]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_65_1 {{port:wrapper/output_spikes[62]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_66_1 {{port:wrapper/output_spikes[61]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_67_1 {{port:wrapper/output_spikes[60]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_68_1 {{port:wrapper/output_spikes[59]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_69_1 {{port:wrapper/output_spikes[58]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_70_1 {{port:wrapper/output_spikes[57]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_71_1 {{port:wrapper/output_spikes[56]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_72_1 {{port:wrapper/output_spikes[55]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_73_1 {{port:wrapper/output_spikes[54]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_74_1 {{port:wrapper/output_spikes[53]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_75_1 {{port:wrapper/output_spikes[52]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_76_1 {{port:wrapper/output_spikes[51]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_77_1 {{port:wrapper/output_spikes[50]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_78_1 {{port:wrapper/output_spikes[49]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_79_1 {{port:wrapper/output_spikes[48]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_80_1 {{port:wrapper/output_spikes[47]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_81_1 {{port:wrapper/output_spikes[46]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_82_1 {{port:wrapper/output_spikes[45]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_83_1 {{port:wrapper/output_spikes[44]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_84_1 {{port:wrapper/output_spikes[43]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_85_1 {{port:wrapper/output_spikes[42]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_86_1 {{port:wrapper/output_spikes[41]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_87_1 {{port:wrapper/output_spikes[40]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_88_1 {{port:wrapper/output_spikes[39]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_89_1 {{port:wrapper/output_spikes[38]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_90_1 {{port:wrapper/output_spikes[37]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_91_1 {{port:wrapper/output_spikes[36]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_92_1 {{port:wrapper/output_spikes[35]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_93_1 {{port:wrapper/output_spikes[34]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_94_1 {{port:wrapper/output_spikes[33]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_95_1 {{port:wrapper/output_spikes[32]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_96_1 {{port:wrapper/output_spikes[31]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_97_1 {{port:wrapper/output_spikes[30]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_98_1 {{port:wrapper/output_spikes[29]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_99_1 {{port:wrapper/output_spikes[28]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_100_1 {{port:wrapper/output_spikes[27]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_101_1 {{port:wrapper/output_spikes[26]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_102_1 {{port:wrapper/output_spikes[25]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_103_1 {{port:wrapper/output_spikes[24]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_104_1 {{port:wrapper/output_spikes[23]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_105_1 {{port:wrapper/output_spikes[22]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_106_1 {{port:wrapper/output_spikes[21]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_107_1 {{port:wrapper/output_spikes[20]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_108_1 {{port:wrapper/output_spikes[19]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_109_1 {{port:wrapper/output_spikes[18]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_110_1 {{port:wrapper/output_spikes[17]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_111_1 {{port:wrapper/output_spikes[16]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_112_1 {{port:wrapper/output_spikes[15]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_113_1 {{port:wrapper/output_spikes[14]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_114_1 {{port:wrapper/output_spikes[13]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_115_1 {{port:wrapper/output_spikes[12]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_116_1 {{port:wrapper/output_spikes[11]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_117_1 {{port:wrapper/output_spikes[10]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_118_1 {{port:wrapper/output_spikes[9]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_119_1 {{port:wrapper/output_spikes[8]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_120_1 {{port:wrapper/output_spikes[7]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_121_1 {{port:wrapper/output_spikes[6]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_122_1 {{port:wrapper/output_spikes[5]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_123_1 {{port:wrapper/output_spikes[4]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_124_1 {{port:wrapper/output_spikes[3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_125_1 {{port:wrapper/output_spikes[2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_126_1 {{port:wrapper/output_spikes[1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:wrapper/aclk -name chip.sdc_line_14_127_1 {{port:wrapper/output_spikes[0]}}
 path_group -paths [specify_paths -to clock:wrapper/aclk]  -name aclk -group cost_group:wrapper/aclk -user_priority -1047552
 # BEGIN DFT SECTION
 set_db -quiet dft_scan_style muxed_scan
 set_db -quiet dft_scanbit_waveform_analysis false
 # END DFT SECTION
-set_db -quiet design:wrapper .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 235} {cell_count 138} {utilization  0.00} {runtime 0 11 0 25} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 170} {cell_count 88} {utilization  0.00} {runtime 0 11 0 26} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 170} {cell_count 88} {utilization  0.00} {runtime 0 11 0 26} }{reify {wns 214748365} {tns 0} {vep 0} {area 187} {cell_count 106} {utilization  0.00} {runtime 0 11 0 26} }{global_incr_map {wns 214748365} {tns 0} {vep 0} {area 195} {cell_count 115} {utilization  0.00} {runtime 1 12 0 26} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 191} {cell_count 107} {utilization  0.00} {runtime 0 12 0 27} }}
+set_db -quiet design:wrapper .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 1142} {cell_count 616} {utilization  0.00} {runtime 0 11 0 25} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 681} {cell_count 352} {utilization  0.00} {runtime 1 12 0 26} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 681} {cell_count 352} {utilization  0.00} {runtime 0 12 0 26} }{reify {wns 214748365} {tns 0} {vep 0} {area 749} {cell_count 425} {utilization  0.00} {runtime 1 13 0 27} }{global_incr_map {wns 214748365} {tns 0} {vep 0} {area 786} {cell_count 465} {utilization  0.00} {runtime 0 13 0 27} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 768} {cell_count 426} {utilization  0.00} {runtime 0 14 0 28} }}
 set_db -quiet design:wrapper .seq_mbci_coverage 0.0
 set_db -quiet design:wrapper .hdl_user_name wrapper
 set_db -quiet design:wrapper .hdl_filelist {{default -sv {SYNTHESIS} {src/wta_1.sv src/wrapper.sv src/sr_latch.sv src/less_than_eq.sv} {./src} {}}}
 set_db -quiet design:wrapper .verification_directory fv/wrapper
 set_db -quiet port:wrapper/aclk .original_name aclk
 set_db -quiet port:wrapper/rst .original_name rst
+set_db -quiet {port:wrapper/input_spikes[63]} .original_name {input_spikes[63]}
+set_db -quiet {port:wrapper/input_spikes[62]} .original_name {input_spikes[62]}
+set_db -quiet {port:wrapper/input_spikes[61]} .original_name {input_spikes[61]}
+set_db -quiet {port:wrapper/input_spikes[60]} .original_name {input_spikes[60]}
+set_db -quiet {port:wrapper/input_spikes[59]} .original_name {input_spikes[59]}
+set_db -quiet {port:wrapper/input_spikes[58]} .original_name {input_spikes[58]}
+set_db -quiet {port:wrapper/input_spikes[57]} .original_name {input_spikes[57]}
+set_db -quiet {port:wrapper/input_spikes[56]} .original_name {input_spikes[56]}
+set_db -quiet {port:wrapper/input_spikes[55]} .original_name {input_spikes[55]}
+set_db -quiet {port:wrapper/input_spikes[54]} .original_name {input_spikes[54]}
+set_db -quiet {port:wrapper/input_spikes[53]} .original_name {input_spikes[53]}
+set_db -quiet {port:wrapper/input_spikes[52]} .original_name {input_spikes[52]}
+set_db -quiet {port:wrapper/input_spikes[51]} .original_name {input_spikes[51]}
+set_db -quiet {port:wrapper/input_spikes[50]} .original_name {input_spikes[50]}
+set_db -quiet {port:wrapper/input_spikes[49]} .original_name {input_spikes[49]}
+set_db -quiet {port:wrapper/input_spikes[48]} .original_name {input_spikes[48]}
+set_db -quiet {port:wrapper/input_spikes[47]} .original_name {input_spikes[47]}
+set_db -quiet {port:wrapper/input_spikes[46]} .original_name {input_spikes[46]}
+set_db -quiet {port:wrapper/input_spikes[45]} .original_name {input_spikes[45]}
+set_db -quiet {port:wrapper/input_spikes[44]} .original_name {input_spikes[44]}
+set_db -quiet {port:wrapper/input_spikes[43]} .original_name {input_spikes[43]}
+set_db -quiet {port:wrapper/input_spikes[42]} .original_name {input_spikes[42]}
+set_db -quiet {port:wrapper/input_spikes[41]} .original_name {input_spikes[41]}
+set_db -quiet {port:wrapper/input_spikes[40]} .original_name {input_spikes[40]}
+set_db -quiet {port:wrapper/input_spikes[39]} .original_name {input_spikes[39]}
+set_db -quiet {port:wrapper/input_spikes[38]} .original_name {input_spikes[38]}
+set_db -quiet {port:wrapper/input_spikes[37]} .original_name {input_spikes[37]}
+set_db -quiet {port:wrapper/input_spikes[36]} .original_name {input_spikes[36]}
+set_db -quiet {port:wrapper/input_spikes[35]} .original_name {input_spikes[35]}
+set_db -quiet {port:wrapper/input_spikes[34]} .original_name {input_spikes[34]}
+set_db -quiet {port:wrapper/input_spikes[33]} .original_name {input_spikes[33]}
+set_db -quiet {port:wrapper/input_spikes[32]} .original_name {input_spikes[32]}
+set_db -quiet {port:wrapper/input_spikes[31]} .original_name {input_spikes[31]}
+set_db -quiet {port:wrapper/input_spikes[30]} .original_name {input_spikes[30]}
+set_db -quiet {port:wrapper/input_spikes[29]} .original_name {input_spikes[29]}
+set_db -quiet {port:wrapper/input_spikes[28]} .original_name {input_spikes[28]}
+set_db -quiet {port:wrapper/input_spikes[27]} .original_name {input_spikes[27]}
+set_db -quiet {port:wrapper/input_spikes[26]} .original_name {input_spikes[26]}
+set_db -quiet {port:wrapper/input_spikes[25]} .original_name {input_spikes[25]}
+set_db -quiet {port:wrapper/input_spikes[24]} .original_name {input_spikes[24]}
+set_db -quiet {port:wrapper/input_spikes[23]} .original_name {input_spikes[23]}
+set_db -quiet {port:wrapper/input_spikes[22]} .original_name {input_spikes[22]}
+set_db -quiet {port:wrapper/input_spikes[21]} .original_name {input_spikes[21]}
+set_db -quiet {port:wrapper/input_spikes[20]} .original_name {input_spikes[20]}
+set_db -quiet {port:wrapper/input_spikes[19]} .original_name {input_spikes[19]}
+set_db -quiet {port:wrapper/input_spikes[18]} .original_name {input_spikes[18]}
+set_db -quiet {port:wrapper/input_spikes[17]} .original_name {input_spikes[17]}
+set_db -quiet {port:wrapper/input_spikes[16]} .original_name {input_spikes[16]}
 set_db -quiet {port:wrapper/input_spikes[15]} .original_name {input_spikes[15]}
 set_db -quiet {port:wrapper/input_spikes[14]} .original_name {input_spikes[14]}
 set_db -quiet {port:wrapper/input_spikes[13]} .original_name {input_spikes[13]}
@@ -120,6 +274,246 @@ set_db -quiet {port:wrapper/input_spikes[3]} .original_name {input_spikes[3]}
 set_db -quiet {port:wrapper/input_spikes[2]} .original_name {input_spikes[2]}
 set_db -quiet {port:wrapper/input_spikes[1]} .original_name {input_spikes[1]}
 set_db -quiet {port:wrapper/input_spikes[0]} .original_name {input_spikes[0]}
+set_db -quiet {port:wrapper/output_spikes[63]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[63]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[63]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[63]} .original_name {output_spikes[63]}
+set_db -quiet {port:wrapper/output_spikes[63]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[62]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[62]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[62]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[62]} .original_name {output_spikes[62]}
+set_db -quiet {port:wrapper/output_spikes[62]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[61]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[61]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[61]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[61]} .original_name {output_spikes[61]}
+set_db -quiet {port:wrapper/output_spikes[61]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[60]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[60]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[60]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[60]} .original_name {output_spikes[60]}
+set_db -quiet {port:wrapper/output_spikes[60]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[59]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[59]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[59]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[59]} .original_name {output_spikes[59]}
+set_db -quiet {port:wrapper/output_spikes[59]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[58]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[58]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[58]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[58]} .original_name {output_spikes[58]}
+set_db -quiet {port:wrapper/output_spikes[58]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[57]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[57]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[57]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[57]} .original_name {output_spikes[57]}
+set_db -quiet {port:wrapper/output_spikes[57]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[56]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[56]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[56]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[56]} .original_name {output_spikes[56]}
+set_db -quiet {port:wrapper/output_spikes[56]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[55]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[55]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[55]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[55]} .original_name {output_spikes[55]}
+set_db -quiet {port:wrapper/output_spikes[55]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[54]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[54]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[54]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[54]} .original_name {output_spikes[54]}
+set_db -quiet {port:wrapper/output_spikes[54]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[53]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[53]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[53]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[53]} .original_name {output_spikes[53]}
+set_db -quiet {port:wrapper/output_spikes[53]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[52]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[52]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[52]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[52]} .original_name {output_spikes[52]}
+set_db -quiet {port:wrapper/output_spikes[52]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[51]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[51]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[51]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[51]} .original_name {output_spikes[51]}
+set_db -quiet {port:wrapper/output_spikes[51]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[50]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[50]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[50]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[50]} .original_name {output_spikes[50]}
+set_db -quiet {port:wrapper/output_spikes[50]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[49]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[49]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[49]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[49]} .original_name {output_spikes[49]}
+set_db -quiet {port:wrapper/output_spikes[49]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[48]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[48]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[48]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[48]} .original_name {output_spikes[48]}
+set_db -quiet {port:wrapper/output_spikes[48]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[47]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[47]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[47]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[47]} .original_name {output_spikes[47]}
+set_db -quiet {port:wrapper/output_spikes[47]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[46]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[46]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[46]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[46]} .original_name {output_spikes[46]}
+set_db -quiet {port:wrapper/output_spikes[46]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[45]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[45]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[45]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[45]} .original_name {output_spikes[45]}
+set_db -quiet {port:wrapper/output_spikes[45]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[44]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[44]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[44]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[44]} .original_name {output_spikes[44]}
+set_db -quiet {port:wrapper/output_spikes[44]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[43]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[43]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[43]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[43]} .original_name {output_spikes[43]}
+set_db -quiet {port:wrapper/output_spikes[43]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[42]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[42]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[42]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[42]} .original_name {output_spikes[42]}
+set_db -quiet {port:wrapper/output_spikes[42]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[41]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[41]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[41]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[41]} .original_name {output_spikes[41]}
+set_db -quiet {port:wrapper/output_spikes[41]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[40]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[40]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[40]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[40]} .original_name {output_spikes[40]}
+set_db -quiet {port:wrapper/output_spikes[40]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[39]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[39]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[39]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[39]} .original_name {output_spikes[39]}
+set_db -quiet {port:wrapper/output_spikes[39]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[38]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[38]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[38]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[38]} .original_name {output_spikes[38]}
+set_db -quiet {port:wrapper/output_spikes[38]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[37]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[37]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[37]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[37]} .original_name {output_spikes[37]}
+set_db -quiet {port:wrapper/output_spikes[37]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[36]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[36]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[36]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[36]} .original_name {output_spikes[36]}
+set_db -quiet {port:wrapper/output_spikes[36]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[35]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[35]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[35]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[35]} .original_name {output_spikes[35]}
+set_db -quiet {port:wrapper/output_spikes[35]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[34]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[34]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[34]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[34]} .original_name {output_spikes[34]}
+set_db -quiet {port:wrapper/output_spikes[34]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[33]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[33]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[33]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[33]} .original_name {output_spikes[33]}
+set_db -quiet {port:wrapper/output_spikes[33]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[32]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[32]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[32]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[32]} .original_name {output_spikes[32]}
+set_db -quiet {port:wrapper/output_spikes[32]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[31]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[31]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[31]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[31]} .original_name {output_spikes[31]}
+set_db -quiet {port:wrapper/output_spikes[31]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[30]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[30]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[30]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[30]} .original_name {output_spikes[30]}
+set_db -quiet {port:wrapper/output_spikes[30]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[29]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[29]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[29]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[29]} .original_name {output_spikes[29]}
+set_db -quiet {port:wrapper/output_spikes[29]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[28]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[28]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[28]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[28]} .original_name {output_spikes[28]}
+set_db -quiet {port:wrapper/output_spikes[28]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[27]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[27]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[27]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[27]} .original_name {output_spikes[27]}
+set_db -quiet {port:wrapper/output_spikes[27]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[26]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[26]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[26]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[26]} .original_name {output_spikes[26]}
+set_db -quiet {port:wrapper/output_spikes[26]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[25]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[25]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[25]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[25]} .original_name {output_spikes[25]}
+set_db -quiet {port:wrapper/output_spikes[25]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[24]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[24]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[24]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[24]} .original_name {output_spikes[24]}
+set_db -quiet {port:wrapper/output_spikes[24]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[23]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[23]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[23]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[23]} .original_name {output_spikes[23]}
+set_db -quiet {port:wrapper/output_spikes[23]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[22]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[22]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[22]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[22]} .original_name {output_spikes[22]}
+set_db -quiet {port:wrapper/output_spikes[22]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[21]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[21]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[21]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[21]} .original_name {output_spikes[21]}
+set_db -quiet {port:wrapper/output_spikes[21]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[20]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[20]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[20]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[20]} .original_name {output_spikes[20]}
+set_db -quiet {port:wrapper/output_spikes[20]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[19]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[19]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[19]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[19]} .original_name {output_spikes[19]}
+set_db -quiet {port:wrapper/output_spikes[19]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[18]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[18]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[18]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[18]} .original_name {output_spikes[18]}
+set_db -quiet {port:wrapper/output_spikes[18]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[17]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[17]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[17]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[17]} .original_name {output_spikes[17]}
+set_db -quiet {port:wrapper/output_spikes[17]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[16]} .external_pin_cap_min 15.0
+set_db -quiet {port:wrapper/output_spikes[16]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:wrapper/output_spikes[16]} .external_capacitance_min 15.0
+set_db -quiet {port:wrapper/output_spikes[16]} .original_name {output_spikes[16]}
+set_db -quiet {port:wrapper/output_spikes[16]} .external_pin_cap {15.0 15.0}
 set_db -quiet {port:wrapper/output_spikes[15]} .external_pin_cap_min 15.0
 set_db -quiet {port:wrapper/output_spikes[15]} .external_capacitance_max {15.0 15.0}
 set_db -quiet {port:wrapper/output_spikes[15]} .external_capacitance_min 15.0
@@ -200,8 +594,8 @@ set_db -quiet {port:wrapper/output_spikes[0]} .external_capacitance_max {15.0 15
 set_db -quiet {port:wrapper/output_spikes[0]} .external_capacitance_min 15.0
 set_db -quiet {port:wrapper/output_spikes[0]} .original_name {output_spikes[0]}
 set_db -quiet {port:wrapper/output_spikes[0]} .external_pin_cap {15.0 15.0}
-set_db -quiet module:wrapper/wta_1_GAMMA_CYCLE_WIDTH16_PULSE_WIDTH8_NUM_INPUTS16 .hdl_user_name wta_1
-set_db -quiet module:wrapper/wta_1_GAMMA_CYCLE_WIDTH16_PULSE_WIDTH8_NUM_INPUTS16 .hdl_filelist {{default -sv {SYNTHESIS} {src/wta_1.sv src/sr_latch.sv src/less_than_eq.sv} {./src} {}}}
+set_db -quiet module:wrapper/wta_1_GAMMA_CYCLE_WIDTH16_PULSE_WIDTH8_NUM_INPUTS64 .hdl_user_name wta_1
+set_db -quiet module:wrapper/wta_1_GAMMA_CYCLE_WIDTH16_PULSE_WIDTH8_NUM_INPUTS64 .hdl_filelist {{default -sv {SYNTHESIS} {src/wta_1.sv src/sr_latch.sv src/less_than_eq.sv} {./src} {}}}
 set_db -quiet module:wrapper/sr_latch .hdl_user_name sr_latch
 set_db -quiet module:wrapper/sr_latch .hdl_filelist {{default -sv {SYNTHESIS} {src/sr_latch.sv} {./src} {}}}
 set_db -quiet inst:wrapper/DUT/Inhibit_sr/cdn_loop_breaker .disabled_arcs lib_arc:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/HB1xp67_ASAP7_75t_R/A_Y_n90
@@ -253,61 +647,170 @@ set_db -quiet hpin:wrapper/DUT/genblk1_14_.Lteq/q .original_name {DUT/genblk1[14
 set_db -quiet hinst:wrapper/DUT/genblk1_15_.Lteq .original_name {{DUT/genblk1[15].Lteq}}
 set_db -quiet hinst:wrapper/DUT/genblk1_15_.Lteq .single_bit_orig_name {DUT/genblk1[15].Lteq}
 set_db -quiet hpin:wrapper/DUT/genblk1_15_.Lteq/q .original_name {DUT/genblk1[15].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_16_.Lteq .original_name {{DUT/genblk1[16].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_16_.Lteq .single_bit_orig_name {DUT/genblk1[16].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_16_.Lteq/q .original_name {DUT/genblk1[16].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_17_.Lteq .original_name {{DUT/genblk1[17].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_17_.Lteq .single_bit_orig_name {DUT/genblk1[17].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_17_.Lteq/q .original_name {DUT/genblk1[17].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_18_.Lteq .original_name {{DUT/genblk1[18].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_18_.Lteq .single_bit_orig_name {DUT/genblk1[18].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_18_.Lteq/q .original_name {DUT/genblk1[18].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_19_.Lteq .original_name {{DUT/genblk1[19].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_19_.Lteq .single_bit_orig_name {DUT/genblk1[19].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_19_.Lteq/q .original_name {DUT/genblk1[19].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_20_.Lteq .original_name {{DUT/genblk1[20].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_20_.Lteq .single_bit_orig_name {DUT/genblk1[20].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_20_.Lteq/q .original_name {DUT/genblk1[20].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_21_.Lteq .original_name {{DUT/genblk1[21].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_21_.Lteq .single_bit_orig_name {DUT/genblk1[21].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_21_.Lteq/q .original_name {DUT/genblk1[21].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_22_.Lteq .original_name {{DUT/genblk1[22].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_22_.Lteq .single_bit_orig_name {DUT/genblk1[22].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_22_.Lteq/q .original_name {DUT/genblk1[22].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_23_.Lteq .original_name {{DUT/genblk1[23].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_23_.Lteq .single_bit_orig_name {DUT/genblk1[23].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_23_.Lteq/q .original_name {DUT/genblk1[23].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_24_.Lteq .original_name {{DUT/genblk1[24].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_24_.Lteq .single_bit_orig_name {DUT/genblk1[24].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_24_.Lteq/q .original_name {DUT/genblk1[24].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_25_.Lteq .original_name {{DUT/genblk1[25].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_25_.Lteq .single_bit_orig_name {DUT/genblk1[25].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_25_.Lteq/q .original_name {DUT/genblk1[25].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_26_.Lteq .original_name {{DUT/genblk1[26].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_26_.Lteq .single_bit_orig_name {DUT/genblk1[26].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_26_.Lteq/q .original_name {DUT/genblk1[26].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_27_.Lteq .original_name {{DUT/genblk1[27].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_27_.Lteq .single_bit_orig_name {DUT/genblk1[27].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_27_.Lteq/q .original_name {DUT/genblk1[27].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_28_.Lteq .original_name {{DUT/genblk1[28].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_28_.Lteq .single_bit_orig_name {DUT/genblk1[28].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_28_.Lteq/q .original_name {DUT/genblk1[28].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_29_.Lteq .original_name {{DUT/genblk1[29].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_29_.Lteq .single_bit_orig_name {DUT/genblk1[29].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_29_.Lteq/q .original_name {DUT/genblk1[29].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_30_.Lteq .original_name {{DUT/genblk1[30].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_30_.Lteq .single_bit_orig_name {DUT/genblk1[30].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_30_.Lteq/q .original_name {DUT/genblk1[30].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_31_.Lteq .original_name {{DUT/genblk1[31].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_31_.Lteq .single_bit_orig_name {DUT/genblk1[31].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_31_.Lteq/q .original_name {DUT/genblk1[31].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_32_.Lteq .original_name {{DUT/genblk1[32].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_32_.Lteq .single_bit_orig_name {DUT/genblk1[32].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_32_.Lteq/q .original_name {DUT/genblk1[32].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_33_.Lteq .original_name {{DUT/genblk1[33].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_33_.Lteq .single_bit_orig_name {DUT/genblk1[33].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_33_.Lteq/q .original_name {DUT/genblk1[33].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_34_.Lteq .original_name {{DUT/genblk1[34].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_34_.Lteq .single_bit_orig_name {DUT/genblk1[34].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_34_.Lteq/q .original_name {DUT/genblk1[34].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_35_.Lteq .original_name {{DUT/genblk1[35].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_35_.Lteq .single_bit_orig_name {DUT/genblk1[35].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_35_.Lteq/q .original_name {DUT/genblk1[35].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_36_.Lteq .original_name {{DUT/genblk1[36].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_36_.Lteq .single_bit_orig_name {DUT/genblk1[36].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_36_.Lteq/q .original_name {DUT/genblk1[36].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_37_.Lteq .original_name {{DUT/genblk1[37].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_37_.Lteq .single_bit_orig_name {DUT/genblk1[37].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_37_.Lteq/q .original_name {DUT/genblk1[37].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_38_.Lteq .original_name {{DUT/genblk1[38].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_38_.Lteq .single_bit_orig_name {DUT/genblk1[38].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_38_.Lteq/q .original_name {DUT/genblk1[38].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_39_.Lteq .original_name {{DUT/genblk1[39].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_39_.Lteq .single_bit_orig_name {DUT/genblk1[39].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_39_.Lteq/q .original_name {DUT/genblk1[39].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_40_.Lteq .original_name {{DUT/genblk1[40].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_40_.Lteq .single_bit_orig_name {DUT/genblk1[40].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_40_.Lteq/q .original_name {DUT/genblk1[40].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_41_.Lteq .original_name {{DUT/genblk1[41].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_41_.Lteq .single_bit_orig_name {DUT/genblk1[41].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_41_.Lteq/q .original_name {DUT/genblk1[41].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_42_.Lteq .original_name {{DUT/genblk1[42].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_42_.Lteq .single_bit_orig_name {DUT/genblk1[42].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_42_.Lteq/q .original_name {DUT/genblk1[42].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_43_.Lteq .original_name {{DUT/genblk1[43].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_43_.Lteq .single_bit_orig_name {DUT/genblk1[43].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_43_.Lteq/q .original_name {DUT/genblk1[43].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_44_.Lteq .original_name {{DUT/genblk1[44].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_44_.Lteq .single_bit_orig_name {DUT/genblk1[44].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_44_.Lteq/q .original_name {DUT/genblk1[44].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_45_.Lteq .original_name {{DUT/genblk1[45].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_45_.Lteq .single_bit_orig_name {DUT/genblk1[45].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_45_.Lteq/q .original_name {DUT/genblk1[45].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_46_.Lteq .original_name {{DUT/genblk1[46].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_46_.Lteq .single_bit_orig_name {DUT/genblk1[46].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_46_.Lteq/q .original_name {DUT/genblk1[46].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_47_.Lteq .original_name {{DUT/genblk1[47].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_47_.Lteq .single_bit_orig_name {DUT/genblk1[47].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_47_.Lteq/q .original_name {DUT/genblk1[47].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_48_.Lteq .original_name {{DUT/genblk1[48].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_48_.Lteq .single_bit_orig_name {DUT/genblk1[48].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_48_.Lteq/q .original_name {DUT/genblk1[48].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_49_.Lteq .original_name {{DUT/genblk1[49].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_49_.Lteq .single_bit_orig_name {DUT/genblk1[49].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_49_.Lteq/q .original_name {DUT/genblk1[49].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_50_.Lteq .original_name {{DUT/genblk1[50].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_50_.Lteq .single_bit_orig_name {DUT/genblk1[50].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_50_.Lteq/q .original_name {DUT/genblk1[50].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_51_.Lteq .original_name {{DUT/genblk1[51].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_51_.Lteq .single_bit_orig_name {DUT/genblk1[51].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_51_.Lteq/q .original_name {DUT/genblk1[51].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_52_.Lteq .original_name {{DUT/genblk1[52].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_52_.Lteq .single_bit_orig_name {DUT/genblk1[52].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_52_.Lteq/q .original_name {DUT/genblk1[52].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_53_.Lteq .original_name {{DUT/genblk1[53].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_53_.Lteq .single_bit_orig_name {DUT/genblk1[53].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_53_.Lteq/q .original_name {DUT/genblk1[53].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_54_.Lteq .original_name {{DUT/genblk1[54].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_54_.Lteq .single_bit_orig_name {DUT/genblk1[54].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_54_.Lteq/q .original_name {DUT/genblk1[54].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_55_.Lteq .original_name {{DUT/genblk1[55].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_55_.Lteq .single_bit_orig_name {DUT/genblk1[55].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_55_.Lteq/q .original_name {DUT/genblk1[55].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_56_.Lteq .original_name {{DUT/genblk1[56].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_56_.Lteq .single_bit_orig_name {DUT/genblk1[56].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_56_.Lteq/q .original_name {DUT/genblk1[56].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_57_.Lteq .original_name {{DUT/genblk1[57].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_57_.Lteq .single_bit_orig_name {DUT/genblk1[57].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_57_.Lteq/q .original_name {DUT/genblk1[57].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_58_.Lteq .original_name {{DUT/genblk1[58].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_58_.Lteq .single_bit_orig_name {DUT/genblk1[58].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_58_.Lteq/q .original_name {DUT/genblk1[58].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_59_.Lteq .original_name {{DUT/genblk1[59].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_59_.Lteq .single_bit_orig_name {DUT/genblk1[59].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_59_.Lteq/q .original_name {DUT/genblk1[59].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_60_.Lteq .original_name {{DUT/genblk1[60].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_60_.Lteq .single_bit_orig_name {DUT/genblk1[60].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_60_.Lteq/q .original_name {DUT/genblk1[60].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_61_.Lteq .original_name {{DUT/genblk1[61].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_61_.Lteq .single_bit_orig_name {DUT/genblk1[61].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_61_.Lteq/q .original_name {DUT/genblk1[61].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_62_.Lteq .original_name {{DUT/genblk1[62].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_62_.Lteq .single_bit_orig_name {DUT/genblk1[62].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_62_.Lteq/q .original_name {DUT/genblk1[62].Lteq/q}
+set_db -quiet hinst:wrapper/DUT/genblk1_63_.Lteq .original_name {{DUT/genblk1[63].Lteq}}
+set_db -quiet hinst:wrapper/DUT/genblk1_63_.Lteq .single_bit_orig_name {DUT/genblk1[63].Lteq}
+set_db -quiet hpin:wrapper/DUT/genblk1_63_.Lteq/q .original_name {DUT/genblk1[63].Lteq/q}
 set_db -quiet {inst:wrapper/dummy_reg[0]} .original_name {{dummy[0]}}
 set_db -quiet {inst:wrapper/dummy_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:wrapper/dummy_reg[0]} .single_bit_orig_name {dummy[0]}
 set_db -quiet {inst:wrapper/dummy_reg[0]} .gint_phase_inversion false
 set_db -quiet {pin:wrapper/dummy_reg[0]/QN} .original_name {dummy[0]/q}
-set_db -quiet {inst:wrapper/dummy_reg[14]} .original_name {{dummy[14]}}
-set_db -quiet {inst:wrapper/dummy_reg[14]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[14]} .single_bit_orig_name {dummy[14]}
-set_db -quiet {inst:wrapper/dummy_reg[14]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[14]/QN} .original_name {dummy[14]/q}
-set_db -quiet {inst:wrapper/dummy_reg[12]} .original_name {{dummy[12]}}
-set_db -quiet {inst:wrapper/dummy_reg[12]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[12]} .single_bit_orig_name {dummy[12]}
-set_db -quiet {inst:wrapper/dummy_reg[12]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[12]/QN} .original_name {dummy[12]/q}
-set_db -quiet {inst:wrapper/dummy_reg[8]} .original_name {{dummy[8]}}
-set_db -quiet {inst:wrapper/dummy_reg[8]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[8]} .single_bit_orig_name {dummy[8]}
-set_db -quiet {inst:wrapper/dummy_reg[8]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[8]/QN} .original_name {dummy[8]/q}
-set_db -quiet {inst:wrapper/dummy_reg[15]} .original_name {{dummy[15]}}
-set_db -quiet {inst:wrapper/dummy_reg[15]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[15]} .single_bit_orig_name {dummy[15]}
-set_db -quiet {inst:wrapper/dummy_reg[15]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[15]/QN} .original_name {dummy[15]/q}
-set_db -quiet {inst:wrapper/dummy_reg[7]} .original_name {{dummy[7]}}
-set_db -quiet {inst:wrapper/dummy_reg[7]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[7]} .single_bit_orig_name {dummy[7]}
-set_db -quiet {inst:wrapper/dummy_reg[7]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[7]/QN} .original_name {dummy[7]/q}
-set_db -quiet {inst:wrapper/dummy_reg[11]} .original_name {{dummy[11]}}
-set_db -quiet {inst:wrapper/dummy_reg[11]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[11]} .single_bit_orig_name {dummy[11]}
-set_db -quiet {inst:wrapper/dummy_reg[11]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[11]/QN} .original_name {dummy[11]/q}
-set_db -quiet {inst:wrapper/dummy_reg[6]} .original_name {{dummy[6]}}
-set_db -quiet {inst:wrapper/dummy_reg[6]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[6]} .single_bit_orig_name {dummy[6]}
-set_db -quiet {inst:wrapper/dummy_reg[6]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[6]/QN} .original_name {dummy[6]/q}
+set_db -quiet {inst:wrapper/dummy_reg[1]} .original_name {{dummy[1]}}
+set_db -quiet {inst:wrapper/dummy_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[1]} .single_bit_orig_name {dummy[1]}
+set_db -quiet {inst:wrapper/dummy_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[1]/QN} .original_name {dummy[1]/q}
+set_db -quiet {inst:wrapper/dummy_reg[2]} .original_name {{dummy[2]}}
+set_db -quiet {inst:wrapper/dummy_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[2]} .single_bit_orig_name {dummy[2]}
+set_db -quiet {inst:wrapper/dummy_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[2]/QN} .original_name {dummy[2]/q}
 set_db -quiet {inst:wrapper/dummy_reg[3]} .original_name {{dummy[3]}}
 set_db -quiet {inst:wrapper/dummy_reg[3]} .orig_hdl_instantiated false
 set_db -quiet {inst:wrapper/dummy_reg[3]} .single_bit_orig_name {dummy[3]}
 set_db -quiet {inst:wrapper/dummy_reg[3]} .gint_phase_inversion false
 set_db -quiet {pin:wrapper/dummy_reg[3]/QN} .original_name {dummy[3]/q}
-set_db -quiet {inst:wrapper/dummy_reg[13]} .original_name {{dummy[13]}}
-set_db -quiet {inst:wrapper/dummy_reg[13]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[13]} .single_bit_orig_name {dummy[13]}
-set_db -quiet {inst:wrapper/dummy_reg[13]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[13]/QN} .original_name {dummy[13]/q}
-set_db -quiet {inst:wrapper/dummy_reg[10]} .original_name {{dummy[10]}}
-set_db -quiet {inst:wrapper/dummy_reg[10]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[10]} .single_bit_orig_name {dummy[10]}
-set_db -quiet {inst:wrapper/dummy_reg[10]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[10]/QN} .original_name {dummy[10]/q}
 set_db -quiet {inst:wrapper/dummy_reg[4]} .original_name {{dummy[4]}}
 set_db -quiet {inst:wrapper/dummy_reg[4]} .orig_hdl_instantiated false
 set_db -quiet {inst:wrapper/dummy_reg[4]} .single_bit_orig_name {dummy[4]}
@@ -318,21 +821,296 @@ set_db -quiet {inst:wrapper/dummy_reg[5]} .orig_hdl_instantiated false
 set_db -quiet {inst:wrapper/dummy_reg[5]} .single_bit_orig_name {dummy[5]}
 set_db -quiet {inst:wrapper/dummy_reg[5]} .gint_phase_inversion false
 set_db -quiet {pin:wrapper/dummy_reg[5]/QN} .original_name {dummy[5]/q}
+set_db -quiet {inst:wrapper/dummy_reg[6]} .original_name {{dummy[6]}}
+set_db -quiet {inst:wrapper/dummy_reg[6]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[6]} .single_bit_orig_name {dummy[6]}
+set_db -quiet {inst:wrapper/dummy_reg[6]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[6]/QN} .original_name {dummy[6]/q}
+set_db -quiet {inst:wrapper/dummy_reg[7]} .original_name {{dummy[7]}}
+set_db -quiet {inst:wrapper/dummy_reg[7]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[7]} .single_bit_orig_name {dummy[7]}
+set_db -quiet {inst:wrapper/dummy_reg[7]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[7]/QN} .original_name {dummy[7]/q}
+set_db -quiet {inst:wrapper/dummy_reg[8]} .original_name {{dummy[8]}}
+set_db -quiet {inst:wrapper/dummy_reg[8]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[8]} .single_bit_orig_name {dummy[8]}
+set_db -quiet {inst:wrapper/dummy_reg[8]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[8]/QN} .original_name {dummy[8]/q}
 set_db -quiet {inst:wrapper/dummy_reg[9]} .original_name {{dummy[9]}}
 set_db -quiet {inst:wrapper/dummy_reg[9]} .orig_hdl_instantiated false
 set_db -quiet {inst:wrapper/dummy_reg[9]} .single_bit_orig_name {dummy[9]}
 set_db -quiet {inst:wrapper/dummy_reg[9]} .gint_phase_inversion false
 set_db -quiet {pin:wrapper/dummy_reg[9]/QN} .original_name {dummy[9]/q}
-set_db -quiet {inst:wrapper/dummy_reg[2]} .original_name {{dummy[2]}}
-set_db -quiet {inst:wrapper/dummy_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[2]} .single_bit_orig_name {dummy[2]}
-set_db -quiet {inst:wrapper/dummy_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[2]/QN} .original_name {dummy[2]/q}
-set_db -quiet {inst:wrapper/dummy_reg[1]} .original_name {{dummy[1]}}
-set_db -quiet {inst:wrapper/dummy_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:wrapper/dummy_reg[1]} .single_bit_orig_name {dummy[1]}
-set_db -quiet {inst:wrapper/dummy_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:wrapper/dummy_reg[1]/QN} .original_name {dummy[1]/q}
+set_db -quiet {inst:wrapper/dummy_reg[10]} .original_name {{dummy[10]}}
+set_db -quiet {inst:wrapper/dummy_reg[10]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[10]} .single_bit_orig_name {dummy[10]}
+set_db -quiet {inst:wrapper/dummy_reg[10]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[10]/QN} .original_name {dummy[10]/q}
+set_db -quiet {inst:wrapper/dummy_reg[11]} .original_name {{dummy[11]}}
+set_db -quiet {inst:wrapper/dummy_reg[11]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[11]} .single_bit_orig_name {dummy[11]}
+set_db -quiet {inst:wrapper/dummy_reg[11]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[11]/QN} .original_name {dummy[11]/q}
+set_db -quiet {inst:wrapper/dummy_reg[12]} .original_name {{dummy[12]}}
+set_db -quiet {inst:wrapper/dummy_reg[12]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[12]} .single_bit_orig_name {dummy[12]}
+set_db -quiet {inst:wrapper/dummy_reg[12]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[12]/QN} .original_name {dummy[12]/q}
+set_db -quiet {inst:wrapper/dummy_reg[13]} .original_name {{dummy[13]}}
+set_db -quiet {inst:wrapper/dummy_reg[13]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[13]} .single_bit_orig_name {dummy[13]}
+set_db -quiet {inst:wrapper/dummy_reg[13]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[13]/QN} .original_name {dummy[13]/q}
+set_db -quiet {inst:wrapper/dummy_reg[14]} .original_name {{dummy[14]}}
+set_db -quiet {inst:wrapper/dummy_reg[14]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[14]} .single_bit_orig_name {dummy[14]}
+set_db -quiet {inst:wrapper/dummy_reg[14]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[14]/QN} .original_name {dummy[14]/q}
+set_db -quiet {inst:wrapper/dummy_reg[15]} .original_name {{dummy[15]}}
+set_db -quiet {inst:wrapper/dummy_reg[15]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[15]} .single_bit_orig_name {dummy[15]}
+set_db -quiet {inst:wrapper/dummy_reg[15]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[15]/QN} .original_name {dummy[15]/q}
+set_db -quiet {inst:wrapper/dummy_reg[16]} .original_name {{dummy[16]}}
+set_db -quiet {inst:wrapper/dummy_reg[16]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[16]} .single_bit_orig_name {dummy[16]}
+set_db -quiet {inst:wrapper/dummy_reg[16]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[16]/QN} .original_name {dummy[16]/q}
+set_db -quiet {inst:wrapper/dummy_reg[17]} .original_name {{dummy[17]}}
+set_db -quiet {inst:wrapper/dummy_reg[17]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[17]} .single_bit_orig_name {dummy[17]}
+set_db -quiet {inst:wrapper/dummy_reg[17]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[17]/QN} .original_name {dummy[17]/q}
+set_db -quiet {inst:wrapper/dummy_reg[18]} .original_name {{dummy[18]}}
+set_db -quiet {inst:wrapper/dummy_reg[18]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[18]} .single_bit_orig_name {dummy[18]}
+set_db -quiet {inst:wrapper/dummy_reg[18]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[18]/QN} .original_name {dummy[18]/q}
+set_db -quiet {inst:wrapper/dummy_reg[19]} .original_name {{dummy[19]}}
+set_db -quiet {inst:wrapper/dummy_reg[19]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[19]} .single_bit_orig_name {dummy[19]}
+set_db -quiet {inst:wrapper/dummy_reg[19]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[19]/QN} .original_name {dummy[19]/q}
+set_db -quiet {inst:wrapper/dummy_reg[20]} .original_name {{dummy[20]}}
+set_db -quiet {inst:wrapper/dummy_reg[20]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[20]} .single_bit_orig_name {dummy[20]}
+set_db -quiet {inst:wrapper/dummy_reg[20]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[20]/QN} .original_name {dummy[20]/q}
+set_db -quiet {inst:wrapper/dummy_reg[21]} .original_name {{dummy[21]}}
+set_db -quiet {inst:wrapper/dummy_reg[21]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[21]} .single_bit_orig_name {dummy[21]}
+set_db -quiet {inst:wrapper/dummy_reg[21]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[21]/QN} .original_name {dummy[21]/q}
+set_db -quiet {inst:wrapper/dummy_reg[22]} .original_name {{dummy[22]}}
+set_db -quiet {inst:wrapper/dummy_reg[22]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[22]} .single_bit_orig_name {dummy[22]}
+set_db -quiet {inst:wrapper/dummy_reg[22]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[22]/QN} .original_name {dummy[22]/q}
+set_db -quiet {inst:wrapper/dummy_reg[23]} .original_name {{dummy[23]}}
+set_db -quiet {inst:wrapper/dummy_reg[23]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[23]} .single_bit_orig_name {dummy[23]}
+set_db -quiet {inst:wrapper/dummy_reg[23]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[23]/QN} .original_name {dummy[23]/q}
+set_db -quiet {inst:wrapper/dummy_reg[24]} .original_name {{dummy[24]}}
+set_db -quiet {inst:wrapper/dummy_reg[24]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[24]} .single_bit_orig_name {dummy[24]}
+set_db -quiet {inst:wrapper/dummy_reg[24]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[24]/QN} .original_name {dummy[24]/q}
+set_db -quiet {inst:wrapper/dummy_reg[25]} .original_name {{dummy[25]}}
+set_db -quiet {inst:wrapper/dummy_reg[25]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[25]} .single_bit_orig_name {dummy[25]}
+set_db -quiet {inst:wrapper/dummy_reg[25]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[25]/QN} .original_name {dummy[25]/q}
+set_db -quiet {inst:wrapper/dummy_reg[26]} .original_name {{dummy[26]}}
+set_db -quiet {inst:wrapper/dummy_reg[26]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[26]} .single_bit_orig_name {dummy[26]}
+set_db -quiet {inst:wrapper/dummy_reg[26]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[26]/QN} .original_name {dummy[26]/q}
+set_db -quiet {inst:wrapper/dummy_reg[27]} .original_name {{dummy[27]}}
+set_db -quiet {inst:wrapper/dummy_reg[27]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[27]} .single_bit_orig_name {dummy[27]}
+set_db -quiet {inst:wrapper/dummy_reg[27]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[27]/QN} .original_name {dummy[27]/q}
+set_db -quiet {inst:wrapper/dummy_reg[28]} .original_name {{dummy[28]}}
+set_db -quiet {inst:wrapper/dummy_reg[28]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[28]} .single_bit_orig_name {dummy[28]}
+set_db -quiet {inst:wrapper/dummy_reg[28]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[28]/QN} .original_name {dummy[28]/q}
+set_db -quiet {inst:wrapper/dummy_reg[29]} .original_name {{dummy[29]}}
+set_db -quiet {inst:wrapper/dummy_reg[29]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[29]} .single_bit_orig_name {dummy[29]}
+set_db -quiet {inst:wrapper/dummy_reg[29]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[29]/QN} .original_name {dummy[29]/q}
+set_db -quiet {inst:wrapper/dummy_reg[30]} .original_name {{dummy[30]}}
+set_db -quiet {inst:wrapper/dummy_reg[30]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[30]} .single_bit_orig_name {dummy[30]}
+set_db -quiet {inst:wrapper/dummy_reg[30]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[30]/QN} .original_name {dummy[30]/q}
+set_db -quiet {inst:wrapper/dummy_reg[31]} .original_name {{dummy[31]}}
+set_db -quiet {inst:wrapper/dummy_reg[31]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[31]} .single_bit_orig_name {dummy[31]}
+set_db -quiet {inst:wrapper/dummy_reg[31]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[31]/QN} .original_name {dummy[31]/q}
+set_db -quiet {inst:wrapper/dummy_reg[32]} .original_name {{dummy[32]}}
+set_db -quiet {inst:wrapper/dummy_reg[32]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[32]} .single_bit_orig_name {dummy[32]}
+set_db -quiet {inst:wrapper/dummy_reg[32]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[32]/QN} .original_name {dummy[32]/q}
+set_db -quiet {inst:wrapper/dummy_reg[33]} .original_name {{dummy[33]}}
+set_db -quiet {inst:wrapper/dummy_reg[33]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[33]} .single_bit_orig_name {dummy[33]}
+set_db -quiet {inst:wrapper/dummy_reg[33]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[33]/QN} .original_name {dummy[33]/q}
+set_db -quiet {inst:wrapper/dummy_reg[34]} .original_name {{dummy[34]}}
+set_db -quiet {inst:wrapper/dummy_reg[34]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[34]} .single_bit_orig_name {dummy[34]}
+set_db -quiet {inst:wrapper/dummy_reg[34]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[34]/QN} .original_name {dummy[34]/q}
+set_db -quiet {inst:wrapper/dummy_reg[35]} .original_name {{dummy[35]}}
+set_db -quiet {inst:wrapper/dummy_reg[35]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[35]} .single_bit_orig_name {dummy[35]}
+set_db -quiet {inst:wrapper/dummy_reg[35]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[35]/QN} .original_name {dummy[35]/q}
+set_db -quiet {inst:wrapper/dummy_reg[36]} .original_name {{dummy[36]}}
+set_db -quiet {inst:wrapper/dummy_reg[36]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[36]} .single_bit_orig_name {dummy[36]}
+set_db -quiet {inst:wrapper/dummy_reg[36]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[36]/QN} .original_name {dummy[36]/q}
+set_db -quiet {inst:wrapper/dummy_reg[37]} .original_name {{dummy[37]}}
+set_db -quiet {inst:wrapper/dummy_reg[37]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[37]} .single_bit_orig_name {dummy[37]}
+set_db -quiet {inst:wrapper/dummy_reg[37]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[37]/QN} .original_name {dummy[37]/q}
+set_db -quiet {inst:wrapper/dummy_reg[38]} .original_name {{dummy[38]}}
+set_db -quiet {inst:wrapper/dummy_reg[38]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[38]} .single_bit_orig_name {dummy[38]}
+set_db -quiet {inst:wrapper/dummy_reg[38]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[38]/QN} .original_name {dummy[38]/q}
+set_db -quiet {inst:wrapper/dummy_reg[39]} .original_name {{dummy[39]}}
+set_db -quiet {inst:wrapper/dummy_reg[39]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[39]} .single_bit_orig_name {dummy[39]}
+set_db -quiet {inst:wrapper/dummy_reg[39]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[39]/QN} .original_name {dummy[39]/q}
+set_db -quiet {inst:wrapper/dummy_reg[40]} .original_name {{dummy[40]}}
+set_db -quiet {inst:wrapper/dummy_reg[40]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[40]} .single_bit_orig_name {dummy[40]}
+set_db -quiet {inst:wrapper/dummy_reg[40]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[40]/QN} .original_name {dummy[40]/q}
+set_db -quiet {inst:wrapper/dummy_reg[41]} .original_name {{dummy[41]}}
+set_db -quiet {inst:wrapper/dummy_reg[41]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[41]} .single_bit_orig_name {dummy[41]}
+set_db -quiet {inst:wrapper/dummy_reg[41]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[41]/QN} .original_name {dummy[41]/q}
+set_db -quiet {inst:wrapper/dummy_reg[42]} .original_name {{dummy[42]}}
+set_db -quiet {inst:wrapper/dummy_reg[42]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[42]} .single_bit_orig_name {dummy[42]}
+set_db -quiet {inst:wrapper/dummy_reg[42]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[42]/QN} .original_name {dummy[42]/q}
+set_db -quiet {inst:wrapper/dummy_reg[43]} .original_name {{dummy[43]}}
+set_db -quiet {inst:wrapper/dummy_reg[43]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[43]} .single_bit_orig_name {dummy[43]}
+set_db -quiet {inst:wrapper/dummy_reg[43]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[43]/QN} .original_name {dummy[43]/q}
+set_db -quiet {inst:wrapper/dummy_reg[44]} .original_name {{dummy[44]}}
+set_db -quiet {inst:wrapper/dummy_reg[44]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[44]} .single_bit_orig_name {dummy[44]}
+set_db -quiet {inst:wrapper/dummy_reg[44]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[44]/QN} .original_name {dummy[44]/q}
+set_db -quiet {inst:wrapper/dummy_reg[45]} .original_name {{dummy[45]}}
+set_db -quiet {inst:wrapper/dummy_reg[45]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[45]} .single_bit_orig_name {dummy[45]}
+set_db -quiet {inst:wrapper/dummy_reg[45]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[45]/QN} .original_name {dummy[45]/q}
+set_db -quiet {inst:wrapper/dummy_reg[46]} .original_name {{dummy[46]}}
+set_db -quiet {inst:wrapper/dummy_reg[46]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[46]} .single_bit_orig_name {dummy[46]}
+set_db -quiet {inst:wrapper/dummy_reg[46]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[46]/QN} .original_name {dummy[46]/q}
+set_db -quiet {inst:wrapper/dummy_reg[47]} .original_name {{dummy[47]}}
+set_db -quiet {inst:wrapper/dummy_reg[47]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[47]} .single_bit_orig_name {dummy[47]}
+set_db -quiet {inst:wrapper/dummy_reg[47]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[47]/QN} .original_name {dummy[47]/q}
+set_db -quiet {inst:wrapper/dummy_reg[48]} .original_name {{dummy[48]}}
+set_db -quiet {inst:wrapper/dummy_reg[48]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[48]} .single_bit_orig_name {dummy[48]}
+set_db -quiet {inst:wrapper/dummy_reg[48]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[48]/QN} .original_name {dummy[48]/q}
+set_db -quiet {inst:wrapper/dummy_reg[49]} .original_name {{dummy[49]}}
+set_db -quiet {inst:wrapper/dummy_reg[49]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[49]} .single_bit_orig_name {dummy[49]}
+set_db -quiet {inst:wrapper/dummy_reg[49]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[49]/QN} .original_name {dummy[49]/q}
+set_db -quiet {inst:wrapper/dummy_reg[50]} .original_name {{dummy[50]}}
+set_db -quiet {inst:wrapper/dummy_reg[50]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[50]} .single_bit_orig_name {dummy[50]}
+set_db -quiet {inst:wrapper/dummy_reg[50]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[50]/QN} .original_name {dummy[50]/q}
+set_db -quiet {inst:wrapper/dummy_reg[51]} .original_name {{dummy[51]}}
+set_db -quiet {inst:wrapper/dummy_reg[51]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[51]} .single_bit_orig_name {dummy[51]}
+set_db -quiet {inst:wrapper/dummy_reg[51]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[51]/QN} .original_name {dummy[51]/q}
+set_db -quiet {inst:wrapper/dummy_reg[52]} .original_name {{dummy[52]}}
+set_db -quiet {inst:wrapper/dummy_reg[52]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[52]} .single_bit_orig_name {dummy[52]}
+set_db -quiet {inst:wrapper/dummy_reg[52]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[52]/QN} .original_name {dummy[52]/q}
+set_db -quiet {inst:wrapper/dummy_reg[53]} .original_name {{dummy[53]}}
+set_db -quiet {inst:wrapper/dummy_reg[53]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[53]} .single_bit_orig_name {dummy[53]}
+set_db -quiet {inst:wrapper/dummy_reg[53]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[53]/QN} .original_name {dummy[53]/q}
+set_db -quiet {inst:wrapper/dummy_reg[54]} .original_name {{dummy[54]}}
+set_db -quiet {inst:wrapper/dummy_reg[54]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[54]} .single_bit_orig_name {dummy[54]}
+set_db -quiet {inst:wrapper/dummy_reg[54]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[54]/QN} .original_name {dummy[54]/q}
+set_db -quiet {inst:wrapper/dummy_reg[55]} .original_name {{dummy[55]}}
+set_db -quiet {inst:wrapper/dummy_reg[55]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[55]} .single_bit_orig_name {dummy[55]}
+set_db -quiet {inst:wrapper/dummy_reg[55]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[55]/QN} .original_name {dummy[55]/q}
+set_db -quiet {inst:wrapper/dummy_reg[56]} .original_name {{dummy[56]}}
+set_db -quiet {inst:wrapper/dummy_reg[56]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[56]} .single_bit_orig_name {dummy[56]}
+set_db -quiet {inst:wrapper/dummy_reg[56]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[56]/QN} .original_name {dummy[56]/q}
+set_db -quiet {inst:wrapper/dummy_reg[57]} .original_name {{dummy[57]}}
+set_db -quiet {inst:wrapper/dummy_reg[57]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[57]} .single_bit_orig_name {dummy[57]}
+set_db -quiet {inst:wrapper/dummy_reg[57]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[57]/QN} .original_name {dummy[57]/q}
+set_db -quiet {inst:wrapper/dummy_reg[58]} .original_name {{dummy[58]}}
+set_db -quiet {inst:wrapper/dummy_reg[58]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[58]} .single_bit_orig_name {dummy[58]}
+set_db -quiet {inst:wrapper/dummy_reg[58]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[58]/QN} .original_name {dummy[58]/q}
+set_db -quiet {inst:wrapper/dummy_reg[59]} .original_name {{dummy[59]}}
+set_db -quiet {inst:wrapper/dummy_reg[59]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[59]} .single_bit_orig_name {dummy[59]}
+set_db -quiet {inst:wrapper/dummy_reg[59]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[59]/QN} .original_name {dummy[59]/q}
+set_db -quiet {inst:wrapper/dummy_reg[60]} .original_name {{dummy[60]}}
+set_db -quiet {inst:wrapper/dummy_reg[60]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[60]} .single_bit_orig_name {dummy[60]}
+set_db -quiet {inst:wrapper/dummy_reg[60]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[60]/QN} .original_name {dummy[60]/q}
+set_db -quiet {inst:wrapper/dummy_reg[61]} .original_name {{dummy[61]}}
+set_db -quiet {inst:wrapper/dummy_reg[61]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[61]} .single_bit_orig_name {dummy[61]}
+set_db -quiet {inst:wrapper/dummy_reg[61]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[61]/QN} .original_name {dummy[61]/q}
+set_db -quiet {inst:wrapper/dummy_reg[62]} .original_name {{dummy[62]}}
+set_db -quiet {inst:wrapper/dummy_reg[62]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[62]} .single_bit_orig_name {dummy[62]}
+set_db -quiet {inst:wrapper/dummy_reg[62]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[62]/QN} .original_name {dummy[62]/q}
+set_db -quiet {inst:wrapper/dummy_reg[63]} .original_name {{dummy[63]}}
+set_db -quiet {inst:wrapper/dummy_reg[63]} .orig_hdl_instantiated false
+set_db -quiet {inst:wrapper/dummy_reg[63]} .single_bit_orig_name {dummy[63]}
+set_db -quiet {inst:wrapper/dummy_reg[63]} .gint_phase_inversion false
+set_db -quiet {pin:wrapper/dummy_reg[63]/QN} .original_name {dummy[63]/q}
 # BEGIN PMBIST SECTION
 # END PMBIST SECTION
 # BEGIN PHYSICAL ANNOTATION SECTION
@@ -343,7 +1121,7 @@ set_db -quiet source_verbose true
 ##
 ## Written by Genus(TM) Synthesis Solution version 18.14-s037_1
 ## flowkit v18.10-p010_1
-## Written on 19:21:20 03-Apr 2022
+## Written on 14:19:43 04-Apr 2022
 #############################################################
 #####   Flow Definitions   ##################################
 
@@ -386,7 +1164,7 @@ if {[is_attribute flow_mail_on_error -obj_type root]} {set_db flow_mail_on_error
 if {[is_attribute flow_mail_to -obj_type root]} {set_db flow_mail_to {}}
 if {[is_attribute flow_metrics_file -obj_type root]} {set_db flow_metrics_file {}}
 if {[is_attribute flow_metrics_snapshot_parent_uuid -obj_type root]} {set_db flow_metrics_snapshot_parent_uuid {}}
-if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid 2f18af7d-94a6-4721-9b74-bb0c39919b89}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid 6bb47e3b-8de7-4539-ad02-e2ccba3ad7c2}
 if {[is_attribute flow_overwrite_db -obj_type root]} {set_db flow_overwrite_db false}
 if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
 if {[is_attribute flow_run_tag -obj_type root]} {set_db flow_run_tag {}}

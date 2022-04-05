@@ -1,7 +1,7 @@
 module wrapper
 #(  parameter GAMMA_CYCLE_WIDTH=16,
     parameter PULSE_WIDTH=8,
-    parameter NUM_INPUTS = 16)
+    parameter NUM_INPUTS = 128)
 (input logic aclk,
  input logic rst,
  input logic [NUM_INPUTS-1:0] input_spikes,
