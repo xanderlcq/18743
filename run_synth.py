@@ -44,7 +44,7 @@ def run_program(top_module_name, directory, synth_type, macro):
     files = arr = os.listdir('./')
     # Delete unnecessary Files
     for file in files:
-        if (file != "rep" or file != "src" or file != "Makefile" or file != "run.tcl"):
+        if (file != "rep" and file != "src" and file != "Makefile" and file != "run.tcl"):
             subprocess.run(['rm', '-rf', file])
     os.chdir(cwd)
 
