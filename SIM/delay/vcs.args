@@ -1,0 +1,2 @@
+$NEURAL_HOME/src/rtl/delay/delay.sv
+$NEURAL_HOME/src/rtl/delay/tb/testbench.sv

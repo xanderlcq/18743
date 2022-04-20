@@ -1,105 +1,94 @@
 module tb();
 
-    parameter NUM_INPUTS = 8;
     parameter GAMMA_CYCLE_WIDTH = 16;
     parameter PULSE_WIDTH = 8;
-    parameter K = 3;
-    logic [NUM_INPUTS-1:0] input_spikes, output_spikes;
+
+    logic in, out;
+    logic [$clog2(GAMMA_CYCLE_WIDTH) - 1 : 0] delay;
     logic grst, aclk; //aclk only for driving the tb
 
-    kwta #(GAMMA_CYCLE_WIDTH, PULSE_WIDTH, NUM_INPUTS, K) DUT(.*);
+    naive_delay #(GAMMA_CYCLE_WIDTH, PULSE_WIDTH) DUT(.*);
 
 
 
     `ifdef RISING
         task reset();
             grst <= 1;
-            input_spikes = '0;
+            in = '0;
+            delay = '0;
             @(posedge aclk);
             grst <= 0;
-            @(posedge aclk);
-            @(posedge aclk);
-            
-            @(posedge aclk);
-            @(posedge aclk);
+
         endtask
 
         initial begin
-            $display("Testing Rising Edge of wta1");
+            $display("Testing Rising Edge of naive delay");
             reset();
-            input_spikes[0] <= 1'b1;
+            in <= 1'b1;
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
             @(posedge aclk);
             @(posedge aclk);
 
             reset();
+            in <= 1'b1;
+            delay <= 4'd5;
             @(posedge aclk);
-            input_spikes[3] <= 1'b1;
             @(posedge aclk);
-            input_spikes[7] <= 1'b1;
             @(posedge aclk);
-            input_spikes[6] <= 1'b1;
             @(posedge aclk);
-            input_spikes[2] <= 1'b1;
             @(posedge aclk);
-            input_spikes[0] <= 1'b1;
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
             @(posedge aclk);
 
             reset();
-            @(posedge aclk);
-            input_spikes[1] <= 1'b1;
-            input_spikes[4] <= 1'b1;
-            input_spikes[5] <= 1'b1;
-            @(posedge aclk);
-            input_spikes[6] <= 1'b1;
+            delay <= 4'd6;
             @(posedge aclk);
             @(posedge aclk);
-            input_spikes[2] <= 1'b1;
+            in <= 1'b1;
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
             @(posedge aclk);
             @(posedge aclk);
 
 
             reset();
-            @(posedge aclk);
-            input_spikes[5] <= 1'b1;
-            @(posedge aclk);
-            input_spikes[6] <= 1'b1;
+            delay <= 4'd15;
+            in <= 1'b1;
             @(posedge aclk);
             @(posedge aclk);
             @(posedge aclk);
             @(posedge aclk);
-            // input_spikes[2] <= 1'b1;
             @(posedge aclk);
             @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            @(posedge aclk);
+            reset();
 
-            //this is to demonstrate the tie breaking does not work
-            reset();
-            @(posedge aclk);
-            input_spikes[0] <= 1'b1;
-            @(posedge aclk);
-            input_spikes[6] <= 1'b1;
-            @(posedge aclk);
-            @(posedge aclk);
-            @(posedge aclk);
-            @(posedge aclk);
-            input_spikes[2] <= 1'b1;
-            input_spikes[4] <= 1'b1;
-            @(posedge aclk);
-            @(posedge aclk);
-            reset();
-            @(posedge aclk);
-            @(posedge aclk);
-            input_spikes[7] <= 1'b1;
-            input_spikes[6] <= 1'b1;
-            input_spikes[5] <= 1'b1;
-            input_spikes[4] <= 1'b1;
-            input_spikes[3] <= 1'b1;
-            input_spikes[2] <= 1'b1;
-            input_spikes[1] <= 1'b1;
-            input_spikes[0] <= 1'b1;
-            @(posedge aclk);
-            @(posedge aclk);
-            @(posedge aclk);
-            @(posedge aclk);
+           
             
 
             $finish;
