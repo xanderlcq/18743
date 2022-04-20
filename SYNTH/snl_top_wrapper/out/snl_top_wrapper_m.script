@@ -1,0 +1,583 @@
+######################################################################
+
+# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Tue Mar 29 15:08:02 EDT 2022
+
+# This file contains the RC script for design:snl_top_wrapper
+
+######################################################################
+
+if {! [is_attribute wlec_internal_to_write_lec_db_for_invocation -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_invocation}
+if {! [is_attribute wlec_internal_to_write_lec_db_for_label -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_label}
+if {! [is_attribute wlec_internal_to_write_lec_label_data -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_label_data}
+set_db -quiet information_level 7
+set_db -quiet init_lib_search_path /afs/andrew.cmu.edu/course/18/743/asap7/
+set_db -quiet design_mode_process 72.0
+set_db -quiet phys_assume_met_fill 0.0
+set_db -quiet map_placed_for_hum false
+set_db -quiet phys_use_invs_extraction true
+set_db -quiet phys_route_time_out 120.0
+set_db -quiet capacitance_per_unit_length_mmmc {}
+set_db -quiet resistance_per_unit_length_mmmc {}
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 26.0} {to_generic 1 12 0 26} {first_condense 2 14 1 28} {PBS_Generic_Opt-Post 3 14 1.8928499999999993 27.89285} {{PBS_Generic-Postgen HBO Optimizations} 0 14 0.0 27.89285} {PBS_TechMap-Start 0 14 0.0 27.89285} {{PBS_TechMap-Premap HBO Optimizations} 0 14 1.0 28.89285} {second_condense 0 14 0 29} {reify 1 15 0 30} {global_incr_map 1 16 0 30} {{PBS_Techmap-Global Mapping} 2 16 1.8309029999999993 30.723753} {{PBS_TechMap-Datapath Postmap Operations} 0 16 0.0 30.723753} {{PBS_TechMap-Postmap HBO Optimizations} 0 16 0.0 30.723753} {{PBS_TechMap-Postmap Clock Gating} 0 16 0.0 30.723753} {{PBS_TechMap-Postmap Cleanup} 0 16 0.0 30.723753} {PBS_Techmap-Post_MBCI 0 16 0.0 30.723753} {incr_opt 0 17 0 31} }
+set_db -quiet hdl_generate_index_style %s_%d_
+set_db -quiet tinfo_tstamp_file .rs_acli.tstamp
+set_db -quiet metric_enable true
+set_db -quiet metric_page_cfg {}
+set_db -quiet script_search_path ./
+set_db -quiet auto_ungroup none
+set_db -quiet use_area_from_lef true
+set_db -quiet flow_metrics_snapshot_uuid f8718932-edd1-48da-8126-2b88ab61c7c4
+set_db -quiet syn_generic_effort high
+set_db -quiet compensative_dpul_driver 0
+set_db -quiet phys_use_segment_parasitics true
+set_db -quiet probabilistic_extraction true
+set_db -quiet ple_correlation_factors {1.9000 2.0000}
+set_db -quiet maximum_interval_of_vias inf
+set_db -quiet layer_aware_buffer true
+set_db -quiet ple_mode global
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+# BEGIN MSV SECTION
+# END MSV SECTION
+# BEGIN DFT SECTION
+set_db -quiet dft_scan_style muxed_scan
+set_db -quiet dft_scanbit_waveform_analysis false
+# END DFT SECTION
+set_db -quiet design:snl_top_wrapper .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 743} {cell_count 734} {utilization  0.00} {runtime 1 12 0 26} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 510} {cell_count 383} {utilization  0.00} {runtime 2 14 1 28} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 510} {cell_count 383} {utilization  0.00} {runtime 0 14 0 29} }{reify {wns 214748365} {tns 0} {vep 0} {area 536} {cell_count 383} {utilization  0.00} {runtime 1 15 0 30} }{global_incr_map {wns 214748365} {tns 0} {vep 0} {area 536} {cell_count 383} {utilization  0.00} {runtime 1 16 0 30} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 536} {cell_count 383} {utilization  0.00} {runtime 0 17 0 31} }}
+set_db -quiet design:snl_top_wrapper .seq_mbci_coverage 0.0
+set_db -quiet design:snl_top_wrapper .hdl_user_name snl_top_wrapper
+set_db -quiet design:snl_top_wrapper .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet design:snl_top_wrapper .verification_directory fv/snl_top_wrapper
+set_db -quiet port:snl_top_wrapper/clk .original_name clk
+set_db -quiet {port:snl_top_wrapper/input_spikes[0]} .original_name {input_spikes[0]}
+set_db -quiet {port:snl_top_wrapper/input_spikes[1]} .original_name {input_spikes[1]}
+set_db -quiet {port:snl_top_wrapper/input_spikes[2]} .original_name {input_spikes[2]}
+set_db -quiet {port:snl_top_wrapper/input_spikes[3]} .original_name {input_spikes[3]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][7]} .original_name {input_weights[3][7]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][6]} .original_name {input_weights[3][6]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][5]} .original_name {input_weights[3][5]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][4]} .original_name {input_weights[3][4]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][3]} .original_name {input_weights[3][3]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][2]} .original_name {input_weights[3][2]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][1]} .original_name {input_weights[3][1]}
+set_db -quiet {port:snl_top_wrapper/input_weights[3][0]} .original_name {input_weights[3][0]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][7]} .original_name {input_weights[2][7]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][6]} .original_name {input_weights[2][6]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][5]} .original_name {input_weights[2][5]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][4]} .original_name {input_weights[2][4]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][3]} .original_name {input_weights[2][3]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][2]} .original_name {input_weights[2][2]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][1]} .original_name {input_weights[2][1]}
+set_db -quiet {port:snl_top_wrapper/input_weights[2][0]} .original_name {input_weights[2][0]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][7]} .original_name {input_weights[1][7]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][6]} .original_name {input_weights[1][6]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][5]} .original_name {input_weights[1][5]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][4]} .original_name {input_weights[1][4]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][3]} .original_name {input_weights[1][3]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][2]} .original_name {input_weights[1][2]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][1]} .original_name {input_weights[1][1]}
+set_db -quiet {port:snl_top_wrapper/input_weights[1][0]} .original_name {input_weights[1][0]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][7]} .original_name {input_weights[0][7]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][6]} .original_name {input_weights[0][6]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][5]} .original_name {input_weights[0][5]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][4]} .original_name {input_weights[0][4]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][3]} .original_name {input_weights[0][3]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][2]} .original_name {input_weights[0][2]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][1]} .original_name {input_weights[0][1]}
+set_db -quiet {port:snl_top_wrapper/input_weights[0][0]} .original_name {input_weights[0][0]}
+set_db -quiet port:snl_top_wrapper/clk_out .original_name clk_out
+set_db -quiet port:snl_top_wrapper/output_spike .original_name output_spike
+set_db -quiet module:snl_top_wrapper/neuron_snl_grl .hdl_user_name neuron_snl_grl
+set_db -quiet module:snl_top_wrapper/neuron_snl_grl .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_32 .hdl_user_name bitonic_sort_32
+set_db -quiet module:snl_top_wrapper/bitonic_sort_32 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_16_1 .hdl_user_name bitonic_sort_16
+set_db -quiet module:snl_top_wrapper/bitonic_sort_16_1 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_3 .hdl_user_name bitonic_sort_8
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_3 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_7 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_7 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_111 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_111 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_110 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_110 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_112 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_112 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_113 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_113 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_114 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_114 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_115 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_115 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_6 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_6 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_105 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_105 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_104 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_104 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_106 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_106 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_107 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_107 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_108 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_108 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_109 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_109 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_116 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_116 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_117 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_117 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_118 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_118 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_119 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_119 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_120 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_120 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_121 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_121 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_122 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_122 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_123 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_123 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_124 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_124 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_125 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_125 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_126 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_126 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_127 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_127 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_2 .hdl_user_name bitonic_sort_8
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_2 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_5 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_5 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_87 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_87 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_86 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_86 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_88 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_88 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_89 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_89 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_90 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_90 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_91 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_91 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_4 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_4 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_81 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_81 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_80 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_80 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_82 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_82 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_83 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_83 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_84 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_84 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_85 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_85 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_92 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_92 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_93 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_93 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_94 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_94 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_95 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_95 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_96 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_96 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_97 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_97 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_98 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_98 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_99 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_99 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_100 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_100 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_101 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_101 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_102 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_102 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_103 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_103 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_128 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_128 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_129 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_129 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_130 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_130 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_131 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_131 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_132 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_132 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_133 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_133 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_134 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_134 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_135 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_135 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_136 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_136 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_137 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_137 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_138 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_138 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_139 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_139 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_140 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_140 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_141 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_141 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_142 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_142 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_143 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_143 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_144 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_144 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_145 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_145 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_146 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_146 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_147 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_147 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_148 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_148 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_149 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_149 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_150 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_150 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_151 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_151 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_152 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_152 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_153 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_153 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_154 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_154 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_155 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_155 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_156 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_156 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_157 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_157 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_158 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_158 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_159 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_159 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_16 .hdl_user_name bitonic_sort_16
+set_db -quiet module:snl_top_wrapper/bitonic_sort_16 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_1 .hdl_user_name bitonic_sort_8
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8_1 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_3 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_3 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_31 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_31 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_30 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_30 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_32 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_32 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_33 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_33 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_34 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_34 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_35 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_35 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_2 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_2 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_25 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_25 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_24 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_24 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_26 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_26 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_27 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_27 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_28 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_28 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_29 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_29 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_36 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_36 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_37 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_37 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_38 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_38 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_39 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_39 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_40 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_40 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_41 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_41 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_42 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_42 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_43 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_43 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_44 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_44 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_45 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_45 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_46 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_46 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_47 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_47 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8 .hdl_user_name bitonic_sort_8
+set_db -quiet module:snl_top_wrapper/bitonic_sort_8 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_1 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4_1 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_7 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_7 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_6 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_6 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_8 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_8 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_9 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_9 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_10 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_10 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_11 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_11 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4 .hdl_user_name bitonic_sort_4
+set_db -quiet module:snl_top_wrapper/bitonic_sort_4 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_1 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_1 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_2 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_2 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_3 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_3 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_4 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_4 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_5 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_5 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_12 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_12 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_13 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_13 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_14 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_14 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_15 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_15 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_16 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_16 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_17 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_17 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_18 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_18 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_19 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_19 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_20 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_20 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_21 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_21 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_22 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_22 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_23 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_23 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_48 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_48 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_49 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_49 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_50 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_50 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_51 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_51 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_52 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_52 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_53 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_53 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_54 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_54 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_55 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_55 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_56 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_56 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_57 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_57 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_58 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_58 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_59 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_59 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_60 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_60 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_61 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_61 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_62 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_62 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_63 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_63 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_64 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_64 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_65 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_65 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_66 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_66 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_67 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_67 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_68 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_68 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_69 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_69 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_70 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_70 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_71 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_71 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_72 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_72 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_73 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_73 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_74 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_74 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_75 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_75 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_76 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_76 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_77 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_77 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_78 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_78 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_79 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_79 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_160 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_160 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_161 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_161 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_162 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_162 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_163 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_163 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_164 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_164 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_165 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_165 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_166 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_166 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_167 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_167 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_168 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_168 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_169 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_169 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_170 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_170 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_171 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_171 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_172 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_172 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_173 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_173 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_174 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_174 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_175 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_175 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_176 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_176 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_177 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_177 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_178 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_178 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_179 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_179 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_180 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_180 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_181 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_181 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_182 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_182 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_183 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_183 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_196 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_196 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_197 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_197 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_198 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_198 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_199 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_199 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_212 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_212 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_213 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_213 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_229 .hdl_user_name bitonic_sort_2
+set_db -quiet module:snl_top_wrapper/bitonic_sort_2_229 .hdl_filelist {{default -sv {SYNTHESIS} {src/neuron_snl_grl.sv} {./src} {}}}
+# BEGIN PMBIST SECTION
+# END PMBIST SECTION
+# BEGIN PHYSICAL ANNOTATION SECTION
+# END PHYSICAL ANNOTATION SECTION
+set_db -quiet source_verbose true
+#############################################################
+#####   FLOW WRITE   ########################################
+##
+## Written by Genus(TM) Synthesis Solution version 18.14-s037_1
+## flowkit v18.10-p010_1
+## Written on 15:08:02 29-Mar 2022
+#############################################################
+#####   Flow Definitions   ##################################
+
+#############################################################
+#####   Step Definitions   ##################################
+
+
+#############################################################
+#####   Attribute Definitions   #############################
+
+if {[is_attribute flow_edit_end_steps -obj_type root]} {set_db flow_edit_end_steps {}}
+if {[is_attribute flow_edit_start_steps -obj_type root]} {set_db flow_edit_start_steps {}}
+if {[is_attribute flow_footer_tcl -obj_type root]} {set_db flow_footer_tcl {}}
+if {[is_attribute flow_header_tcl -obj_type root]} {set_db flow_header_tcl {}}
+if {[is_attribute flow_metadata -obj_type root]} {set_db flow_metadata {}}
+if {[is_attribute flow_setup_config -obj_type root]} {set_db flow_setup_config {HUDDLE {!!map {}}}}
+if {[is_attribute flow_step_begin_tcl -obj_type root]} {set_db flow_step_begin_tcl {}}
+if {[is_attribute flow_step_check_tcl -obj_type root]} {set_db flow_step_check_tcl {}}
+if {[is_attribute flow_step_end_tcl -obj_type root]} {set_db flow_step_end_tcl {}}
+if {[is_attribute flow_step_order -obj_type root]} {set_db flow_step_order {}}
+if {[is_attribute flow_summary_tcl -obj_type root]} {set_db flow_summary_tcl {}}
+if {[is_attribute flow_template_feature_definition -obj_type root]} {set_db flow_template_feature_definition {}}
+if {[is_attribute flow_template_type -obj_type root]} {set_db flow_template_type {}}
+if {[is_attribute flow_template_version -obj_type root]} {set_db flow_template_version {}}
+if {[is_attribute flow_user_templates -obj_type root]} {set_db flow_user_templates {}}
+
+
+#############################################################
+#####   Flow History   ######################################
+
+if {[is_attribute flow_branch -obj_type root]} {set_db flow_branch {}}
+if {[is_attribute flow_caller_data -obj_type root]} {set_db flow_caller_data {}}
+if {[is_attribute flow_current -obj_type root]} {set_db flow_current {}}
+if {[is_attribute flow_hier_path -obj_type root]} {set_db flow_hier_path {}}
+if {[is_attribute flow_db_directory -obj_type root]} {set_db flow_db_directory dbs}
+if {[is_attribute flow_exit_when_done -obj_type root]} {set_db flow_exit_when_done false}
+if {[is_attribute flow_history -obj_type root]} {set_db flow_history {}}
+if {[is_attribute flow_log_directory -obj_type root]} {set_db flow_log_directory logs}
+if {[is_attribute flow_mail_on_error -obj_type root]} {set_db flow_mail_on_error false}
+if {[is_attribute flow_mail_to -obj_type root]} {set_db flow_mail_to {}}
+if {[is_attribute flow_metrics_file -obj_type root]} {set_db flow_metrics_file {}}
+if {[is_attribute flow_metrics_snapshot_parent_uuid -obj_type root]} {set_db flow_metrics_snapshot_parent_uuid {}}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid f8718932-edd1-48da-8126-2b88ab61c7c4}
+if {[is_attribute flow_overwrite_db -obj_type root]} {set_db flow_overwrite_db false}
+if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
+if {[is_attribute flow_run_tag -obj_type root]} {set_db flow_run_tag {}}
+if {[is_attribute flow_schedule -obj_type root]} {set_db flow_schedule {}}
+if {[is_attribute flow_script -obj_type root]} {set_db flow_script {}}
+if {[is_attribute flow_starting_db -obj_type root]} {set_db flow_starting_db {}}
+if {[is_attribute flow_status_file -obj_type root]} {set_db flow_status_file {}}
+if {[is_attribute flow_step_canonical_current -obj_type root]} {set_db flow_step_canonical_current {}}
+if {[is_attribute flow_step_current -obj_type root]} {set_db flow_step_current {}}
+if {[is_attribute flow_step_last -obj_type root]} {set_db flow_step_last {}}
+if {[is_attribute flow_step_last_msg -obj_type root]} {set_db flow_step_last_msg {}}
+if {[is_attribute flow_step_last_status -obj_type root]} {set_db flow_step_last_status not_run}
+if {[is_attribute flow_step_next -obj_type root]} {set_db flow_step_next {}}
+if {[is_attribute flow_working_directory -obj_type root]} {set_db flow_working_directory .}
+
+#############################################################
+#####   User Defined Attributes   ###########################
+
