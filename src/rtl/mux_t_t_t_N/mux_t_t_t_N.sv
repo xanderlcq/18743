@@ -6,9 +6,9 @@ module mux_t_t_t_N
   parameter PULSE_WIDTH=8)
 (
     input logic grst,
-    input logic [NUM_INPUTS:0] inputs,
+    input logic [NUM_INPUTS-1:0] inputs,
     input logic select_line,
-    output logic [NUM_INPUTS:0] y
+    output logic [NUM_INPUTS-1:0] y
 );
 `ifdef RISING
 // rising edge transition base

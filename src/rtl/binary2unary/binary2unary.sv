@@ -21,7 +21,7 @@ module binary2unary
         end else begin
             counter <= counter + 1'b1;
 
-            if (counter == binary_input) begin
+            if (counter == (binary_input - 1'b1)) begin
                 unary_output <= ~unary_output;
             end
         end
