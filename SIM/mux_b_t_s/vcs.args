@@ -1,0 +1,3 @@
+$NEURAL_HOME/src/rtl/mux/mux.sv
+$NEURAL_HOME/src/rtl/mux_b_t_s/mux_b_t_s.sv
+$NEURAL_HOME/src/rtl/mux_b_t_s/tb/testbench.sv
