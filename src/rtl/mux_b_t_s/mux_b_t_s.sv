@@ -1,10 +1,10 @@
 `default_nettype none
 
 module mux_b_t_s
-#(parameter NUM_INPUTS=16,
-  parameter BUS_WIDTH=8,
-  parameter GAMMA_CYCLE_WIDTH=16,
-  parameter PULSE_WIDTH=8)
+#(parameter GAMMA_CYCLE_WIDTH=16,
+  parameter PULSE_WIDTH=8,
+  parameter NUM_INPUTS=GAMMA_CYCLE_WIDTH,
+  parameter BUS_WIDTH=8)
 (
     input logic aclk,
     input logic grst,

@@ -7,22 +7,17 @@ module tb();
 
     parameter GAMMA_CYCLE_WIDTH = 16;
     parameter PULSE_WIDTH = 8;
-    parameter NUM_INPUTS = 16;
-    parameter BUS_WIDTH = 8;
+    parameter INPUT_WIDTH = 8;
 
     logic aclk, grst;
-    logic [NUM_INPUTS-1:0] [BUS_WIDTH-1:0] inputs;
-    logic select_line;
-    logic [BUS_WIDTH-1:0] y;
+    logic [INPUT_WIDTH-1:0] binary_input;
+    logic unary_output;
 
-    int delay;
-
-    mux_b_t_s dut(.aclk(aclk), .grst(grst), .inputs(inputs), .select_line(select_line), .y(y));
+    binary2unary dut(.grst(grst), .aclk(aclk), .binary_input(binary_input), .unary_output(unary_output));
 
     task reset();
         grst = 1'b1;
-        inputs = 'd0;
-        select_line = 1'b0;
+        binary_input = 'd0;
         
         repeat (2) @(posedge aclk);
         grst = 1'b0;
@@ -30,16 +25,11 @@ module tb();
 
     initial begin
         reset();
-
-        delay = 10;
-        inputs[9] = 'd9;
-        inputs[10] = 'd10;
-        inputs[11] = 'd11;
-        repeat (delay) @(posedge aclk);
-        select_line = 1'b1;
-        repeat (GAMMA_CYCLE_WIDTH - delay) @(posedge aclk);
+        binary_input = 'd1;
+        repeat (GAMMA_CYCLE_WIDTH) @(posedge aclk);
 
         reset();
+        binary_input = 'd8;
         repeat (GAMMA_CYCLE_WIDTH) @(posedge aclk);
 
         $finish;
@@ -56,8 +46,10 @@ module tb();
 `elsif FALLING
 // falling edge transition base
 
+
 `else
 // pulse width base
+
 
 `endif
 
