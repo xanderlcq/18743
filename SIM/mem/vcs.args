@@ -1,0 +1,2 @@
+$NEURAL_HOME/src/rtl/mem/mem.sv
+$NEURAL_HOME/src/rtl/mem/tb/testbench.sv
