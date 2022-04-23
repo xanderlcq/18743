@@ -23,25 +23,21 @@ module tb();
         $display("Rising Edge Signal");
         reset();
         
-        // // Case 1: No signal
-        // #10; 
-        // #30; reset();
-
-        // Case 2: a first, b second
+        // Scenario 1
         #10; inputs[0] = ~inputs[0]; 
         #10; inputs[1] = ~inputs[1]; 
         select_line = ~select_line;
         #10; inputs[2] = ~inputs[2];
         #10;  reset();
         
-        // Case 3: b first, a second
+        // Scenario 2
         #10; inputs[0] = ~inputs[0]; 
         #10; inputs[3] = ~inputs[3]; 
         select_line = ~select_line;
         #10; inputs[2] = ~inputs[2];
         #10;  reset();
         
-        // // Case 4: a and b at same time
+        // Scenario 3
         #10; inputs[0] = ~inputs[0]; 
         #10; select_line = ~select_line;
         #10; inputs[2] = ~inputs[2];
