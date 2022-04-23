@@ -6,7 +6,6 @@ module less_than
 (
     input logic aclk,
     input logic grst,
-    input logic rst,
     input logic a,
     input logic b,
     output logic q
@@ -15,14 +14,14 @@ module less_than
 //edge transition base, rising
     logic c, d;
     assign c = (a & (~b));
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(grst), .r(c), .q(d), .q_b());
     assign q = (~d | c);
 
 `elsif FALLING
 //edge transition base, falling, JES_STC_GRL_2_12_20.pdf
     logic c, d;
     assign c = ((~a) & b);
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(grst), .r(c), .q(d), .q_b());
     assign q = (d & ~c);
 
 `else
@@ -32,7 +31,7 @@ module less_than
     logic c, d;
     
     assign c = a & (~b);
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(grst), .r(c), .q(d), .q_b());
     assign temp_out = a & (~d);
     assign q = (a_select & a);
     
@@ -46,7 +45,7 @@ module less_than
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set), .r(rst), .q(a_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set), .r(grst), .q(a_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

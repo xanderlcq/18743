@@ -6,7 +6,6 @@ module min
 (
     input logic aclk,
     input logic grst,
-    input logic rst,
     input logic a,
     input logic b,
     output logic y
@@ -38,8 +37,8 @@ module min
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set_1), .r(rst), .q(a_select), .q_b());
-    sr_latch sr2(.s(ouptut_latch_set_2), .r(rst), .q(b_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set_1), .r(grst), .q(a_select), .q_b());
+    sr_latch sr2(.s(ouptut_latch_set_2), .r(grst), .q(b_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

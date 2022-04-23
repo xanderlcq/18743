@@ -6,7 +6,6 @@ module not_equal
 (
 	input logic aclk,
     input logic grst,
-    input logic rst,
     input logic a,
     input logic b,
     output logic y
@@ -15,7 +14,7 @@ module not_equal
 // rising edge transition base
     logic c, d, e;
     
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+    sr_latch sr(.s(grst), .r(c), .q(d), .q_b());
 	
     assign c = ((~a) ^ (~b));
 	assign e = ((~c) & d);
@@ -25,7 +24,7 @@ module not_equal
 // falling edge transition base (JES_STC_GRL_2_12_20.pdf)
     logic c, d, e;
     
-	sr_latch sr(.s(rst), .r(c), .q(d), .q_b());
+	sr_latch sr(.s(grst), .r(c), .q(d), .q_b());
 	
     assign c = (a ^ b);
     assign e = ((~c) & d);
@@ -36,7 +35,7 @@ module not_equal
     logic temp_out, ouptut_latch_set, a_select, prev_temp_out, prev_a;
     logic c, d, e;
     
-    sr_latch sr(.s(rst), .r(c), .q(d), .q_b());    
+    sr_latch sr(.s(grst), .r(c), .q(d), .q_b());    
     
     assign c = ((~a) ^ (~b));
     assign e = ((~c) & d);
@@ -53,7 +52,7 @@ module not_equal
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set), .r(rst), .q(a_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set), .r(grst), .q(a_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

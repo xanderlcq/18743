@@ -4,12 +4,12 @@ module tb();
 
 `ifdef RISING
 //edge transition base, rising
-    logic rst, a, b, q;
-    exclusive_min DUT(.rst(rst), .a(a), .b(b), .q(q));
+    logic grst, a, b, q;
+    exclusive_min DUT(.grst(grst), .a(a), .b(b), .q(q));
     
     task reset();
-       a = 0; b = 0; rst = 1;
-       #1; rst = 0;
+       a = 0; b = 0; grst = 1;
+       #1; grst = 0;
     endtask
 
     initial begin
@@ -39,12 +39,12 @@ module tb();
 
 `elsif FALLING
 //edge transition base, falling
-    logic rst, a, b, q;
-    exclusive_min DUT(.rst(rst), .a(a), .b(b), .q(q));
+    logic grst, a, b, q;
+    exclusive_min DUT(.grst(grst), .a(a), .b(b), .q(q));
     
     task reset();
-       a = 1; b = 1; rst = 1;
-       #1; rst = 0;
+       a = 1; b = 1; grst = 1;
+       #1; grst = 0;
     endtask
 
     initial begin
@@ -77,14 +77,14 @@ module tb();
     parameter GAMMA_CYCLE_WIDTH = 16;
     parameter PULSE_WIDTH = 8;
 
-    logic aclk, grst, rst, a, b, q;
+    logic aclk, grst, a, b, q;
     exclusive_min DUT(.*);
     
     task reset(int elapsed_cycles);
         a = 0; b = 0;
-        grst = 1; rst = 1;
+        grst = 1;
         @(posedge aclk);
-        grst = 0; rst = 0;
+        grst = 0;
         repeat (GAMMA_CYCLE_WIDTH - elapsed_cycles - 1) @(posedge aclk);
     endtask
 
