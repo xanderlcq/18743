@@ -17,15 +17,12 @@ module binary2unary
     always_ff @(posedge aclk, posedge grst) begin
         if (grst) begin
             counter <= 'b0;
-            unary_output <= 1'b0;
         end else begin
             counter <= counter + 1'b1;
-
-            if (counter == (binary_input - 1'b1)) begin
-                unary_output <= ~unary_output;
-            end
         end
     end
+
+    assign unary_output = (counter >= binary_input);
 
 `elsif FALLING
     logic [INPUT_WIDTH-1:0] counter;
@@ -33,15 +30,12 @@ module binary2unary
     always_ff @(posedge aclk, posedge grst) begin
         if (grst) begin
             counter <= 'b0;
-            unary_output <= 1'b1;
         end else begin
             counter <= counter + 1'b1;
-
-            if (counter == binary_input) begin
-                unary_output <= ~unary_output;
-            end
         end
     end
+
+    assign unary_output = (counter <= binary_input);
 
 `endif
 
