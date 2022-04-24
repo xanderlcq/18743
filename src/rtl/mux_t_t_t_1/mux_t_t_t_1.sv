@@ -1,9 +1,9 @@
 `default_nettype none
 
 module mux_t_t_t_1
-#(parameter NUM_INPUTS=4,
-  parameter GAMMA_CYCLE_WIDTH=16,
-  parameter PULSE_WIDTH=8)
+#(parameter GAMMA_CYCLE_WIDTH=16,
+  parameter PULSE_WIDTH=8,
+  parameter NUM_INPUTS=GAMMA_CYCLE_WIDTH)
 (
     input logic grst,
     input logic [NUM_INPUTS-1:0] inputs,
@@ -18,7 +18,7 @@ module mux_t_t_t_1
     generate
       for(i=0; i<NUM_INPUTS; i++)
       begin: eq
-        equal inst(.rst(grst), .a(select_line), .b(inputs[i]), .y(out[i]));
+        equal inst(.grst(grst), .a(select_line), .b(inputs[i]), .y(out[i]));
       end
     endgenerate
 
@@ -32,7 +32,7 @@ module mux_t_t_t_1
     generate
       for(i=0; i<NUM_INPUTS; i++)
       begin: eq
-        equal inst(.rst(grst), .a(select_line), .b(inputs[i]), .y(out[i]));
+        equal inst(.grst(grst), .a(select_line), .b(inputs[i]), .y(out[i]));
       end
     endgenerate
 

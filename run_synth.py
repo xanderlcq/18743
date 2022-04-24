@@ -3,6 +3,7 @@
 import os
 import sys
 import subprocess
+from subprocess import PIPE
 
 
 def modify_tcl(directory, macro):
@@ -26,15 +27,16 @@ def run_program(top_module_name, directory, synth_type, macro):
     src_dir = './SYNTH/'+directory
     dest_dir = src_dir+'_'+synth_type+'_'+macro.lower()
 
-    # Generate Synth directories
-    subprocess.run(['python3', 'gen.py', 'SYNTH', top_module_name, directory, synth_type])
-    subprocess.run(['mv', src_dir, dest_dir])
+    # # Generate Synth directories
+    # subprocess.run(['python3', 'gen.py', 'SYNTH', top_module_name, directory, synth_type])
+    # subprocess.run(['mv', src_dir, dest_dir])
 
-    # Modify TCL file
-    modify_tcl(dest_dir, macro)
+    # # Modify TCL file
+    # modify_tcl(dest_dir, macro)
     
-    # Copy SR Latch File
-    subprocess.run(['cp', './src/rtl/lib/sr_latch.sv', dest_dir+'/src/sr_latch.sv'])
+    # linker_files = open("./src/rtl/" + directory + "/vcs.args", "r").readlines()[:-2]
+    # for f in linker_files:
+    #     res = subprocess.run('ln -s {} {}'.format(f.strip("\n"), dest_dir+"/src/"), shell=True, stdout=PIPE, stderr=PIPE)    
 
     # Change the Working Directory
     cwd = os.getcwd()
@@ -50,17 +52,17 @@ def run_program(top_module_name, directory, synth_type, macro):
 
 
 
-modules = [
-        #'equal', 'not_equal', 'exclusive_max', 'exclusive_min', 'max',
-        'min', 'greater_than', 'less_than', 'greater_than_eq', 'less_than_eq'
-        ]
-
-macros = ['RISING', 'FALLING', 'PULSE']
+modules = ['mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N']
+macros = ['RISING']
 
 for module in modules:
     for macro in macros:
-        if (macro == 'PULSE'):
-            run_program(module, module, 'seq', macro)
-        else:
-            run_program(module, module, 'comb', macro)
+        run_program(module, module, 'seq', macro)
 
+
+modules = ['mux_t_t_t_1', 'mux_t_t_t_N']
+macros = ['RISING']
+
+for module in modules:
+    for macro in macros:
+        run_program(module, module, 'comb', macro)
