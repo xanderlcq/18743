@@ -1,0 +1,803 @@
+######################################################################
+
+# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Sat Apr 23 15:08:05 EDT 2022
+
+# This file contains the RC script for design:naive_delay
+
+######################################################################
+
+if {! [is_attribute wlec_internal_to_write_lec_db_for_invocation -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_invocation}
+if {! [is_attribute wlec_internal_to_write_lec_db_for_label -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_label}
+if {! [is_attribute wlec_internal_to_write_lec_label_data -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_label_data}
+set_db -quiet information_level 7
+set_db -quiet init_lib_search_path /afs/andrew.cmu.edu/course/18/743/asap7/
+set_db -quiet design_mode_process 72.0
+set_db -quiet phys_assume_met_fill 0.0
+set_db -quiet map_placed_for_hum false
+set_db -quiet phys_use_invs_extraction true
+set_db -quiet phys_route_time_out 120.0
+set_db -quiet capacitance_per_unit_length_mmmc {}
+set_db -quiet resistance_per_unit_length_mmmc {}
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 25.0} {to_generic 0 11 0 24} {first_condense 1 12 0 25} {PBS_Generic_Opt-Post 1 12 0.9425610000000013 25.942561} {{PBS_Generic-Postgen HBO Optimizations} 0 12 0.0 25.942561} {PBS_TechMap-Start 0 12 0.0 25.942561} {{PBS_TechMap-Premap HBO Optimizations} 0 12 0.0 25.942561} {second_condense 0 12 0 26} {reify 1 13 0 27} {global_incr_map 0 13 0 27} {{PBS_Techmap-Global Mapping} 1 13 0.7914009999999969 26.733962} {{PBS_TechMap-Datapath Postmap Operations} 1 14 1.0 27.733962} {{PBS_TechMap-Postmap HBO Optimizations} 0 14 0.0 27.733962} {{PBS_TechMap-Postmap Clock Gating} 0 14 0.0 27.733962} {{PBS_TechMap-Postmap Cleanup} 0 14 0.0 27.733962} {PBS_Techmap-Post_MBCI 0 14 0.0 27.733962} {incr_opt 1 15 0 28} }
+set_db -quiet hdl_error_on_latch true
+set_db -quiet hdl_generate_index_style %s_%d_
+set_db -quiet hdl_error_on_blackbox true
+set_db -quiet tinfo_tstamp_file .rs_acli.tstamp
+set_db -quiet metric_enable true
+set_db -quiet metric_page_cfg {}
+set_db -quiet fail_on_error_mesg true
+set_db -quiet script_search_path ./
+set_db -quiet auto_ungroup none
+set_db -quiet use_area_from_lef true
+set_db -quiet flow_metrics_snapshot_uuid 9fba762a-65b2-463c-af27-6fbfd8de836c
+set_db -quiet syn_generic_effort high
+set_db -quiet compensative_dpul_driver 0
+set_db -quiet phys_use_segment_parasitics true
+set_db -quiet probabilistic_extraction true
+set_db -quiet ple_correlation_factors {1.9000 2.0000}
+set_db -quiet maximum_interval_of_vias inf
+set_db -quiet layer_aware_buffer true
+set_db -quiet ple_mode global
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+# BEGIN MSV SECTION
+# END MSV SECTION
+define_clock -name aclk -domain domain_1 -period 20000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:naive_delay port:naive_delay/aclk
+set_db -quiet clock:naive_delay/aclk .slew {150.0 150.0 150.0 150.0}
+set_db -quiet clock:naive_delay/aclk .clock_setup_uncertainty {400.0 400.0}
+set_db -quiet clock:naive_delay/aclk .clock_hold_uncertainty {400.0 400.0}
+define_cost_group -design design:naive_delay -name aclk
+external_delay -accumulate -input {0.0 no_value 0.0 no_value} -clock clock:naive_delay/aclk -name create_clock_delay_domain_1_aclk_R_0 port:naive_delay/aclk
+set_db -quiet external_delay:naive_delay/create_clock_delay_domain_1_aclk_R_0 .clock_network_latency_included true
+external_delay -accumulate -input {no_value 0.0 no_value 0.0} -clock clock:naive_delay/aclk -edge_fall -name create_clock_delay_domain_1_aclk_F_0 port:naive_delay/aclk
+set_db -quiet external_delay:naive_delay/create_clock_delay_domain_1_aclk_F_0 .clock_network_latency_included true
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7 port:naive_delay/grst
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_1_1 port:naive_delay/in
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_2_1 {{port:naive_delay/delay[6]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_3_1 {{port:naive_delay/delay[5]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_4_1 {{port:naive_delay/delay[4]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_5_1 {{port:naive_delay/delay[3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_6_1 {{port:naive_delay/delay[2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_7_1 {{port:naive_delay/delay[1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_7_8_1 {{port:naive_delay/delay[0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:naive_delay/aclk -name chip.sdc_line_8 port:naive_delay/out
+path_group -paths [specify_paths -to clock:naive_delay/aclk]  -name aclk -group cost_group:naive_delay/aclk -user_priority -1047552
+# BEGIN DFT SECTION
+set_db -quiet dft_scan_style muxed_scan
+set_db -quiet dft_scanbit_waveform_analysis false
+# END DFT SECTION
+set_db -quiet design:naive_delay .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 762} {cell_count 128} {utilization  0.00} {runtime 0 11 0 24} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 1036} {cell_count 461} {utilization  0.00} {runtime 1 12 0 25} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 1036} {cell_count 461} {utilization  0.00} {runtime 0 12 0 26} }{reify {wns 15134} {tns 0} {vep 0} {area 1019} {cell_count 372} {utilization  0.00} {runtime 1 13 0 27} }{global_incr_map {wns 15146} {tns 0} {vep 0} {area 1019} {cell_count 372} {utilization  0.00} {runtime 0 13 0 27} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 1019} {cell_count 372} {utilization  0.00} {runtime 1 15 0 28} }}
+set_db -quiet design:naive_delay .seq_mbci_coverage 0.0
+set_db -quiet design:naive_delay .hdl_filelist {{default -sv {RISING SYNTHESIS} {src/naive_delay.sv} {./src} {}}}
+set_db -quiet design:naive_delay .hdl_user_name naive_delay
+set_db -quiet design:naive_delay .verification_directory fv/naive_delay
+set_db -quiet port:naive_delay/grst .original_name grst
+set_db -quiet port:naive_delay/aclk .original_name aclk
+set_db -quiet port:naive_delay/in .original_name in
+set_db -quiet {port:naive_delay/delay[6]} .original_name {delay[6]}
+set_db -quiet {port:naive_delay/delay[5]} .original_name {delay[5]}
+set_db -quiet {port:naive_delay/delay[4]} .original_name {delay[4]}
+set_db -quiet {port:naive_delay/delay[3]} .original_name {delay[3]}
+set_db -quiet {port:naive_delay/delay[2]} .original_name {delay[2]}
+set_db -quiet {port:naive_delay/delay[1]} .original_name {delay[1]}
+set_db -quiet {port:naive_delay/delay[0]} .original_name {delay[0]}
+set_db -quiet port:naive_delay/out .external_pin_cap_min 15.0
+set_db -quiet port:naive_delay/out .external_capacitance_max {15.0 15.0}
+set_db -quiet port:naive_delay/out .external_capacitance_min 15.0
+set_db -quiet port:naive_delay/out .original_name out
+set_db -quiet port:naive_delay/out .external_pin_cap {15.0 15.0}
+set_db -quiet {inst:naive_delay/delayed_in_reg[127]} .original_name {{delayed_in[127]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[127]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[127]} .single_bit_orig_name {delayed_in[127]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[127]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[127]/QN} .original_name {delayed_in[127]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[126]} .original_name {{delayed_in[126]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[126]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[126]} .single_bit_orig_name {delayed_in[126]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[126]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[126]/QN} .original_name {delayed_in[126]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[125]} .original_name {{delayed_in[125]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[125]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[125]} .single_bit_orig_name {delayed_in[125]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[125]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[125]/QN} .original_name {delayed_in[125]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[124]} .original_name {{delayed_in[124]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[124]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[124]} .single_bit_orig_name {delayed_in[124]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[124]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[124]/QN} .original_name {delayed_in[124]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[123]} .original_name {{delayed_in[123]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[123]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[123]} .single_bit_orig_name {delayed_in[123]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[123]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[123]/QN} .original_name {delayed_in[123]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[122]} .original_name {{delayed_in[122]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[122]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[122]} .single_bit_orig_name {delayed_in[122]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[122]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[122]/QN} .original_name {delayed_in[122]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[121]} .original_name {{delayed_in[121]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[121]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[121]} .single_bit_orig_name {delayed_in[121]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[121]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[121]/QN} .original_name {delayed_in[121]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[120]} .original_name {{delayed_in[120]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[120]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[120]} .single_bit_orig_name {delayed_in[120]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[120]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[120]/QN} .original_name {delayed_in[120]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[119]} .original_name {{delayed_in[119]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[119]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[119]} .single_bit_orig_name {delayed_in[119]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[119]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[119]/QN} .original_name {delayed_in[119]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[118]} .original_name {{delayed_in[118]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[118]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[118]} .single_bit_orig_name {delayed_in[118]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[118]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[118]/QN} .original_name {delayed_in[118]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[117]} .original_name {{delayed_in[117]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[117]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[117]} .single_bit_orig_name {delayed_in[117]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[117]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[117]/QN} .original_name {delayed_in[117]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[116]} .original_name {{delayed_in[116]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[116]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[116]} .single_bit_orig_name {delayed_in[116]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[116]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[116]/QN} .original_name {delayed_in[116]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[115]} .original_name {{delayed_in[115]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[115]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[115]} .single_bit_orig_name {delayed_in[115]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[115]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[115]/QN} .original_name {delayed_in[115]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[114]} .original_name {{delayed_in[114]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[114]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[114]} .single_bit_orig_name {delayed_in[114]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[114]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[114]/QN} .original_name {delayed_in[114]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[113]} .original_name {{delayed_in[113]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[113]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[113]} .single_bit_orig_name {delayed_in[113]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[113]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[113]/QN} .original_name {delayed_in[113]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[112]} .original_name {{delayed_in[112]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[112]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[112]} .single_bit_orig_name {delayed_in[112]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[112]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[112]/QN} .original_name {delayed_in[112]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[111]} .original_name {{delayed_in[111]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[111]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[111]} .single_bit_orig_name {delayed_in[111]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[111]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[111]/QN} .original_name {delayed_in[111]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[110]} .original_name {{delayed_in[110]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[110]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[110]} .single_bit_orig_name {delayed_in[110]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[110]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[110]/QN} .original_name {delayed_in[110]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[109]} .original_name {{delayed_in[109]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[109]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[109]} .single_bit_orig_name {delayed_in[109]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[109]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[109]/QN} .original_name {delayed_in[109]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[108]} .original_name {{delayed_in[108]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[108]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[108]} .single_bit_orig_name {delayed_in[108]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[108]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[108]/QN} .original_name {delayed_in[108]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[107]} .original_name {{delayed_in[107]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[107]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[107]} .single_bit_orig_name {delayed_in[107]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[107]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[107]/QN} .original_name {delayed_in[107]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[106]} .original_name {{delayed_in[106]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[106]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[106]} .single_bit_orig_name {delayed_in[106]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[106]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[106]/QN} .original_name {delayed_in[106]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[105]} .original_name {{delayed_in[105]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[105]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[105]} .single_bit_orig_name {delayed_in[105]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[105]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[105]/QN} .original_name {delayed_in[105]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[104]} .original_name {{delayed_in[104]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[104]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[104]} .single_bit_orig_name {delayed_in[104]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[104]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[104]/QN} .original_name {delayed_in[104]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[103]} .original_name {{delayed_in[103]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[103]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[103]} .single_bit_orig_name {delayed_in[103]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[103]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[103]/QN} .original_name {delayed_in[103]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[102]} .original_name {{delayed_in[102]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[102]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[102]} .single_bit_orig_name {delayed_in[102]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[102]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[102]/QN} .original_name {delayed_in[102]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[101]} .original_name {{delayed_in[101]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[101]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[101]} .single_bit_orig_name {delayed_in[101]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[101]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[101]/QN} .original_name {delayed_in[101]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[100]} .original_name {{delayed_in[100]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[100]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[100]} .single_bit_orig_name {delayed_in[100]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[100]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[100]/QN} .original_name {delayed_in[100]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[99]} .original_name {{delayed_in[99]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[99]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[99]} .single_bit_orig_name {delayed_in[99]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[99]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[99]/QN} .original_name {delayed_in[99]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[98]} .original_name {{delayed_in[98]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[98]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[98]} .single_bit_orig_name {delayed_in[98]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[98]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[98]/QN} .original_name {delayed_in[98]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[97]} .original_name {{delayed_in[97]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[97]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[97]} .single_bit_orig_name {delayed_in[97]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[97]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[97]/QN} .original_name {delayed_in[97]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[96]} .original_name {{delayed_in[96]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[96]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[96]} .single_bit_orig_name {delayed_in[96]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[96]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[96]/QN} .original_name {delayed_in[96]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[95]} .original_name {{delayed_in[95]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[95]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[95]} .single_bit_orig_name {delayed_in[95]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[95]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[95]/QN} .original_name {delayed_in[95]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[94]} .original_name {{delayed_in[94]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[94]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[94]} .single_bit_orig_name {delayed_in[94]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[94]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[94]/QN} .original_name {delayed_in[94]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[93]} .original_name {{delayed_in[93]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[93]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[93]} .single_bit_orig_name {delayed_in[93]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[93]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[93]/QN} .original_name {delayed_in[93]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[92]} .original_name {{delayed_in[92]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[92]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[92]} .single_bit_orig_name {delayed_in[92]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[92]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[92]/QN} .original_name {delayed_in[92]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[91]} .original_name {{delayed_in[91]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[91]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[91]} .single_bit_orig_name {delayed_in[91]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[91]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[91]/QN} .original_name {delayed_in[91]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[90]} .original_name {{delayed_in[90]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[90]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[90]} .single_bit_orig_name {delayed_in[90]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[90]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[90]/QN} .original_name {delayed_in[90]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[89]} .original_name {{delayed_in[89]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[89]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[89]} .single_bit_orig_name {delayed_in[89]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[89]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[89]/QN} .original_name {delayed_in[89]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[88]} .original_name {{delayed_in[88]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[88]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[88]} .single_bit_orig_name {delayed_in[88]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[88]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[88]/QN} .original_name {delayed_in[88]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[87]} .original_name {{delayed_in[87]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[87]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[87]} .single_bit_orig_name {delayed_in[87]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[87]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[87]/QN} .original_name {delayed_in[87]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[86]} .original_name {{delayed_in[86]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[86]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[86]} .single_bit_orig_name {delayed_in[86]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[86]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[86]/QN} .original_name {delayed_in[86]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[85]} .original_name {{delayed_in[85]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[85]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[85]} .single_bit_orig_name {delayed_in[85]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[85]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[85]/QN} .original_name {delayed_in[85]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[84]} .original_name {{delayed_in[84]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[84]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[84]} .single_bit_orig_name {delayed_in[84]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[84]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[84]/QN} .original_name {delayed_in[84]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[83]} .original_name {{delayed_in[83]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[83]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[83]} .single_bit_orig_name {delayed_in[83]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[83]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[83]/QN} .original_name {delayed_in[83]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[82]} .original_name {{delayed_in[82]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[82]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[82]} .single_bit_orig_name {delayed_in[82]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[82]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[82]/QN} .original_name {delayed_in[82]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[81]} .original_name {{delayed_in[81]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[81]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[81]} .single_bit_orig_name {delayed_in[81]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[81]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[81]/QN} .original_name {delayed_in[81]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[80]} .original_name {{delayed_in[80]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[80]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[80]} .single_bit_orig_name {delayed_in[80]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[80]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[80]/QN} .original_name {delayed_in[80]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[79]} .original_name {{delayed_in[79]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[79]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[79]} .single_bit_orig_name {delayed_in[79]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[79]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[79]/QN} .original_name {delayed_in[79]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[78]} .original_name {{delayed_in[78]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[78]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[78]} .single_bit_orig_name {delayed_in[78]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[78]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[78]/QN} .original_name {delayed_in[78]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[77]} .original_name {{delayed_in[77]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[77]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[77]} .single_bit_orig_name {delayed_in[77]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[77]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[77]/QN} .original_name {delayed_in[77]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[76]} .original_name {{delayed_in[76]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[76]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[76]} .single_bit_orig_name {delayed_in[76]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[76]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[76]/QN} .original_name {delayed_in[76]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[75]} .original_name {{delayed_in[75]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[75]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[75]} .single_bit_orig_name {delayed_in[75]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[75]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[75]/QN} .original_name {delayed_in[75]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[74]} .original_name {{delayed_in[74]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[74]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[74]} .single_bit_orig_name {delayed_in[74]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[74]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[74]/QN} .original_name {delayed_in[74]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[73]} .original_name {{delayed_in[73]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[73]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[73]} .single_bit_orig_name {delayed_in[73]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[73]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[73]/QN} .original_name {delayed_in[73]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[72]} .original_name {{delayed_in[72]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[72]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[72]} .single_bit_orig_name {delayed_in[72]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[72]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[72]/QN} .original_name {delayed_in[72]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[71]} .original_name {{delayed_in[71]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[71]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[71]} .single_bit_orig_name {delayed_in[71]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[71]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[71]/QN} .original_name {delayed_in[71]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[70]} .original_name {{delayed_in[70]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[70]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[70]} .single_bit_orig_name {delayed_in[70]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[70]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[70]/QN} .original_name {delayed_in[70]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[69]} .original_name {{delayed_in[69]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[69]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[69]} .single_bit_orig_name {delayed_in[69]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[69]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[69]/QN} .original_name {delayed_in[69]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[68]} .original_name {{delayed_in[68]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[68]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[68]} .single_bit_orig_name {delayed_in[68]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[68]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[68]/QN} .original_name {delayed_in[68]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[67]} .original_name {{delayed_in[67]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[67]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[67]} .single_bit_orig_name {delayed_in[67]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[67]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[67]/QN} .original_name {delayed_in[67]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[66]} .original_name {{delayed_in[66]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[66]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[66]} .single_bit_orig_name {delayed_in[66]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[66]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[66]/QN} .original_name {delayed_in[66]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[65]} .original_name {{delayed_in[65]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[65]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[65]} .single_bit_orig_name {delayed_in[65]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[65]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[65]/QN} .original_name {delayed_in[65]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[64]} .original_name {{delayed_in[64]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[64]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[64]} .single_bit_orig_name {delayed_in[64]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[64]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[64]/QN} .original_name {delayed_in[64]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[63]} .original_name {{delayed_in[63]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[63]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[63]} .single_bit_orig_name {delayed_in[63]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[63]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[63]/QN} .original_name {delayed_in[63]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[62]} .original_name {{delayed_in[62]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[62]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[62]} .single_bit_orig_name {delayed_in[62]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[62]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[62]/QN} .original_name {delayed_in[62]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[61]} .original_name {{delayed_in[61]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[61]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[61]} .single_bit_orig_name {delayed_in[61]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[61]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[61]/QN} .original_name {delayed_in[61]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[60]} .original_name {{delayed_in[60]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[60]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[60]} .single_bit_orig_name {delayed_in[60]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[60]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[60]/QN} .original_name {delayed_in[60]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[59]} .original_name {{delayed_in[59]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[59]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[59]} .single_bit_orig_name {delayed_in[59]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[59]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[59]/QN} .original_name {delayed_in[59]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[58]} .original_name {{delayed_in[58]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[58]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[58]} .single_bit_orig_name {delayed_in[58]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[58]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[58]/QN} .original_name {delayed_in[58]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[57]} .original_name {{delayed_in[57]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[57]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[57]} .single_bit_orig_name {delayed_in[57]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[57]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[57]/QN} .original_name {delayed_in[57]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[56]} .original_name {{delayed_in[56]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[56]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[56]} .single_bit_orig_name {delayed_in[56]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[56]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[56]/QN} .original_name {delayed_in[56]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[55]} .original_name {{delayed_in[55]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[55]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[55]} .single_bit_orig_name {delayed_in[55]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[55]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[55]/QN} .original_name {delayed_in[55]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[54]} .original_name {{delayed_in[54]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[54]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[54]} .single_bit_orig_name {delayed_in[54]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[54]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[54]/QN} .original_name {delayed_in[54]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[53]} .original_name {{delayed_in[53]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[53]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[53]} .single_bit_orig_name {delayed_in[53]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[53]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[53]/QN} .original_name {delayed_in[53]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[52]} .original_name {{delayed_in[52]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[52]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[52]} .single_bit_orig_name {delayed_in[52]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[52]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[52]/QN} .original_name {delayed_in[52]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[51]} .original_name {{delayed_in[51]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[51]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[51]} .single_bit_orig_name {delayed_in[51]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[51]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[51]/QN} .original_name {delayed_in[51]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[50]} .original_name {{delayed_in[50]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[50]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[50]} .single_bit_orig_name {delayed_in[50]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[50]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[50]/QN} .original_name {delayed_in[50]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[49]} .original_name {{delayed_in[49]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[49]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[49]} .single_bit_orig_name {delayed_in[49]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[49]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[49]/QN} .original_name {delayed_in[49]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[48]} .original_name {{delayed_in[48]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[48]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[48]} .single_bit_orig_name {delayed_in[48]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[48]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[48]/QN} .original_name {delayed_in[48]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[47]} .original_name {{delayed_in[47]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[47]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[47]} .single_bit_orig_name {delayed_in[47]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[47]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[47]/QN} .original_name {delayed_in[47]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[46]} .original_name {{delayed_in[46]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[46]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[46]} .single_bit_orig_name {delayed_in[46]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[46]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[46]/QN} .original_name {delayed_in[46]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[45]} .original_name {{delayed_in[45]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[45]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[45]} .single_bit_orig_name {delayed_in[45]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[45]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[45]/QN} .original_name {delayed_in[45]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[44]} .original_name {{delayed_in[44]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[44]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[44]} .single_bit_orig_name {delayed_in[44]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[44]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[44]/QN} .original_name {delayed_in[44]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[43]} .original_name {{delayed_in[43]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[43]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[43]} .single_bit_orig_name {delayed_in[43]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[43]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[43]/QN} .original_name {delayed_in[43]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[42]} .original_name {{delayed_in[42]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[42]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[42]} .single_bit_orig_name {delayed_in[42]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[42]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[42]/QN} .original_name {delayed_in[42]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[41]} .original_name {{delayed_in[41]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[41]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[41]} .single_bit_orig_name {delayed_in[41]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[41]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[41]/QN} .original_name {delayed_in[41]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[40]} .original_name {{delayed_in[40]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[40]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[40]} .single_bit_orig_name {delayed_in[40]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[40]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[40]/QN} .original_name {delayed_in[40]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[39]} .original_name {{delayed_in[39]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[39]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[39]} .single_bit_orig_name {delayed_in[39]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[39]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[39]/QN} .original_name {delayed_in[39]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[38]} .original_name {{delayed_in[38]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[38]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[38]} .single_bit_orig_name {delayed_in[38]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[38]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[38]/QN} .original_name {delayed_in[38]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[37]} .original_name {{delayed_in[37]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[37]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[37]} .single_bit_orig_name {delayed_in[37]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[37]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[37]/QN} .original_name {delayed_in[37]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[36]} .original_name {{delayed_in[36]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[36]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[36]} .single_bit_orig_name {delayed_in[36]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[36]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[36]/QN} .original_name {delayed_in[36]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[35]} .original_name {{delayed_in[35]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[35]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[35]} .single_bit_orig_name {delayed_in[35]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[35]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[35]/QN} .original_name {delayed_in[35]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[34]} .original_name {{delayed_in[34]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[34]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[34]} .single_bit_orig_name {delayed_in[34]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[34]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[34]/QN} .original_name {delayed_in[34]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[33]} .original_name {{delayed_in[33]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[33]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[33]} .single_bit_orig_name {delayed_in[33]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[33]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[33]/QN} .original_name {delayed_in[33]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[32]} .original_name {{delayed_in[32]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[32]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[32]} .single_bit_orig_name {delayed_in[32]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[32]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[32]/QN} .original_name {delayed_in[32]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[31]} .original_name {{delayed_in[31]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[31]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[31]} .single_bit_orig_name {delayed_in[31]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[31]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[31]/QN} .original_name {delayed_in[31]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[30]} .original_name {{delayed_in[30]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[30]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[30]} .single_bit_orig_name {delayed_in[30]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[30]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[30]/QN} .original_name {delayed_in[30]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[29]} .original_name {{delayed_in[29]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[29]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[29]} .single_bit_orig_name {delayed_in[29]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[29]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[29]/QN} .original_name {delayed_in[29]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[28]} .original_name {{delayed_in[28]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[28]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[28]} .single_bit_orig_name {delayed_in[28]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[28]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[28]/QN} .original_name {delayed_in[28]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[27]} .original_name {{delayed_in[27]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[27]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[27]} .single_bit_orig_name {delayed_in[27]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[27]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[27]/QN} .original_name {delayed_in[27]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[26]} .original_name {{delayed_in[26]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[26]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[26]} .single_bit_orig_name {delayed_in[26]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[26]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[26]/QN} .original_name {delayed_in[26]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[25]} .original_name {{delayed_in[25]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[25]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[25]} .single_bit_orig_name {delayed_in[25]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[25]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[25]/QN} .original_name {delayed_in[25]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[24]} .original_name {{delayed_in[24]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[24]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[24]} .single_bit_orig_name {delayed_in[24]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[24]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[24]/QN} .original_name {delayed_in[24]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[23]} .original_name {{delayed_in[23]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[23]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[23]} .single_bit_orig_name {delayed_in[23]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[23]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[23]/QN} .original_name {delayed_in[23]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[22]} .original_name {{delayed_in[22]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[22]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[22]} .single_bit_orig_name {delayed_in[22]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[22]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[22]/QN} .original_name {delayed_in[22]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[21]} .original_name {{delayed_in[21]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[21]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[21]} .single_bit_orig_name {delayed_in[21]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[21]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[21]/QN} .original_name {delayed_in[21]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[20]} .original_name {{delayed_in[20]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[20]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[20]} .single_bit_orig_name {delayed_in[20]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[20]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[20]/QN} .original_name {delayed_in[20]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[19]} .original_name {{delayed_in[19]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[19]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[19]} .single_bit_orig_name {delayed_in[19]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[19]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[19]/QN} .original_name {delayed_in[19]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[18]} .original_name {{delayed_in[18]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[18]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[18]} .single_bit_orig_name {delayed_in[18]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[18]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[18]/QN} .original_name {delayed_in[18]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[17]} .original_name {{delayed_in[17]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[17]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[17]} .single_bit_orig_name {delayed_in[17]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[17]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[17]/QN} .original_name {delayed_in[17]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[16]} .original_name {{delayed_in[16]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[16]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[16]} .single_bit_orig_name {delayed_in[16]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[16]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[16]/QN} .original_name {delayed_in[16]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[15]} .original_name {{delayed_in[15]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[15]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[15]} .single_bit_orig_name {delayed_in[15]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[15]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[15]/QN} .original_name {delayed_in[15]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[14]} .original_name {{delayed_in[14]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[14]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[14]} .single_bit_orig_name {delayed_in[14]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[14]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[14]/QN} .original_name {delayed_in[14]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[13]} .original_name {{delayed_in[13]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[13]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[13]} .single_bit_orig_name {delayed_in[13]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[13]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[13]/QN} .original_name {delayed_in[13]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[12]} .original_name {{delayed_in[12]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[12]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[12]} .single_bit_orig_name {delayed_in[12]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[12]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[12]/QN} .original_name {delayed_in[12]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[11]} .original_name {{delayed_in[11]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[11]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[11]} .single_bit_orig_name {delayed_in[11]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[11]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[11]/QN} .original_name {delayed_in[11]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[10]} .original_name {{delayed_in[10]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[10]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[10]} .single_bit_orig_name {delayed_in[10]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[10]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[10]/QN} .original_name {delayed_in[10]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[9]} .original_name {{delayed_in[9]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[9]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[9]} .single_bit_orig_name {delayed_in[9]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[9]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[9]/QN} .original_name {delayed_in[9]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[8]} .original_name {{delayed_in[8]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[8]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[8]} .single_bit_orig_name {delayed_in[8]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[8]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[8]/QN} .original_name {delayed_in[8]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[7]} .original_name {{delayed_in[7]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[7]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[7]} .single_bit_orig_name {delayed_in[7]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[7]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[7]/QN} .original_name {delayed_in[7]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[6]} .original_name {{delayed_in[6]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[6]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[6]} .single_bit_orig_name {delayed_in[6]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[6]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[6]/QN} .original_name {delayed_in[6]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[5]} .original_name {{delayed_in[5]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[5]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[5]} .single_bit_orig_name {delayed_in[5]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[5]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[5]/QN} .original_name {delayed_in[5]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[4]} .original_name {{delayed_in[4]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[4]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[4]} .single_bit_orig_name {delayed_in[4]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[4]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[4]/QN} .original_name {delayed_in[4]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[3]} .original_name {{delayed_in[3]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[3]} .single_bit_orig_name {delayed_in[3]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[3]/QN} .original_name {delayed_in[3]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[2]} .original_name {{delayed_in[2]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[2]} .single_bit_orig_name {delayed_in[2]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[2]/QN} .original_name {delayed_in[2]/q}
+set_db -quiet {inst:naive_delay/delayed_in_reg[1]} .original_name {{delayed_in[1]}}
+set_db -quiet {inst:naive_delay/delayed_in_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:naive_delay/delayed_in_reg[1]} .single_bit_orig_name {delayed_in[1]}
+set_db -quiet {inst:naive_delay/delayed_in_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:naive_delay/delayed_in_reg[1]/QN} .original_name {delayed_in[1]/q}
+# BEGIN PMBIST SECTION
+# END PMBIST SECTION
+# BEGIN PHYSICAL ANNOTATION SECTION
+# END PHYSICAL ANNOTATION SECTION
+set_db -quiet source_verbose true
+#############################################################
+#####   FLOW WRITE   ########################################
+##
+## Written by Genus(TM) Synthesis Solution version 18.14-s037_1
+## flowkit v18.10-p010_1
+## Written on 15:08:05 23-Apr 2022
+#############################################################
+#####   Flow Definitions   ##################################
+
+#############################################################
+#####   Step Definitions   ##################################
+
+
+#############################################################
+#####   Attribute Definitions   #############################
+
+if {[is_attribute flow_edit_end_steps -obj_type root]} {set_db flow_edit_end_steps {}}
+if {[is_attribute flow_edit_start_steps -obj_type root]} {set_db flow_edit_start_steps {}}
+if {[is_attribute flow_footer_tcl -obj_type root]} {set_db flow_footer_tcl {}}
+if {[is_attribute flow_header_tcl -obj_type root]} {set_db flow_header_tcl {}}
+if {[is_attribute flow_metadata -obj_type root]} {set_db flow_metadata {}}
+if {[is_attribute flow_setup_config -obj_type root]} {set_db flow_setup_config {HUDDLE {!!map {}}}}
+if {[is_attribute flow_step_begin_tcl -obj_type root]} {set_db flow_step_begin_tcl {}}
+if {[is_attribute flow_step_check_tcl -obj_type root]} {set_db flow_step_check_tcl {}}
+if {[is_attribute flow_step_end_tcl -obj_type root]} {set_db flow_step_end_tcl {}}
+if {[is_attribute flow_step_order -obj_type root]} {set_db flow_step_order {}}
+if {[is_attribute flow_summary_tcl -obj_type root]} {set_db flow_summary_tcl {}}
+if {[is_attribute flow_template_feature_definition -obj_type root]} {set_db flow_template_feature_definition {}}
+if {[is_attribute flow_template_type -obj_type root]} {set_db flow_template_type {}}
+if {[is_attribute flow_template_version -obj_type root]} {set_db flow_template_version {}}
+if {[is_attribute flow_user_templates -obj_type root]} {set_db flow_user_templates {}}
+
+
+#############################################################
+#####   Flow History   ######################################
+
+if {[is_attribute flow_branch -obj_type root]} {set_db flow_branch {}}
+if {[is_attribute flow_caller_data -obj_type root]} {set_db flow_caller_data {}}
+if {[is_attribute flow_current -obj_type root]} {set_db flow_current {}}
+if {[is_attribute flow_hier_path -obj_type root]} {set_db flow_hier_path {}}
+if {[is_attribute flow_db_directory -obj_type root]} {set_db flow_db_directory dbs}
+if {[is_attribute flow_exit_when_done -obj_type root]} {set_db flow_exit_when_done false}
+if {[is_attribute flow_history -obj_type root]} {set_db flow_history {}}
+if {[is_attribute flow_log_directory -obj_type root]} {set_db flow_log_directory logs}
+if {[is_attribute flow_mail_on_error -obj_type root]} {set_db flow_mail_on_error false}
+if {[is_attribute flow_mail_to -obj_type root]} {set_db flow_mail_to {}}
+if {[is_attribute flow_metrics_file -obj_type root]} {set_db flow_metrics_file {}}
+if {[is_attribute flow_metrics_snapshot_parent_uuid -obj_type root]} {set_db flow_metrics_snapshot_parent_uuid {}}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid 9fba762a-65b2-463c-af27-6fbfd8de836c}
+if {[is_attribute flow_overwrite_db -obj_type root]} {set_db flow_overwrite_db false}
+if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
+if {[is_attribute flow_run_tag -obj_type root]} {set_db flow_run_tag {}}
+if {[is_attribute flow_schedule -obj_type root]} {set_db flow_schedule {}}
+if {[is_attribute flow_script -obj_type root]} {set_db flow_script {}}
+if {[is_attribute flow_starting_db -obj_type root]} {set_db flow_starting_db {}}
+if {[is_attribute flow_status_file -obj_type root]} {set_db flow_status_file {}}
+if {[is_attribute flow_step_canonical_current -obj_type root]} {set_db flow_step_canonical_current {}}
+if {[is_attribute flow_step_current -obj_type root]} {set_db flow_step_current {}}
+if {[is_attribute flow_step_last -obj_type root]} {set_db flow_step_last {}}
+if {[is_attribute flow_step_last_msg -obj_type root]} {set_db flow_step_last_msg {}}
+if {[is_attribute flow_step_last_status -obj_type root]} {set_db flow_step_last_status not_run}
+if {[is_attribute flow_step_next -obj_type root]} {set_db flow_step_next {}}
+if {[is_attribute flow_working_directory -obj_type root]} {set_db flow_working_directory .}
+
+#############################################################
+#####   User Defined Attributes   ###########################
+

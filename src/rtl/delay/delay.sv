@@ -7,7 +7,7 @@
 * Assume delay remain constant during one gamma cycle
 ***/
 module delay
-#(  parameter GAMMA_CYCLE_WIDTH=16,
+#(  parameter GAMMA_CYCLE_WIDTH=128,
     parameter PULSE_WIDTH=8)
 (
     input logic grst,

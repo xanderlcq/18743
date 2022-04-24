@@ -1,0 +1,3 @@
+$NEURAL_HOME/src/rtl/mem_group/mem.sv
+$NEURAL_HOME/src/rtl/mem_group/mem_group.sv
+$NEURAL_HOME/src/rtl/mem_group/tb/testbench.sv

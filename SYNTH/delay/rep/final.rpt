@@ -1,0 +1,51 @@
+
+
+Working Directory = /afs/ece.cmu.edu/usr/acli/Private/18743/SYNTH/delay
+QoS Summary for delay
+================================================================================
+Metric                          final          
+================================================================================
+Slack (ps):                    15,268
+  R2R (ps):                    19,280
+  I2R (ps):                    17,558
+  R2O (ps):                    17,151
+  I2O (ps):                    15,268
+  CG  (ps):                  no_value
+TNS (ps):                           0
+  R2R (ps):                         0
+  I2R (ps):                         0
+  R2O (ps):                         0
+  I2O (ps):                         0
+  CG  (ps):                  no_value
+Failing Paths:                      0
+Cell Area:                         86
+Total Cell Area:                   86
+Leaf Instances:                    42
+Total Instances:                   42
+Utilization (%):                 0.00
+Tot. Net Length (um):        no_value
+Avg. Net Length (um):        no_value
+Route Overflow H (%):        no_value
+Route Overflow V (%):        no_value
+MBCI(%) (bits/gate) :            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value
+  Tot Cong:                  no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:00:24
+Real Runtime (h:m:s):        00:00:09
+CPU  Elapsed (h:m:s):        00:00:27
+Real Elapsed (h:m:s):        00:00:10
+Memory (MB):                   861.06
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:00:09
+Total Memory (MB):     858.06
+Executable Version:    18.14-s037_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

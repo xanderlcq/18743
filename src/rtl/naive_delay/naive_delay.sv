@@ -7,7 +7,7 @@
 * Assume delay remain constant during one gamma cycle
 ***/
 module naive_delay
-#(  parameter GAMMA_CYCLE_WIDTH=16,
+#(  parameter GAMMA_CYCLE_WIDTH=128,
     parameter PULSE_WIDTH=8)
 (
     input logic grst,
@@ -22,13 +22,6 @@ module naive_delay
     assign out = delayed_in[delay];
     //signal itself
     assign delayed_in[0] = in;
-    // always_ff @(posedge aclk, posedge grst) begin
-    //     if(grst) begin
-    //         delayed_in[0] <= 1'b0;
-    //     end else begin
-    //         delayed_in[0] <= in;
-    //     end
-    // end
 
     genvar i;
     generate
