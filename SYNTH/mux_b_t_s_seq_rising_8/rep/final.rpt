@@ -5,11 +5,11 @@ QoS Summary for mux_b_t_s
 ================================================================================
 Metric                          final          
 ================================================================================
-Slack (ps):                     5,503
+Slack (ps):                     5,505
   R2R (ps):                     9,389
   I2R (ps):                     7,521
-  R2O (ps):                     7,273
-  I2O (ps):                     5,503
+  R2O (ps):                     7,309
+  I2O (ps):                     5,505
   CG  (ps):                  no_value
 TNS (ps):                           0
   R2R (ps):                         0
@@ -18,10 +18,10 @@ TNS (ps):                           0
   I2O (ps):                         0
   CG  (ps):                  no_value
 Failing Paths:                      0
-Cell Area:                        108
-Total Cell Area:                  108
-Leaf Instances:                    73
-Total Instances:                   73
+Cell Area:                         74
+Total Cell Area:                   74
+Leaf Instances:                    49
+Total Instances:                   49
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -34,15 +34,15 @@ Norm Cong Hotspot Area:
 ================================================================================
 CPU  Runtime (h:m:s):        00:00:31
 Real Runtime (h:m:s):        00:00:14
-CPU  Elapsed (h:m:s):        00:00:35
-Real Elapsed (h:m:s):        00:00:15
-Memory (MB):                  1145.79
+CPU  Elapsed (h:m:s):        00:00:36
+Real Elapsed (h:m:s):        00:00:16
+Memory (MB):                  1133.82
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
 Total Runtime (h:m:s): 00:00:15
-Total Memory (MB):     1153.79
+Total Memory (MB):     1141.83
 Executable Version:    20.11-s111_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area

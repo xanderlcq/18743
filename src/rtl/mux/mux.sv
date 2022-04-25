@@ -16,7 +16,7 @@ endmodule: mux_2to1
 
 module mux_16to1
 #(parameter N=16,
-  parameter WIDTH=8)
+  parameter WIDTH=4)
 (
     input logic [N-1:0] [WIDTH-1:0] inputs,
     input logic [$clog2(N)-1:0] select_line,

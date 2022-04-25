@@ -5,11 +5,11 @@ QoS Summary for mux_b_t_s
 ================================================================================
 Metric                          final          
 ================================================================================
-Slack (ps):                     5,442
-  R2R (ps):                     9,363
-  I2R (ps):                     7,487
-  R2O (ps):                     7,202
-  I2O (ps):                     5,442
+Slack (ps):                     5,458
+  R2R (ps):                     9,362
+  I2R (ps):                     7,486
+  R2O (ps):                     7,226
+  I2O (ps):                     5,458
   CG  (ps):                  no_value
 TNS (ps):                           0
   R2R (ps):                         0
@@ -18,10 +18,10 @@ TNS (ps):                           0
   I2O (ps):                         0
   CG  (ps):                  no_value
 Failing Paths:                      0
-Cell Area:                        193
-Total Cell Area:                  193
-Leaf Instances:                   132
-Total Instances:                  132
+Cell Area:                        117
+Total Cell Area:                  117
+Leaf Instances:                    77
+Total Instances:                   77
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -32,17 +32,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value
   Tot Cong:                  no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:32
+CPU  Runtime (h:m:s):        00:00:31
 Real Runtime (h:m:s):        00:00:15
 CPU  Elapsed (h:m:s):        00:00:36
-Real Elapsed (h:m:s):        00:00:17
-Memory (MB):                  1160.20
+Real Elapsed (h:m:s):        00:00:16
+Memory (MB):                  1120.68
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
 Total Runtime (h:m:s): 00:00:15
-Total Memory (MB):     1168.20
+Total Memory (MB):     1128.68
 Executable Version:    20.11-s111_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area

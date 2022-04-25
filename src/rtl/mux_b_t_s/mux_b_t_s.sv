@@ -4,7 +4,7 @@ module mux_b_t_s
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8,
   parameter NUM_INPUTS=GAMMA_CYCLE_WIDTH,
-  parameter BUS_WIDTH=8)
+  parameter BUS_WIDTH=4)
 (
     input logic aclk,
     input logic grst,

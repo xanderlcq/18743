@@ -63,7 +63,7 @@ def run_program(top_module_name, directory, synth_type, macro, gamma_width):
     files = arr = os.listdir('./')
     # Delete unnecessary Files
     for file in files:
-        if (file != "rep" and file != "src" and file != "Makefile" and file != "run.tcl"):
+        if (file != "rep" and file != "src" and file != "Makefile" and file != "run.tcl" and file != "chips.sdc"):
             subprocess.run(['rm', '-rf', file])
     os.chdir(cwd)
 
@@ -71,7 +71,7 @@ def run_program(top_module_name, directory, synth_type, macro, gamma_width):
 
 gamma_widths = [8, 16, 32, 64, 128]
 macros = ['RISING']
-modules = ['mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N'] #'filter']
+modules = ['mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N', 'filter']
 for module in modules:
     for macro in macros:
         for gamma in gamma_widths:

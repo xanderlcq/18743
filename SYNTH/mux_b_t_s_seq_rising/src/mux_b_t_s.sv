@@ -1,1 +1,0 @@
-/afs/andrew.cmu.edu/usr4/kbhat2/private/18-743/project/src/rtl/mux_b_t_s/mux_b_t_s.sv
