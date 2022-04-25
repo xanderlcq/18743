@@ -3,7 +3,7 @@
 module mux_b_t_t_1
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8,
-  parameter NUM_INPUTS=GAMMA_CYCLE_WIDTH,
+  parameter NUM_INPUTS=16,
   parameter INPUT_WIDTH = $clog2(GAMMA_CYCLE_WIDTH)
 )
 (
