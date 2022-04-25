@@ -3,17 +3,18 @@
 module mux_b_t_t_n
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8,
-  parameter NUM_INPUTS=GAMMA_CYCLE_WIDTH,
+  parameter NUM_INPUTS=8,
+  parameter INPUT_WIDTH = $clog2(GAMMA_CYCLE_WIDTH) 
 )
 (
     input logic grst,
     input logic aclk,
     //binary
-    input logic [NUM_INPUTS-1:0] inputs,
+    input logic [NUM_INPUTS-1:0][INPUT_WIDTH-1:0] inputs,
 
     //temporal
     input logic select,
-    output logic [NUM_INPUTS-1:0] out
+    output logic [NUM_INPUTS-1:0][INPUT_WIDTH-1:0] out
 );
 `ifdef RISING
     logic [$clog2(GAMMA_CYCLE_WIDTH)-1:0] counter, select_value, select_value_next;
@@ -34,13 +35,15 @@ module mux_b_t_t_n
 
     generate
         for(i = 0; i < NUM_INPUTS; i++) begin
-            if(inputs[i] == select_value) begin
-                out[i] = inputs[i];
-            end else begin
-                out[i] = '0;
+            always_comb begin
+                if(inputs[i] == select_value_next) begin
+                    out[i] = inputs[i];
+                end else begin
+                    out[i] = '0;
+                end
             end
         end
     endgenerate
 `endif
 
-endmodule: mux_t_be_t_N
+endmodule
