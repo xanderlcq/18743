@@ -9,7 +9,7 @@
 module mem_group_share
 #(  parameter GAMMA_CYCLE_WIDTH=16,
     parameter PULSE_WIDTH=8,
-    parameter WIDTH=1)
+    parameter WIDTH=128)
 (
     input logic grst, //this is used to signal the start of a new gamma cycle, must be assert during first reset
     input logic aclk,

@@ -5,11 +5,11 @@ QoS Summary for mem_group_share
 ================================================================================
 Metric                          final          
 ================================================================================
-Slack (ps):                    15,529
-  R2R (ps):                    19,412
-  I2R (ps):                    17,522
-  R2O (ps):                    17,341
-  I2O (ps):                    15,529
+Slack (ps):                    15,388
+  R2R (ps):                    19,162
+  I2R (ps):                    17,518
+  R2O (ps):                    16,854
+  I2O (ps):                    15,388
   CG  (ps):                  no_value
 TNS (ps):                           0
   R2R (ps):                         0
@@ -18,10 +18,10 @@ TNS (ps):                           0
   I2O (ps):                         0
   CG  (ps):                  no_value
 Failing Paths:                      0
-Cell Area:                         83
-Total Cell Area:                   83
-Leaf Instances:                    33
-Total Instances:                   33
+Cell Area:                      6,847
+Total Cell Area:                6,847
+Leaf Instances:                 3,251
+Total Instances:                3,251
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -32,17 +32,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value
   Tot Cong:                  no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:22
-Real Runtime (h:m:s):        00:00:08
-CPU  Elapsed (h:m:s):        00:00:26
-Real Elapsed (h:m:s):        00:00:09
-Memory (MB):                   838.03
+CPU  Runtime (h:m:s):        00:01:15
+Real Runtime (h:m:s):        00:00:49
+CPU  Elapsed (h:m:s):        00:01:19
+Real Elapsed (h:m:s):        00:00:50
+Memory (MB):                   861.99
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:08
-Total Memory (MB):     838.03
+Total Runtime (h:m:s): 00:00:50
+Total Memory (MB):     861.99
 Executable Version:    18.14-s037_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
