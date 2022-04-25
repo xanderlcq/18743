@@ -6,8 +6,8 @@ QoS Summary for mux_t_be_t_1
 Metric                          final          
 ================================================================================
 Slack (ps):                     5,344
-  R2R (ps):                     9,375
-  I2R (ps):                     7,470
+  R2R (ps):                     9,378
+  I2R (ps):                     7,434
   R2O (ps):                     7,046
   I2O (ps):                     5,344
   CG  (ps):                  no_value
@@ -18,10 +18,10 @@ TNS (ps):                           0
   I2O (ps):                         0
   CG  (ps):                  no_value
 Failing Paths:                      0
-Cell Area:                        272
-Total Cell Area:                  272
-Leaf Instances:                   152
-Total Instances:                  152
+Cell Area:                        291
+Total Cell Area:                  291
+Leaf Instances:                   162
+Total Instances:                  162
 Utilization (%):                 0.00
 Tot. Net Length (um):        no_value
 Avg. Net Length (um):        no_value
@@ -34,15 +34,15 @@ Norm Cong Hotspot Area:
 ================================================================================
 CPU  Runtime (h:m:s):        00:00:32
 Real Runtime (h:m:s):        00:00:16
-CPU  Elapsed (h:m:s):        00:00:36
+CPU  Elapsed (h:m:s):        00:00:37
 Real Elapsed (h:m:s):        00:00:17
-Memory (MB):                  1141.03
+Memory (MB):                  1143.21
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:16
-Total Memory (MB):     1150.04
+Total Runtime (h:m:s): 00:00:17
+Total Memory (MB):     1151.21
 Executable Version:    20.11-s111_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area

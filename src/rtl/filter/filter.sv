@@ -19,8 +19,8 @@ module filter
 
     generate
         for (i = 0; i < NUM_INPUTS; i ++) begin
-            greater_than_eq greater_than_inst(.rst(grst), .grst(grst), .aclk(aclk), .a(inputs[i]), .b(sel_greater), .q(out_greater[i]));
-            less_than_eq less_than_inst(.rst(grst), .grst(grst), .aclk(aclk), .a(inputs[i]), .b(sel_lesser), .q(out_less[i]));
+            greater_than_eq greater_than_inst(.grst(grst), .aclk(aclk), .a(inputs[i]), .b(sel_greater), .q(out_greater[i]));
+            less_than_eq less_than_inst(.grst(grst), .aclk(aclk), .a(inputs[i]), .b(sel_lesser), .q(out_less[i]));
             and output_inst (y[i], out_less[i], out_greater[i]);
         end
     endgenerate

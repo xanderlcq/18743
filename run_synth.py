@@ -27,16 +27,16 @@ def run_program(top_module_name, directory, synth_type, macro):
     src_dir = './SYNTH/'+directory
     dest_dir = src_dir+'_'+synth_type+'_'+macro.lower()
 
-    # # Generate Synth directories
-    # subprocess.run(['python3', 'gen.py', 'SYNTH', top_module_name, directory, synth_type])
-    # subprocess.run(['mv', src_dir, dest_dir])
+    # Generate Synth directories
+    subprocess.run(['python3', 'gen.py', 'SYNTH', top_module_name, directory, synth_type])
+    subprocess.run(['mv', src_dir, dest_dir])
 
-    # # Modify TCL file
-    # modify_tcl(dest_dir, macro)
+    # Modify TCL file
+    modify_tcl(dest_dir, macro)
     
-    # linker_files = open("./src/rtl/" + directory + "/vcs.args", "r").readlines()[:-2]
-    # for f in linker_files:
-    #     res = subprocess.run('ln -s {} {}'.format(f.strip("\n"), dest_dir+"/src/"), shell=True, stdout=PIPE, stderr=PIPE)    
+    linker_files = open("./src/rtl/" + directory + "/vcs.args", "r").readlines()[:-2]
+    for f in linker_files:
+        res = subprocess.run('ln -s {} {}'.format(f.strip("\n"), dest_dir+"/src/"), shell=True, stdout=PIPE, stderr=PIPE)    
 
     # Change the Working Directory
     cwd = os.getcwd()
@@ -52,7 +52,7 @@ def run_program(top_module_name, directory, synth_type, macro):
 
 
 
-modules = ['mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N']
+modules = ['filter', 'mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N']
 macros = ['RISING']
 
 for module in modules:
