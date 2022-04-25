@@ -12,7 +12,7 @@ module binary2unary
 );
 
 `ifdef RISING
-    logic [INPUT_WIDTH-1:0] counter;
+    logic [INPUT_WIDTH:0] counter;
 
     always_ff @(posedge aclk, posedge grst) begin
         if (grst) begin
@@ -22,10 +22,10 @@ module binary2unary
         end
     end
 
-    assign unary_output = (counter >= binary_input);
+    assign unary_output = (counter > binary_input);
 
 `elsif FALLING
-    logic [INPUT_WIDTH-1:0] counter;
+    logic [INPUT_WIDTH:0] counter;
 
     always_ff @(posedge aclk, posedge grst) begin
         if (grst) begin
@@ -36,6 +36,19 @@ module binary2unary
     end
 
     assign unary_output = (counter <= binary_input);
+
+`else
+    logic [INPUT_WIDTH:0] counter;
+
+    always_ff @(posedge aclk, posedge grst) begin
+        if (grst) begin
+            counter <= 'b0;
+        end else begin
+            counter <= counter + 1'b1;
+        end
+    end
+
+    assign unary_output = (counter > binary_input) & (counter <= (binary_input + PULSE_WIDTH));
 
 `endif
 

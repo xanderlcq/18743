@@ -1,15 +1,15 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Thu Apr 21 02:01:03 2022
+# Saved on Mon Apr 25 01:43:05 2022
 # Designs open: 1
 #   Sim: /afs/andrew.cmu.edu/usr4/kbhat2/private/18-743/project/SIM/mux_b_t_s/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: tb
-#   Wave.1: 6 signals
+#   Wave.1: 7 signals
 #   Group count = 1
-#   Group Group1 signal count = 6
+#   Group Group1 signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: K-2015.09_Full64
@@ -59,7 +59,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 397} {child_wave_right 1517} {child_wave_colname 196} {child_wave_colvalue 197} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 538} {child_wave_right 1313} {child_wave_colname 267} {child_wave_colvalue 267} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -88,11 +88,11 @@ gui_set_time_units 1s
 # Global: Signal Groups
 
 
-set _session_group_12 Group1
-gui_sg_create "$_session_group_12"
-set Group1 "$_session_group_12"
+set _session_group_5 Group1
+gui_sg_create "$_session_group_5"
+set Group1 "$_session_group_5"
 
-gui_sg_addsignal -group "$_session_group_12" { tb.aclk tb.grst tb.inputs tb.select_line tb.y tb.dut.counter }
+gui_sg_addsignal -group "$_session_group_5" { tb.aclk tb.grst tb.inputs tb.select_line tb.y tb.dut.counter tb.dut.counter_next }
 
 # Global: Highlighting
 
@@ -131,7 +131,7 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {tb.dut}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb.dut.counter }}
+catch { gui_list_select -id ${Data.1} {tb.dut.counter_next tb.dut.counter }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0

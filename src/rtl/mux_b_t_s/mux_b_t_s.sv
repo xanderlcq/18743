@@ -14,26 +14,39 @@ module mux_b_t_s
 );
 `ifdef RISING
 // rising edge transition base
-    logic [$clog2(GAMMA_CYCLE_WIDTH):0] counter;
+    logic [$clog2(GAMMA_CYCLE_WIDTH)-1:0] counter, counter_next;
     logic [BUS_WIDTH-1:0] temp_out;
 
     always_ff @(posedge aclk, posedge grst) begin
         if (grst) begin
             counter <= 'b0;
-            y <= 'b0;
         end else begin
-            if (select_line == 0) begin
-                counter <= counter + 1'b1;
-            end else begin
-                y <= temp_out;
-            end
+            counter <= counter_next;
         end
     end
+
+    assign counter_next = counter + !select_line;
+    assign y = select_line ? temp_out : 'b0;
 
     mux_16to1 mux_output (inputs, counter, temp_out);
 
 `elsif FALLING
 // falling edge transition base
+    logic [$clog2(GAMMA_CYCLE_WIDTH)-1:0] counter, counter_next;
+    logic [BUS_WIDTH-1:0] temp_out;
+
+    always_ff @(posedge aclk, posedge grst) begin
+        if (grst) begin
+            counter <= 'b0;
+        end else begin
+            counter <= counter_next;
+        end
+    end
+
+    assign counter_next = counter + select_line;
+    assign y = select_line ? 'b0 : temp_out;
+
+    mux_16to1 mux_output (inputs, counter, temp_out);
 
 `else
 // pulse width base
