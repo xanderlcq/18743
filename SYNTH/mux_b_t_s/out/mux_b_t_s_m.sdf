@@ -1,0 +1,13 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "mux_b_t_s")
+  (DATE        "Mon Apr 25 12:06:16 EDT 2022")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "18.14-s037_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::0.7)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::25.0)
+  (TIMESCALE   1ns)
+)

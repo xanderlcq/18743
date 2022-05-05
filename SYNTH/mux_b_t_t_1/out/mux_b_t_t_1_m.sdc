@@ -1,13 +1,13 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Mon Apr 25 09:58:52 EDT 2022
+#  Created by Genus(TM) Synthesis Solution 20.11-s111_1 on Tue Apr 26 14:50:54 EDT 2022
 
 # ####################################################################
 
 set sdc_version 2.0
 
-set_units -capacitance 1.0fF
-set_units -time 1.0ps
+set_units -capacitance 1fF
+set_units -time 1ps
 
 # Set the current design
 current_design mux_b_t_t_1
