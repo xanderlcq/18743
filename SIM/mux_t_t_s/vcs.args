@@ -1,0 +1,6 @@
+$NEURAL_HOME/src/rtl/lib/sr_latch.sv
+$NEURAL_HOME/src/rtl/equal/equal.sv
+$NEURAL_HOME/src/rtl/mem/mem.sv
+$NEURAL_HOME/src/rtl/mux/mux.sv
+$NEURAL_HOME/src/rtl/mux_t_t_s/mux_t_t_s.sv
+$NEURAL_HOME/src/rtl/mux_t_t_s/tb/testbench.sv

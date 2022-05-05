@@ -1,0 +1,2 @@
+$NEURAL_HOME/src/rtl/binary2unary/binary2unary.sv
+$NEURAL_HOME/src/rtl/binary2unary/tb/testbench.sv

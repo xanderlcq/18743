@@ -1,0 +1,444 @@
+######################################################################
+
+# Created by Genus(TM) Synthesis Solution 18.14-s037_1 on Mon Apr 25 10:00:49 EDT 2022
+
+# This file contains the RC script for design:mux_b_t_t_n
+
+######################################################################
+
+if {! [is_attribute wlec_internal_to_write_lec_db_for_invocation -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_invocation}
+if {! [is_attribute wlec_internal_to_write_lec_db_for_label -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_db_for_label}
+if {! [is_attribute wlec_internal_to_write_lec_label_data -obj_type root]} {define_attribute -obj_type root -category lec -data_type string -help_string {Capture internal write_lec variables.} wlec_internal_to_write_lec_label_data}
+set_db -quiet information_level 7
+set_db -quiet init_lib_search_path /afs/andrew.cmu.edu/course/18/743/asap7/
+set_db -quiet design_mode_process 72.0
+set_db -quiet phys_assume_met_fill 0.0
+set_db -quiet map_placed_for_hum false
+set_db -quiet phys_use_invs_extraction true
+set_db -quiet phys_route_time_out 120.0
+set_db -quiet capacitance_per_unit_length_mmmc {}
+set_db -quiet resistance_per_unit_length_mmmc {}
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 11 0.0 25.0} {to_generic 0 11 0 25} {first_condense 1 12 0 25} {PBS_Generic_Opt-Post 1 12 0.9554909999999985 25.955491} {{PBS_Generic-Postgen HBO Optimizations} 0 12 0.0 25.955491} {PBS_TechMap-Start 0 12 0.0 25.955491} {{PBS_TechMap-Premap HBO Optimizations} 0 12 0.0 25.955491} {second_condense 0 12 0 25} {reify 0 12 0 26} {global_incr_map 0 12 0 26} {{PBS_Techmap-Global Mapping} 0 12 -0.23658599999999907 25.718905} {{PBS_TechMap-Datapath Postmap Operations} 0 12 1.0 26.718905} {{PBS_TechMap-Postmap HBO Optimizations} 0 12 0.0 26.718905} {{PBS_TechMap-Postmap Clock Gating} 0 12 0.0 26.718905} {{PBS_TechMap-Postmap Cleanup} 0 12 0.0 26.718905} {PBS_Techmap-Post_MBCI 0 12 0.0 26.718905} {incr_opt 1 13 0 26} }
+set_db -quiet hdl_error_on_latch true
+set_db -quiet hdl_generate_index_style %s_%d_
+set_db -quiet hdl_error_on_blackbox true
+set_db -quiet tinfo_tstamp_file .rs_acli.tstamp
+set_db -quiet metric_enable true
+set_db -quiet metric_page_cfg {}
+set_db -quiet fail_on_error_mesg true
+set_db -quiet script_search_path ./
+set_db -quiet auto_ungroup none
+set_db -quiet use_area_from_lef true
+set_db -quiet flow_metrics_snapshot_uuid b5ceeced-3e27-4a3a-afaf-7807ec48ac58
+set_db -quiet syn_generic_effort high
+set_db -quiet compensative_dpul_driver 0
+set_db -quiet phys_use_segment_parasitics true
+set_db -quiet probabilistic_extraction true
+set_db -quiet ple_correlation_factors {1.9000 2.0000}
+set_db -quiet maximum_interval_of_vias inf
+set_db -quiet layer_aware_buffer true
+set_db -quiet ple_mode global
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_AO_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_OA_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SEQ_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/PVT_0P7V_25C .tree_type balanced_tree
+set_db -quiet operating_condition:default_emulate_libset_max/asap7sc7p5t_SIMPLE_RVT_TT_ccs_201020/_nominal_ .tree_type balanced_tree
+# BEGIN MSV SECTION
+# END MSV SECTION
+define_clock -name aclk -domain domain_1 -period 10000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:mux_b_t_t_n port:mux_b_t_t_n/aclk
+set_db -quiet clock:mux_b_t_t_n/aclk .slew {150.0 150.0 150.0 150.0}
+set_db -quiet clock:mux_b_t_t_n/aclk .clock_setup_uncertainty {400.0 400.0}
+set_db -quiet clock:mux_b_t_t_n/aclk .clock_hold_uncertainty {400.0 400.0}
+define_cost_group -design design:mux_b_t_t_n -name aclk
+external_delay -accumulate -input {0.0 no_value 0.0 no_value} -clock clock:mux_b_t_t_n/aclk -name create_clock_delay_domain_1_aclk_R_0 port:mux_b_t_t_n/aclk
+set_db -quiet external_delay:mux_b_t_t_n/create_clock_delay_domain_1_aclk_R_0 .clock_network_latency_included true
+external_delay -accumulate -input {no_value 0.0 no_value 0.0} -clock clock:mux_b_t_t_n/aclk -edge_fall -name create_clock_delay_domain_1_aclk_F_0 port:mux_b_t_t_n/aclk
+set_db -quiet external_delay:mux_b_t_t_n/create_clock_delay_domain_1_aclk_F_0 .clock_network_latency_included true
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7 port:mux_b_t_t_n/grst
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_1_1 {{port:mux_b_t_t_n/inputs[0][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_2_1 {{port:mux_b_t_t_n/inputs[0][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_3_1 {{port:mux_b_t_t_n/inputs[0][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_4_1 {{port:mux_b_t_t_n/inputs[0][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_5_1 {{port:mux_b_t_t_n/inputs[1][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_6_1 {{port:mux_b_t_t_n/inputs[1][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_7_1 {{port:mux_b_t_t_n/inputs[1][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_8_1 {{port:mux_b_t_t_n/inputs[1][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_9_1 {{port:mux_b_t_t_n/inputs[2][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_10_1 {{port:mux_b_t_t_n/inputs[2][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_11_1 {{port:mux_b_t_t_n/inputs[2][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_12_1 {{port:mux_b_t_t_n/inputs[2][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_13_1 {{port:mux_b_t_t_n/inputs[3][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_14_1 {{port:mux_b_t_t_n/inputs[3][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_15_1 {{port:mux_b_t_t_n/inputs[3][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_16_1 {{port:mux_b_t_t_n/inputs[3][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_17_1 {{port:mux_b_t_t_n/inputs[4][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_18_1 {{port:mux_b_t_t_n/inputs[4][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_19_1 {{port:mux_b_t_t_n/inputs[4][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_20_1 {{port:mux_b_t_t_n/inputs[4][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_21_1 {{port:mux_b_t_t_n/inputs[5][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_22_1 {{port:mux_b_t_t_n/inputs[5][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_23_1 {{port:mux_b_t_t_n/inputs[5][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_24_1 {{port:mux_b_t_t_n/inputs[5][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_25_1 {{port:mux_b_t_t_n/inputs[6][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_26_1 {{port:mux_b_t_t_n/inputs[6][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_27_1 {{port:mux_b_t_t_n/inputs[6][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_28_1 {{port:mux_b_t_t_n/inputs[6][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_29_1 {{port:mux_b_t_t_n/inputs[7][3]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_30_1 {{port:mux_b_t_t_n/inputs[7][2]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_31_1 {{port:mux_b_t_t_n/inputs[7][1]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_32_1 {{port:mux_b_t_t_n/inputs[7][0]}}
+external_delay -accumulate -input {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_7_33_1 port:mux_b_t_t_n/select
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8 {{port:mux_b_t_t_n/out[0][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_34_1 {{port:mux_b_t_t_n/out[0][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_35_1 {{port:mux_b_t_t_n/out[0][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_36_1 {{port:mux_b_t_t_n/out[0][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_37_1 {{port:mux_b_t_t_n/out[1][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_38_1 {{port:mux_b_t_t_n/out[1][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_39_1 {{port:mux_b_t_t_n/out[1][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_40_1 {{port:mux_b_t_t_n/out[1][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_41_1 {{port:mux_b_t_t_n/out[2][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_42_1 {{port:mux_b_t_t_n/out[2][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_43_1 {{port:mux_b_t_t_n/out[2][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_44_1 {{port:mux_b_t_t_n/out[2][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_45_1 {{port:mux_b_t_t_n/out[3][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_46_1 {{port:mux_b_t_t_n/out[3][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_47_1 {{port:mux_b_t_t_n/out[3][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_48_1 {{port:mux_b_t_t_n/out[3][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_49_1 {{port:mux_b_t_t_n/out[4][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_50_1 {{port:mux_b_t_t_n/out[4][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_51_1 {{port:mux_b_t_t_n/out[4][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_52_1 {{port:mux_b_t_t_n/out[4][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_53_1 {{port:mux_b_t_t_n/out[5][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_54_1 {{port:mux_b_t_t_n/out[5][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_55_1 {{port:mux_b_t_t_n/out[5][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_56_1 {{port:mux_b_t_t_n/out[5][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_57_1 {{port:mux_b_t_t_n/out[6][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_58_1 {{port:mux_b_t_t_n/out[6][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_59_1 {{port:mux_b_t_t_n/out[6][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_60_1 {{port:mux_b_t_t_n/out[6][0]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_61_1 {{port:mux_b_t_t_n/out[7][3]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_62_1 {{port:mux_b_t_t_n/out[7][2]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_63_1 {{port:mux_b_t_t_n/out[7][1]}}
+external_delay -accumulate -output {2000.0 2000.0 2000.0 2000.0} -clock clock:mux_b_t_t_n/aclk -name chip.sdc_line_8_64_1 {{port:mux_b_t_t_n/out[7][0]}}
+path_group -paths [specify_paths -to clock:mux_b_t_t_n/aclk]  -name aclk -group cost_group:mux_b_t_t_n/aclk -user_priority -1047552
+# BEGIN DFT SECTION
+set_db -quiet dft_scan_style muxed_scan
+set_db -quiet dft_scanbit_waveform_analysis false
+# END DFT SECTION
+set_db -quiet design:mux_b_t_t_n .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 190} {cell_count 127} {utilization  0.00} {runtime 0 11 0 25} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 271} {cell_count 184} {utilization  0.00} {runtime 1 12 0 25} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 271} {cell_count 184} {utilization  0.00} {runtime 0 12 0 25} }{reify {wns 5189} {tns 0} {vep 0} {area 178} {cell_count 98} {utilization  0.00} {runtime 0 12 0 26} }{global_incr_map {wns 5189} {tns 0} {vep 0} {area 178} {cell_count 98} {utilization  0.00} {runtime 0 12 0 26} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 178} {cell_count 96} {utilization  0.00} {runtime 1 13 0 26} }}
+set_db -quiet design:mux_b_t_t_n .seq_mbci_coverage 0.0
+set_db -quiet design:mux_b_t_t_n .hdl_filelist {{default -sv {RISING SYNTHESIS} {src/mux_b_t_t_n.sv} {./src} {}}}
+set_db -quiet design:mux_b_t_t_n .hdl_user_name mux_b_t_t_n
+set_db -quiet design:mux_b_t_t_n .verification_directory fv/mux_b_t_t_n
+set_db -quiet port:mux_b_t_t_n/grst .original_name grst
+set_db -quiet port:mux_b_t_t_n/aclk .original_name aclk
+set_db -quiet {port:mux_b_t_t_n/inputs[0][3]} .original_name {inputs[0][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[0][2]} .original_name {inputs[0][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[0][1]} .original_name {inputs[0][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[0][0]} .original_name {inputs[0][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[1][3]} .original_name {inputs[1][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[1][2]} .original_name {inputs[1][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[1][1]} .original_name {inputs[1][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[1][0]} .original_name {inputs[1][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[2][3]} .original_name {inputs[2][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[2][2]} .original_name {inputs[2][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[2][1]} .original_name {inputs[2][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[2][0]} .original_name {inputs[2][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[3][3]} .original_name {inputs[3][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[3][2]} .original_name {inputs[3][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[3][1]} .original_name {inputs[3][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[3][0]} .original_name {inputs[3][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[4][3]} .original_name {inputs[4][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[4][2]} .original_name {inputs[4][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[4][1]} .original_name {inputs[4][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[4][0]} .original_name {inputs[4][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[5][3]} .original_name {inputs[5][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[5][2]} .original_name {inputs[5][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[5][1]} .original_name {inputs[5][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[5][0]} .original_name {inputs[5][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[6][3]} .original_name {inputs[6][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[6][2]} .original_name {inputs[6][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[6][1]} .original_name {inputs[6][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[6][0]} .original_name {inputs[6][0]}
+set_db -quiet {port:mux_b_t_t_n/inputs[7][3]} .original_name {inputs[7][3]}
+set_db -quiet {port:mux_b_t_t_n/inputs[7][2]} .original_name {inputs[7][2]}
+set_db -quiet {port:mux_b_t_t_n/inputs[7][1]} .original_name {inputs[7][1]}
+set_db -quiet {port:mux_b_t_t_n/inputs[7][0]} .original_name {inputs[7][0]}
+set_db -quiet port:mux_b_t_t_n/select .original_name select
+set_db -quiet {port:mux_b_t_t_n/out[0][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][3]} .original_name {out[0][3]}
+set_db -quiet {port:mux_b_t_t_n/out[0][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][2]} .original_name {out[0][2]}
+set_db -quiet {port:mux_b_t_t_n/out[0][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][1]} .original_name {out[0][1]}
+set_db -quiet {port:mux_b_t_t_n/out[0][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[0][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[0][0]} .original_name {out[0][0]}
+set_db -quiet {port:mux_b_t_t_n/out[0][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][3]} .original_name {out[1][3]}
+set_db -quiet {port:mux_b_t_t_n/out[1][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][2]} .original_name {out[1][2]}
+set_db -quiet {port:mux_b_t_t_n/out[1][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][1]} .original_name {out[1][1]}
+set_db -quiet {port:mux_b_t_t_n/out[1][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[1][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[1][0]} .original_name {out[1][0]}
+set_db -quiet {port:mux_b_t_t_n/out[1][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][3]} .original_name {out[2][3]}
+set_db -quiet {port:mux_b_t_t_n/out[2][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][2]} .original_name {out[2][2]}
+set_db -quiet {port:mux_b_t_t_n/out[2][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][1]} .original_name {out[2][1]}
+set_db -quiet {port:mux_b_t_t_n/out[2][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[2][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[2][0]} .original_name {out[2][0]}
+set_db -quiet {port:mux_b_t_t_n/out[2][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][3]} .original_name {out[3][3]}
+set_db -quiet {port:mux_b_t_t_n/out[3][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][2]} .original_name {out[3][2]}
+set_db -quiet {port:mux_b_t_t_n/out[3][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][1]} .original_name {out[3][1]}
+set_db -quiet {port:mux_b_t_t_n/out[3][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[3][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[3][0]} .original_name {out[3][0]}
+set_db -quiet {port:mux_b_t_t_n/out[3][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][3]} .original_name {out[4][3]}
+set_db -quiet {port:mux_b_t_t_n/out[4][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][2]} .original_name {out[4][2]}
+set_db -quiet {port:mux_b_t_t_n/out[4][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][1]} .original_name {out[4][1]}
+set_db -quiet {port:mux_b_t_t_n/out[4][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[4][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[4][0]} .original_name {out[4][0]}
+set_db -quiet {port:mux_b_t_t_n/out[4][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][3]} .original_name {out[5][3]}
+set_db -quiet {port:mux_b_t_t_n/out[5][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][2]} .original_name {out[5][2]}
+set_db -quiet {port:mux_b_t_t_n/out[5][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][1]} .original_name {out[5][1]}
+set_db -quiet {port:mux_b_t_t_n/out[5][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[5][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[5][0]} .original_name {out[5][0]}
+set_db -quiet {port:mux_b_t_t_n/out[5][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][3]} .original_name {out[6][3]}
+set_db -quiet {port:mux_b_t_t_n/out[6][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][2]} .original_name {out[6][2]}
+set_db -quiet {port:mux_b_t_t_n/out[6][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][1]} .original_name {out[6][1]}
+set_db -quiet {port:mux_b_t_t_n/out[6][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[6][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[6][0]} .original_name {out[6][0]}
+set_db -quiet {port:mux_b_t_t_n/out[6][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][3]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][3]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][3]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][3]} .original_name {out[7][3]}
+set_db -quiet {port:mux_b_t_t_n/out[7][3]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][2]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][2]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][2]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][2]} .original_name {out[7][2]}
+set_db -quiet {port:mux_b_t_t_n/out[7][2]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][1]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][1]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][1]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][1]} .original_name {out[7][1]}
+set_db -quiet {port:mux_b_t_t_n/out[7][1]} .external_pin_cap {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][0]} .external_pin_cap_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][0]} .external_capacitance_max {15.0 15.0}
+set_db -quiet {port:mux_b_t_t_n/out[7][0]} .external_capacitance_min 15.0
+set_db -quiet {port:mux_b_t_t_n/out[7][0]} .original_name {out[7][0]}
+set_db -quiet {port:mux_b_t_t_n/out[7][0]} .external_pin_cap {15.0 15.0}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[3]} .original_name {{counter[3]}}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[3]} .single_bit_orig_name {counter[3]}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/counter_reg[3]/QN} .original_name {counter[3]/q}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[0]} .original_name {{select_value[0]}}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[0]} .single_bit_orig_name {select_value[0]}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/select_value_reg[0]/QN} .original_name {select_value[0]/q}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[3]} .original_name {{select_value[3]}}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[3]} .single_bit_orig_name {select_value[3]}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/select_value_reg[3]/QN} .original_name {select_value[3]/q}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[1]} .original_name {{select_value[1]}}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[1]} .single_bit_orig_name {select_value[1]}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/select_value_reg[1]/QN} .original_name {select_value[1]/q}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[2]} .original_name {{select_value[2]}}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[2]} .single_bit_orig_name {select_value[2]}
+set_db -quiet {inst:mux_b_t_t_n/select_value_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/select_value_reg[2]/QN} .original_name {select_value[2]/q}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[2]} .original_name {{counter[2]}}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[2]} .single_bit_orig_name {counter[2]}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/counter_reg[2]/QN} .original_name {counter[2]/q}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[1]} .original_name {{counter[1]}}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[1]} .single_bit_orig_name {counter[1]}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/counter_reg[1]/QN} .original_name {counter[1]/q}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[0]} .original_name {{counter[0]}}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[0]} .single_bit_orig_name {counter[0]}
+set_db -quiet {inst:mux_b_t_t_n/counter_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:mux_b_t_t_n/counter_reg[0]/QN} .original_name {counter[0]/q}
+# BEGIN PMBIST SECTION
+# END PMBIST SECTION
+# BEGIN PHYSICAL ANNOTATION SECTION
+# END PHYSICAL ANNOTATION SECTION
+set_db -quiet source_verbose true
+#############################################################
+#####   FLOW WRITE   ########################################
+##
+## Written by Genus(TM) Synthesis Solution version 18.14-s037_1
+## flowkit v18.10-p010_1
+## Written on 10:00:50 25-Apr 2022
+#############################################################
+#####   Flow Definitions   ##################################
+
+#############################################################
+#####   Step Definitions   ##################################
+
+
+#############################################################
+#####   Attribute Definitions   #############################
+
+if {[is_attribute flow_edit_end_steps -obj_type root]} {set_db flow_edit_end_steps {}}
+if {[is_attribute flow_edit_start_steps -obj_type root]} {set_db flow_edit_start_steps {}}
+if {[is_attribute flow_footer_tcl -obj_type root]} {set_db flow_footer_tcl {}}
+if {[is_attribute flow_header_tcl -obj_type root]} {set_db flow_header_tcl {}}
+if {[is_attribute flow_metadata -obj_type root]} {set_db flow_metadata {}}
+if {[is_attribute flow_setup_config -obj_type root]} {set_db flow_setup_config {HUDDLE {!!map {}}}}
+if {[is_attribute flow_step_begin_tcl -obj_type root]} {set_db flow_step_begin_tcl {}}
+if {[is_attribute flow_step_check_tcl -obj_type root]} {set_db flow_step_check_tcl {}}
+if {[is_attribute flow_step_end_tcl -obj_type root]} {set_db flow_step_end_tcl {}}
+if {[is_attribute flow_step_order -obj_type root]} {set_db flow_step_order {}}
+if {[is_attribute flow_summary_tcl -obj_type root]} {set_db flow_summary_tcl {}}
+if {[is_attribute flow_template_feature_definition -obj_type root]} {set_db flow_template_feature_definition {}}
+if {[is_attribute flow_template_type -obj_type root]} {set_db flow_template_type {}}
+if {[is_attribute flow_template_version -obj_type root]} {set_db flow_template_version {}}
+if {[is_attribute flow_user_templates -obj_type root]} {set_db flow_user_templates {}}
+
+
+#############################################################
+#####   Flow History   ######################################
+
+if {[is_attribute flow_branch -obj_type root]} {set_db flow_branch {}}
+if {[is_attribute flow_caller_data -obj_type root]} {set_db flow_caller_data {}}
+if {[is_attribute flow_current -obj_type root]} {set_db flow_current {}}
+if {[is_attribute flow_hier_path -obj_type root]} {set_db flow_hier_path {}}
+if {[is_attribute flow_db_directory -obj_type root]} {set_db flow_db_directory dbs}
+if {[is_attribute flow_exit_when_done -obj_type root]} {set_db flow_exit_when_done false}
+if {[is_attribute flow_history -obj_type root]} {set_db flow_history {}}
+if {[is_attribute flow_log_directory -obj_type root]} {set_db flow_log_directory logs}
+if {[is_attribute flow_mail_on_error -obj_type root]} {set_db flow_mail_on_error false}
+if {[is_attribute flow_mail_to -obj_type root]} {set_db flow_mail_to {}}
+if {[is_attribute flow_metrics_file -obj_type root]} {set_db flow_metrics_file {}}
+if {[is_attribute flow_metrics_snapshot_parent_uuid -obj_type root]} {set_db flow_metrics_snapshot_parent_uuid {}}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid b5ceeced-3e27-4a3a-afaf-7807ec48ac58}
+if {[is_attribute flow_overwrite_db -obj_type root]} {set_db flow_overwrite_db false}
+if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
+if {[is_attribute flow_run_tag -obj_type root]} {set_db flow_run_tag {}}
+if {[is_attribute flow_schedule -obj_type root]} {set_db flow_schedule {}}
+if {[is_attribute flow_script -obj_type root]} {set_db flow_script {}}
+if {[is_attribute flow_starting_db -obj_type root]} {set_db flow_starting_db {}}
+if {[is_attribute flow_status_file -obj_type root]} {set_db flow_status_file {}}
+if {[is_attribute flow_step_canonical_current -obj_type root]} {set_db flow_step_canonical_current {}}
+if {[is_attribute flow_step_current -obj_type root]} {set_db flow_step_current {}}
+if {[is_attribute flow_step_last -obj_type root]} {set_db flow_step_last {}}
+if {[is_attribute flow_step_last_msg -obj_type root]} {set_db flow_step_last_msg {}}
+if {[is_attribute flow_step_last_status -obj_type root]} {set_db flow_step_last_status not_run}
+if {[is_attribute flow_step_next -obj_type root]} {set_db flow_step_next {}}
+if {[is_attribute flow_working_directory -obj_type root]} {set_db flow_working_directory .}
+
+#############################################################
+#####   User Defined Attributes   ###########################
+

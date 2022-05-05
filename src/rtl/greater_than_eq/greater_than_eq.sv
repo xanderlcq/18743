@@ -6,7 +6,6 @@ module greater_than_eq
 (
     input logic grst,
     input logic aclk,
-    input logic rst,
     input logic a,
     input logic b,
     output logic q
@@ -16,14 +15,14 @@ module greater_than_eq
 // rising edge transition base
     logic c, d;
     assign c = (a & (~b));
-    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
     assign q = (~d & a);
 
 `elsif FALLING
 // falling edge transition base (JES_STC_GRL_2_12_20.pdf)
     logic c, d;
     assign c = ((~a) & b);
-    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
     assign q = d | a;
 
 `else
@@ -33,7 +32,7 @@ module greater_than_eq
     logic c, d;
 
     assign c = (a & (~b));
-    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
     assign temp_out = (~d & a) & b;
     assign q = (a_select & a);
     
@@ -47,7 +46,7 @@ module greater_than_eq
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set), .r(rst), .q(a_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set), .r(grst), .q(a_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

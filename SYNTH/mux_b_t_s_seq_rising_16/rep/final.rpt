@@ -1,0 +1,51 @@
+
+
+Working Directory = /afs/andrew.cmu.edu/usr4/kbhat2/private/18-743/project/SYNTH/mux_b_t_s_seq_rising_16
+QoS Summary for mux_b_t_s
+================================================================================
+Metric                          final          
+================================================================================
+Slack (ps):                     5,458
+  R2R (ps):                     9,362
+  I2R (ps):                     7,486
+  R2O (ps):                     7,226
+  I2O (ps):                     5,458
+  CG  (ps):                  no_value
+TNS (ps):                           0
+  R2R (ps):                         0
+  I2R (ps):                         0
+  R2O (ps):                         0
+  I2O (ps):                         0
+  CG  (ps):                  no_value
+Failing Paths:                      0
+Cell Area:                        117
+Total Cell Area:                  117
+Leaf Instances:                    77
+Total Instances:                   77
+Utilization (%):                 0.00
+Tot. Net Length (um):        no_value
+Avg. Net Length (um):        no_value
+Route Overflow H (%):        no_value
+Route Overflow V (%):        no_value
+MBCI(%) (bits/gate) :            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value
+  Tot Cong:                  no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:00:31
+Real Runtime (h:m:s):        00:00:15
+CPU  Elapsed (h:m:s):        00:00:36
+Real Elapsed (h:m:s):        00:00:16
+Memory (MB):                  1120.68
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:00:15
+Total Memory (MB):     1128.68
+Executable Version:    20.11-s111_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

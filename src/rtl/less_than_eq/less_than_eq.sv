@@ -4,7 +4,6 @@ module less_than_eq
 #(parameter GAMMA_CYCLE_WIDTH=16,
   parameter PULSE_WIDTH=8)
 (
-    input logic rst,
     input logic grst,
     input logic aclk,
     input logic a,
@@ -15,7 +14,7 @@ module less_than_eq
 //edge transition base, rising
   logic c, d;
   assign c = (~a) & b;
-  sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+  sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
   assign q = a & (~d);
 
 `elsif FALLING
@@ -23,7 +22,7 @@ module less_than_eq
 
     logic c, d;
     assign c = ((a) & (~b));
-    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
     assign q = d | a;
 `else
 //pulse width base
@@ -32,7 +31,7 @@ module less_than_eq
     logic c, d;
     
     assign c = (~a) & b;
-    sr_latch sr(.s(c), .r(rst), .q(d), .q_b());
+    sr_latch sr(.s(c), .r(grst), .q(d), .q_b());
     assign temp_out = a & (~d);
     assign q = (a_select & a);
     
@@ -46,7 +45,7 @@ module less_than_eq
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set), .r(rst), .q(a_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set), .r(grst), .q(a_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

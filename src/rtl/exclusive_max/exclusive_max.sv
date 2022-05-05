@@ -6,7 +6,6 @@ module exclusive_max
 (
     input logic aclk,
     input logic grst,
-    input logic rst,
     input logic a,
     input logic b,
     output logic q
@@ -21,7 +20,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = ((~a) | (~b));
 
-    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(grst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign q = ~(h | f);
@@ -36,7 +35,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = a | b;
 
-    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(grst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign q = h | f;
@@ -52,7 +51,7 @@ module exclusive_max
     assign e = ((~c) & (~d));
     assign f = ((~a) | (~b));
 
-    sr_latch sr(.s(rst), .r(~e), .q(g), .q_b());
+    sr_latch sr(.s(grst), .r(~e), .q(g), .q_b());
 
     assign h = g & e;
     assign temp_out = ~(h | f);
@@ -68,8 +67,8 @@ module exclusive_max
         end
     end
 
-    sr_latch sr1(.s(ouptut_latch_set_1), .r(rst), .q(a_select), .q_b());
-    sr_latch sr2(.s(ouptut_latch_set_2), .r(rst), .q(b_select), .q_b());
+    sr_latch sr1(.s(ouptut_latch_set_1), .r(grst), .q(a_select), .q_b());
+    sr_latch sr2(.s(ouptut_latch_set_2), .r(grst), .q(b_select), .q_b());
 
     always_comb begin        
         if ((!prev_a & a) && (!prev_temp_out & temp_out)) begin

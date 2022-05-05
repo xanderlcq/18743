@@ -46,3 +46,7 @@ vc_hdrs.h
 */__pycache__/*
 *.pyc
 *.elf
+
+*.restartSimSession.tcl.old
+*.synopsys_dve_rebuild.tcl
+*.rs*

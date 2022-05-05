@@ -1,0 +1,4 @@
+$NEURAL_HOME/src/rtl/lib/sr_latch.sv
+$NEURAL_HOME/src/rtl/equal/equal.sv
+$NEURAL_HOME/src/rtl/mux_t_t_t_N/mux_t_t_t_N.sv
+$NEURAL_HOME/src/rtl/mux_t_t_t_N/tb/testbench.sv
