@@ -49,4 +49,4 @@ vc_hdrs.h
 
 *.restartSimSession.tcl.old
 *.synopsys_dve_rebuild.tcl
-*.rs_acli
+*.rs*

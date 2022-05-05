@@ -1,1 +1,0 @@
-/afs/ece.cmu.edu/usr/acli/Private/18743/src/rtl/mux_b_t_t_1/mux_b_t_t_1.sv

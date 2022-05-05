@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess
 from subprocess import PIPE
+import argparse
 
 
 def modify_tcl(directory, macro):
@@ -26,7 +27,7 @@ def modify_gamma(directory, top_module_name, gamma_width):
     file.close()
 
     for line in range(len(fileData)):
-        if (fileData[line].startswith('#(parameter GAMMA_CYCLE_WIDTH')):
+        if ("parameter GAMMA_CYCLE_WIDTH" in fileData[line]):
             fileData[line] = '#(parameter GAMMA_CYCLE_WIDTH='+ gamma_width +','
     
     file = open(directory+'/src/'+ top_module_name +'.sv', 'w')
@@ -51,6 +52,7 @@ def run_program(top_module_name, directory, synth_type, macro, gamma_width):
     # Modify Gammawidth
     modify_gamma(dest_dir, top_module_name, gamma_width)
     
+    # Copy all the required Source files
     linker_files = open("./src/rtl/" + directory + "/vcs.args", "r").readlines()[:-2]
     for f in linker_files:
         res = subprocess.run('ln -s {} {}'.format(f.strip("\n"), dest_dir+"/src/"), shell=True, stdout=PIPE, stderr=PIPE)    
@@ -67,19 +69,16 @@ def run_program(top_module_name, directory, synth_type, macro, gamma_width):
             subprocess.run(['rm', '-rf', file])
     os.chdir(cwd)
 
+parser = argparse.ArgumentParser(description='Generate the synthesis folders and run the genus script for synthesis report.\n\
+All the files and reports are stored in a directory under SYNTH/"DIR_SYN_MACRO_GWIDTH"')
 
+requiredArgs = parser.add_argument_group('required arguments')
+requiredArgs.add_argument("-d", "--DIR", help="Directory within src/rtl", required=True)
+requiredArgs.add_argument("-t", "--TOP", help="Top Module name", required=True)
+requiredArgs.add_argument("-s", "--SYN", help="Synthesis Type", choices=["seq", "comb"], required=True)
+parser.add_argument("-m", "--MACRO", help="Macro Type", choices=["RISING", "FALLING", "PULSE"], default="")
+parser.add_argument("-g", "--GWIDTH", help="Width of the Gamma cycle", type=int, default=16)
 
-gamma_widths = [8, 16, 32, 64, 128]
-macros = ['RISING']
-modules = ['mux_b_t_s', 'mux_t_be_t_1', 'mux_t_be_t_N', 'filter']
-for module in modules:
-    for macro in macros:
-        for gamma in gamma_widths:
-            run_program(module, module, 'seq', macro, str(gamma))
+args = parser.parse_args()
 
-
-modules = ['mux_t_t_t_1', 'mux_t_t_t_N']
-for module in modules:
-    for macro in macros:
-        for gamma in gamma_widths:
-            run_program(module, module, 'comb', macro, str(gamma))
+run_program(args.TOP, args.DIR, args.SYN, args.MACRO, args.GWIDTH)
